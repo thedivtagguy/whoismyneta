@@ -36,7 +36,7 @@
 	}
 </script>
 
-<div class="search-container border-neutral-100 border-[1px] my-4 w-full mx-auto shadow-sm">
+<div class="search-container border-neutral-100 border-[1px] mb-4 w-full mx-auto shadow-sm">
 	<Typeahead
 		label={searchType === 'location' ? 'Search for your constituency' : 'Search for a candidate'}
 		value={searchType === 'location' && $selectedConstituency.ls_seat_name
