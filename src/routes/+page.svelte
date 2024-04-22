@@ -1,2 +1,6 @@
-<h1>Speed running election dashboard</h1>
-<p>Lessgo</p>
+<script>
+	import Header from '$lib/components/Header.svelte';
+	import Map from '$lib/components/Map.svelte';
+</script>
+
+<Map />

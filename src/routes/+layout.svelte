@@ -1,4 +1,5 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
 	import '../lib/styles.css';
 </script>
 
@@ -8,6 +9,9 @@
 	<a href="/lists">Lists</a>
 </nav> -->
 
-<main class="flex flex-col justify-center items-center">
-	<slot></slot>
+<main class=" max-w-xl mx-auto md:py-8">
+	<Header />
+	<main class="flex p-8 flex-col justify-center items-center">
+		<slot></slot>
+	</main>
 </main>

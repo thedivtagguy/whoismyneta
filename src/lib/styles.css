@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import '@fontsource/source-sans-pro/300-italic.css';
+@import '@fontsource/source-sans-pro/400-italic.css';
+@import '@fontsource/source-sans-pro/600-italic.css';
+@import '@fontsource/source-sans-pro/700-italic.css';
+@import '@fontsource/source-sans-pro/900-italic.css';
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
