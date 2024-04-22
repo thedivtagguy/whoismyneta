@@ -3,15 +3,14 @@
 	import { feature } from 'topojson-client';
 	import { Chart, Svg, GeoPath, Text, Transform } from 'layerchart';
 	import country from '$lib/data/india_ls_seats_545.json';
-	import { fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import { Field, SelectField, ToggleGroup, ToggleOption } from 'svelte-ux';
 	import TransformControls from './TransformControls.svelte';
+	import { selectedConstituency } from '$lib/store';
+	import { setConstituency, slugify } from '$lib/utils';
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 
 	let transform = Transform;
-	let scrollMode = 'scale';
 </script>
 
 <main
@@ -38,11 +37,17 @@
 				<g class="states">
 					{#each states.features as feature}
 						<GeoPath
-							on:click={() => (hovered = feature)}
+							on:click={() => setConstituency(feature.properties.ls_seat_name)}
 							on:mousemove={() => (hovered = feature)}
 							on:mouseleave={() => (hovered = null)}
 							geojson={feature}
-							class=" fill-surface-200 stroke-neutral-50 stroke-[0.1px] hover:fill-neutral-50"
+							class=" fill-surface-200 hover:cursor-pointer stroke-neutral-50 stroke-[0.1px]  
+                            {$selectedConstituency &&
+							$selectedConstituency.ls_seat_name != null &&
+							$selectedConstituency.ls_seat_name === slugify(feature.properties.ls_seat_name)
+								? 'fill-neutral-50'
+								: 'fill-surface-200'} 
+                            hover:fill-neutral-50"
 						/>
 					{/each}
 				</g>
@@ -50,14 +55,14 @@
 					{#each states.features as feature}
 						<GeoPath geojson={feature} let:geoPath>
 							{@const [x, y] = geoPath.centroid(feature)}
-							{#if hovered === feature}
+							{#if $selectedConstituency.ls_seat_name === slugify(feature.properties.ls_seat_name)}
 								<Text
 									{x}
-									y={y - 20}
+									y={y - 10}
 									value={feature.properties.ls_seat_name}
 									textAnchor="middle"
-									verticalAnchor="top"
-									class="text-[12px] stroke-surface-100 [stroke-width:2px]"
+									verticalAnchor="start"
+									class="text-[14px] stroke-surface-100 [stroke-width:1px]"
 								/>
 							{/if}
 						</GeoPath>

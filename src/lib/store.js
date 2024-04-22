@@ -1,3 +1,5 @@
-import { useWritable } from './shared-store';
+import { writable } from 'svelte/store';
 
-export const selectedConstituency = () => useWritable('selectedConstituency', null);
+export const selectedConstituency = writable({});
+export const selectedCandidate = writable({});
+export const searchMode = writable('location');
