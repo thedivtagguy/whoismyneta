@@ -3,7 +3,7 @@
 	import { slugify } from '$lib/utils';
 	import data from '$lib/data/data.json';
 	import { page } from '$app/stores';
-	import { CopyButton } from 'svelte-ux';
+	import { CopyButton, ProgressCircle } from 'svelte-ux';
 	import { MapPin } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -11,7 +11,7 @@
 	$: results = $searchMode === 'location' ? $selectedConstituency : $selectedCandidate;
 </script>
 
-{#if results}
+{#if results && Object.keys(results).length > 0}
 	{#key results}
 		<section
 			in:fade={{ duration: 300, easing: cubicInOut }}
@@ -38,4 +38,11 @@
 			</div>
 		</section>
 	{/key}
+{:else if results && Object.keys(results).length === 0}
+	<section
+		in:fade={{ duration: 300, easing: cubicInOut }}
+		class="px-6 py-4 h-full rounded-md w-full bg-surface-200 flex flex-col justify-center items-center"
+	>
+		<ProgressCircle />
+	</section>
 {/if}
