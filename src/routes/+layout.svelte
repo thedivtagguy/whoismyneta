@@ -11,7 +11,7 @@
 
 <main class=" max-w-xl mx-auto md:py-8">
 	<Header />
-	<main class="flex p-8 flex-col justify-center items-center">
+	<main class="flex py-2 flex-col justify-center items-center">
 		<slot></slot>
 	</main>
 </main>
