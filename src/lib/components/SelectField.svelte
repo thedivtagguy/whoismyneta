@@ -5,6 +5,7 @@
 	import { mdiFilterRemove } from '@mdi/js';
 	import { slugify, setConstituency, setCandidate } from '$lib/utils';
 	import { selectedCandidate, selectedConstituency, searchMode } from '$lib/store';
+	import { goto } from '$app/navigation';
 
 	$: searchType = $searchMode;
 
@@ -70,9 +71,10 @@
 	/>
 	<div class="pl-4 pt-7">
 		<Button
-			on:click={() =>
-				// clear the store
-				($selectedConstituency = {})}
+			on:click={() => {
+				$selectedConstituency = {};
+				goto('/', { noScroll: true });
+			}}
 			icon={mdiFilterRemove}
 		/>
 	</div>

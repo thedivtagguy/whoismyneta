@@ -27,7 +27,7 @@ export function setConstituency(constituency = '') {
 		selectedConstituency.set(constituencyData);
 	}
 
-	goto(`/?constituency=${slugify(constituency)}`);
+	goto(`/?constituency=${slugify(constituency)}`, { noScroll: true });
 }
 
 export function setCandidate(candidate = '') {

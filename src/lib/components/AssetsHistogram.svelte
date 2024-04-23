@@ -2,6 +2,7 @@
 	import { sort, quantile, scaleLinear, svg } from 'd3';
 	import data from '$lib/data/data.json';
 	import { formatRupee, textMultiline } from '$lib/utils';
+	import InfoPopover from './InfoPopover.svelte';
 	export let assets = 0;
 	export let threshold = 10;
 
@@ -26,8 +27,11 @@
 	let outliers = sortedData.filter((d) => Number(d.total_assets) > max);
 </script>
 
-<div bind:this={width} class="w-full border-b-[1px] pt-4">
-	<span class="font-bold">Relative wealth</span>
+<div bind:this={width} class="w-full pb-4 border-b-[1px] pt-4">
+	<span class="inline-flex items-center font-bold"
+		>Relative wealth
+		<InfoPopover text="The wealth of the candidate relative to other candidates in the dataset." />
+	</span>
 	<svg width={svgWidth} class="w-full h-[70px]">
 		<line y1={center} y2={center} x1={xScale(min)} x2={xScale(max)} class=" stroke-neutral-500" />
 

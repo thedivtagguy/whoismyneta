@@ -105,9 +105,9 @@
 <ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
 
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[550px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[650px] w-full max-w-[900px]"
 >
-	<div class=" absolute top-2 right-2">
+	<div class="absolute top-2 right-2">
 		<TransformControls {transform} />
 	</div>
 
@@ -127,14 +127,14 @@
 				}}
 				title={selectedCategory.label}
 			>
-				<div class="flex bg-white flex-col gap-1">
+				<div class="flex flex-col gap-1 bg-white">
 					{#each values as value}
 						{#if value !== undefined}
 							{@const scaledValue = selectedCategory.valueScale
 								? selectedCategory.valueScale[value]
 								: value}
 							<div class="flex items-center gap-1">
-								<div class="size-2 rounded-full" style:background-color={scale(scaledValue)} />
+								<div class="rounded-full size-2" style:background-color={scale(scaledValue)} />
 								<div class="text-xs text-surface-content/50">{value}</div>
 							</div>
 						{/if}
@@ -146,8 +146,8 @@
 		{/if}
 		<Svg>
 			<Transform
-				bind:this={transform}
 				scroll="scale"
+				bind:this={transform}
 				tweened={{ duration: 800, easing: cubicOut }}
 				let:zoomTo
 				let:reset={resetZoom}
@@ -160,6 +160,8 @@
 							on:mousemove={() => (hovered = feature)}
 							on:mouseleave={() => (hovered = null)}
 							geojson={feature}
+							stroke-width={0.4 / scale}
+							stroke="#8F96A3"
 							fill={colorScale
 								? colorScale(
 										data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name)[
@@ -172,14 +174,13 @@
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-900'
 								: ''} hover:cursor-pointer 
-                                {colorScale ? 'stroke-neutral-800' : 'stroke-neutral-50'}
-                                stroke-[0.2px]  
+                                                             
                             
                             hover:fill-neutral-50"
 						/>
 					{/each}
 				</g>
-				<g class="labels pointer-events-none">
+				<g class="pointer-events-none labels">
 					{#each states.features as feature}
 						<GeoPath geojson={feature} let:geoPath>
 							{@const [x, y] = geoPath.centroid(feature)}
