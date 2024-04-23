@@ -1,5 +1,13 @@
 <script>
-	import { geoMercator } from 'd3';
+	import {
+		geoMercator,
+		scaleQuantile,
+		scaleOrdinal,
+		schemePurples,
+		schemeGreens,
+		schemePuRd,
+		schemeObservable10
+	} from 'd3';
 	import { feature } from 'topojson-client';
 	import { Chart, GeoPoint, Svg, GeoPath, Text, Transform } from 'layerchart';
 	import country from '$lib/data/india_ls_seats_545.json';
@@ -7,12 +15,63 @@
 	import TransformControls from './TransformControls.svelte';
 	import { selectedConstituency } from '$lib/store';
 	import { setConstituency, slugify } from '$lib/utils';
+	import data from '$lib/data/data.json';
+	import ToggleMap from './ToggleMap.svelte';
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 
 	let transform = Transform;
 
-	$: console.log($selectedConstituency);
+	let category = {
+		all: {
+			key: 'all',
+			type: 'all',
+			label: 'All'
+		},
+		assets: {
+			key: 'total_assets',
+			label: 'Total Assets',
+			type: 'number',
+			scheme: schemePurples[5]
+		},
+		criminalCases: {
+			key: 'criminal_cases',
+			type: 'number',
+			label: 'Criminal Cases',
+			scheme: schemeGreens[5]
+		},
+		attendance: {
+			key: 'attendance',
+			type: 'number',
+			label: 'Attendance',
+			scheme: schemePuRd[5]
+		},
+		education: {
+			key: 'education_x',
+			type: 'categorical',
+			label: 'Education',
+			scheme: schemeObservable10
+		}
+	};
+	let selectedCategory = category.all;
+	let numericColorScale, categoricalColorScale;
+
+	$: if (selectedCategory.key != 'all') {
+		numericColorScale = scaleQuantile()
+			.domain(data.map((d) => d[selectedCategory.key]))
+			.range(selectedCategory.scheme);
+
+		categoricalColorScale = scaleOrdinal()
+			.domain(data.map((d) => d[selectedCategory.key]))
+			.range(selectedCategory.scheme);
+	}
+
+	$: colorScale =
+		selectedCategory.type === 'all'
+			? null
+			: selectedCategory.type === 'number'
+				? numericColorScale
+				: categoricalColorScale;
 </script>
 
 <main
@@ -21,6 +80,7 @@
 	<div class=" absolute top-2 right-2">
 		<TransformControls {transform} />
 	</div>
+
 	<Chart
 		geo={{
 			projection: geoMercator,
@@ -43,11 +103,21 @@
 							on:mousemove={() => (hovered = feature)}
 							on:mouseleave={() => (hovered = null)}
 							geojson={feature}
-							class=" fill-surface-200 hover:cursor-pointer stroke-neutral-50 stroke-[0.1px]  
-                            {$selectedConstituency &&
+							fill={colorScale
+								? colorScale(
+										data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name)[
+											selectedCategory.key
+										]
+									)
+								: '#ECEFF4'}
+							style="fill-opacity:0.5"
+							class="{$selectedConstituency &&
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
-								? 'fill-neutral-50'
-								: 'fill-surface-200'} 
+								? 'fill-neutral-900'
+								: ''} hover:cursor-pointer 
+                                {colorScale ? 'stroke-neutral-800' : 'stroke-neutral-50'}
+                                stroke-[0.2px]  
+                            
                             hover:fill-neutral-50"
 						/>
 					{/each}
@@ -73,3 +143,5 @@
 		</Svg>
 	</Chart>
 </main>
+
+<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
