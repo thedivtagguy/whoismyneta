@@ -1,7 +1,8 @@
 <script>
 	import data from '$lib/data/data.json';
 	import Typeahead from 'svelte-typeahead';
-	import { SelectField } from 'svelte-ux';
+	import { Button } from 'svelte-ux';
+	import { mdiFilterRemove } from '@mdi/js';
 	import { slugify, setConstituency, setCandidate } from '$lib/utils';
 	import { selectedCandidate, selectedConstituency, searchMode } from '$lib/store';
 
@@ -44,7 +45,9 @@
 	}
 </script>
 
-<div class="search-container border-neutral-100 border-[1px] mb-4 w-full mx-auto shadow-sm">
+<div
+	class="search-container flex justify-center items-center border-neutral-100 border-[1px] mb-4 w-full mx-auto shadow-sm"
+>
 	<Typeahead
 		label={searchType === 'location'
 			? 'Search for your constituency or a candidate'
@@ -65,6 +68,14 @@
 		data={searchIndex}
 		showDropdownOnFocus={true}
 	/>
+	<div class="pl-4 pt-7">
+		<Button
+			on:click={() =>
+				// clear the store
+				($selectedConstituency = {})}
+			icon={mdiFilterRemove}
+		/>
+	</div>
 </div>
 
 <style>
