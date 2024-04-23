@@ -2,7 +2,7 @@
 	import { Chart, Svg, Group, Arc, Text, LinearGradient } from 'layerchart';
 	import { SpringValue, cls } from 'svelte-ux';
 
-	export let value = 75;
+	export let value;
 	let segments = 50;
 
 	$: fillColor =
@@ -27,13 +27,23 @@
 							padAngle={0.01}
 							class={cls((segmentIndex / segments) * 100 < value ? fillColor : 'fill-gray-300')}
 						>
-							<Text
-								value={Math.round(value) + '%'}
-								textAnchor="middle"
-								verticalAnchor="middle"
-								dy={1}
-								class="text-3xl tabular-nums fill-primary-800"
-							/>
+							{#if value}
+								<Text
+									value={Math.round(value) + '%'}
+									textAnchor="middle"
+									verticalAnchor="middle"
+									dy={1}
+									class="text-3xl tabular-nums fill-primary-800"
+								/>
+							{:else}
+								<Text
+									value="Not available"
+									textAnchor="middle"
+									verticalAnchor="middle"
+									dy={1}
+									class="text-sm font-light fill-primary-300"
+								/>
+							{/if}
 						</Arc>
 					</SpringValue>
 				{/each}

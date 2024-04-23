@@ -1,5 +1,4 @@
 <script>
-	import data from '$lib/data/data.json';
 	import { formatRupee } from '$lib/utils';
 	import AssetsHistogram from './AssetsHistogram.svelte';
 	export let criminalCases = 0;
@@ -9,21 +8,20 @@
 
 <div class="flex my-2 flex-row justify-start items-start gap-2">
 	<div class="flex flex-col w-1/2 gap-1">
-		<span class="font-bold">Assets</span>
+		<span class="font-bold">Declared Assets</span>
 		<div class="inline-flex justify-between items-start">
 			<span class=" text-2xl">{formatRupee(assets)}</span>
 		</div>
 	</div>
 
 	<div class="flex flex-col gap-1">
-		<p class="text-lg">
-			<span class="text-xl block font-bold">{criminalCases}</span>
-
+		<p class="text-md font-bold">
 			{Number(criminalCases) === 0
 				? 'Criminal Cases'
 				: criminalCases > 1
 					? 'Criminal Cases'
 					: 'Criminal Case'}
+			<span class="text-xl block font-medium">{criminalCases}</span>
 		</p>
 	</div>
 </div>
