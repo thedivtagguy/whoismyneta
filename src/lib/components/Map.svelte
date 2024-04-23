@@ -44,7 +44,8 @@
 			type: 'number',
 			scheme: schemeOrRd[5],
 			color: 'bg-orangePrimary',
-			text: 'white'
+			text: 'white',
+      format: d => "₹" + (parseInt(d / 10000000, 10)) + " crore"
 		},
 		criminalCases: {
 			key: 'criminal_cases',
@@ -60,7 +61,8 @@
 			label: 'Attendance',
 			scheme: schemeGreens[5],
 			color: 'bg-sagePrimary',
-			text: 'white'
+			text: 'white',
+      format: d => parseInt(d, 10) + "%"
 		},
 		education: {
 			key: 'education_x',
@@ -90,10 +92,6 @@
 			: selectedCategory.type === 'number'
 				? numericColorScale
 				: categoricalColorScale;
-
-	const formatCurrency = () => {
-		return format(IN.format('$,'));
-	};
 
 	$: console.log(selectedCategory);
 </script>
@@ -139,7 +137,13 @@
 					</div>
 				</Legend>
 			{:else if selectedCategory.type === 'number'}
-				<Legend scale={colorScale} tickFormat={formatCurrency()} title={selectedCategory.label} />
+				<Legend
+          scale={colorScale}
+					let:values
+					let:scale
+          tickFormat={selectedCategory.format}
+          title={selectedCategory.label} 
+        />
 			{/if}
 		</div>
 		<Svg>
