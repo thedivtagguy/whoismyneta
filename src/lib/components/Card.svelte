@@ -9,6 +9,7 @@
 	import AttendanceMarker from './AttendanceMarker.svelte';
 	import AssetsCriminalCases from './AssetsCriminalCases.svelte';
 	import { partyColors } from '$lib/colors';
+	import Button from './Button.svelte';
 
 	$: results = $selectedConstituency;
 </script>
@@ -16,20 +17,24 @@
 {#if results && Object.keys(results).length > 0}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
-		class="px-6 py-4 h-full rounded-md w-full bg-surface-200 flex flex-col justify-between"
+		class="px-6 py-4 relative h-full rounded-md w-full bg-surface-200 flex flex-col justify-between"
 	>
+		<span
+			style:background-color={partyColors[results.party_x].backgroundColor
+				? partyColors[results.party_x].backgroundColor
+				: partyColors['IND'].backgroundColor}
+			style:color={partyColors[results.party_x].textColor
+				? partyColors[results.party_x].textColor
+				: partyColors['IND'].textColor}
+			class="absolute font-bold top-[3%] right-[3%] px-2 font-mono text-sm rounded-md inline-flex text-neutral-500"
+		>
+			{results.party_x}</span
+		>
 		<div>
 			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
 				<div class="inline-flex items-end justify-between">
 					<h2 class="w-full text-pretty font-bold text-4xl">
 						{results.candidate}
-						<span
-							style:background-color={partyColors[results.party_x].backgroundColor}
-							style:color={partyColors[results.party_x].textColor}
-							class=" px-2 font-mono text-sm rounded-md inline-flex text-neutral-500"
-						>
-							{results.party_x}</span
-						>
 					</h2>
 				</div>
 				<div class="inline-flex gap-2 justify-start items-center">
@@ -67,14 +72,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-end w-full items-center align-bottom">
-			<span class="text-base-content font-medium text-xs">Share</span><CopyButton
-				value={$page.url.href}
-				color="#f2f2f2"
-				variant="fill"
-				size="md"
-			/>
+		<div class="flex justify-between w-full items-center align-bottom">
+			<span class="text-base-content font-medium text-xs"
+				>Share <CopyButton value={$page.url.href} color="#f2f2f2" variant="fill" size="md" /></span
+			>
+			<div class="align-start"><Button /></div>
 		</div>
+	</section>
+{:else if Object.keys($selectedConstituency).length === 0}
+	<section
+		in:fade={{ duration: 300, easing: cubicInOut }}
+		class="px-6 py-4 h-full rounded-md w-full bg-surface-200 flex flex-col justify-center items-center"
+	>
+		<p class="text-neutral-500 text-lg">Select a constituency to view details</p>
 	</section>
 {:else if results && Object.keys(results).length === 0}
 	<section

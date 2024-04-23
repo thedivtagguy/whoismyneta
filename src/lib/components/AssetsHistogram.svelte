@@ -57,19 +57,11 @@
 			{/each}
 		</g>
 
-		<rect
-			y={center - height / 2}
-			x={xScale(max)}
-			width={xScale(outliers[0].total_assets) - xScale(max)}
-			{height}
-			class="fill-warning-500 stroke-warning-500"
-		/>
-
 		<circle
 			cx={xScale(assets) >= 470 ? 320 : xScale(assets)}
 			cy={center + 13}
 			r={3}
-			class="fill-info-500"
+			class="fill-info-500 marker"
 		/>
 
 		<line
@@ -77,13 +69,13 @@
 			y2={center + height / 2}
 			x1={xScale(assets) >= 470 ? 320 : xScale(assets)}
 			x2={xScale(assets) >= 470 ? 320 : xScale(assets)}
-			class="stroke-info-500 stroke-2"
+			class="stroke-info-500 marker stroke-2"
 		/>
 		<text
 			y={center + 28}
 			alignment-baseline="middle"
 			text-anchor="middle"
-			class="text-xs text-neutral-500"
+			class="text-xs marker text-neutral-500"
 		>
 			<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="0.2em">
 				{assets < q1 ? 'Lower' : assets < median ? 'Average' : assets < q3 ? 'Upper' : 'Top'} wealth
@@ -92,3 +84,9 @@
 		</text>
 	</svg>
 </div>
+
+<style>
+	.marker {
+		transition: all 0.3s ease-in-out;
+	}
+</style>

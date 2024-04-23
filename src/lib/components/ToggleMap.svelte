@@ -14,12 +14,17 @@
 
 	$: selected = optionsArray.find((option) => option.value === selectedStr);
 	$: dispatch('change', selected);
-
-	$: console.log(optionsArray);
 </script>
 
-<div class="inline-grid mt-2 gap-2">
-	<ToggleGroup gap {variant} bind:value={selectedStr}>
+<div class=" mt-2">
+	<ToggleGroup
+		classes={{
+			root: 'grid grid-flow-col overflow-hidden'
+		}}
+		gap
+		{variant}
+		bind:value={selectedStr}
+	>
 		{#each optionsArray as option}
 			<ToggleOption
 				classes={{

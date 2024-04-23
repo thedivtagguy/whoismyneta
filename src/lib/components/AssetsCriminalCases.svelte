@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex py-4 border-b-[1px] border-neutral-100/50 flex-row justify-start items-start gap-2"
+	class="flex py-4 border-b-[1px] border-neutral-100/50 flex-col-reverse md:flex-row justify-start items-start gap-2"
 >
 	<div class="flex flex-col w-1/2 gap-1">
 		<span class="font-bold">Declared Assets</span>
