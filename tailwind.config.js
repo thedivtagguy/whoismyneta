@@ -9,7 +9,20 @@ export default {
 		'./node_modules/svelte-ux/**/*.{svelte,js}'
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				serif: ['LibreCaslonCondensed', 'serif']
+			},
+			colors: {
+				yellowPrimary: '#E8C85A',
+				orangePrimary: '#E8845A',
+				bluePrimary: '#4D80E6',
+				greenPrimary: '#92DE86',
+				sagePrimary: '#949B80',
+				redPrimary: '#B56666',
+				purplePrimary: '#4F4E8D'
+			}
+		}
 	},
 
 	ux: {
@@ -26,7 +39,14 @@ export default {
 				danger: 'hsl(354.2553 42.3423% 56.4706%)',
 				'surface-100': 'hsl(217.5 26.6667% 94.1176%)',
 				'surface-200': 'hsl(218.1818 26.8293% 91.9608%)',
-				'surface-300': 'hsl(218.8235 27.8689% 88.0392%)'
+				'surface-300': 'hsl(218.8235 27.8689% 88.0392%)',
+				yellow: '#E8C85A',
+				orange: '#E8845A',
+				blue: '#4D80E6',
+				green: '#92DE86',
+				sage: '#949B80',
+				red: '#B56666',
+				purple: '#4F4E8D'
 			}
 		}
 	},

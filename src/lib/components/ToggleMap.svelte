@@ -9,17 +9,25 @@
 
 	// make options array from object
 	let optionsArray = Object.keys(options).map((key) => {
-		return { value: key, label: options[key] };
+		return { value: key, label: options[key], color: options[key].color, text: options[key].text };
 	});
 
 	$: selected = optionsArray.find((option) => option.value === selectedStr);
 	$: dispatch('change', selected);
+
+	$: console.log(optionsArray);
 </script>
 
 <div class="inline-grid mt-2 gap-2">
 	<ToggleGroup gap {variant} bind:value={selectedStr}>
 		{#each optionsArray as option}
-			<ToggleOption value={option.value}>
+			<ToggleOption
+				classes={{
+					root: `${option.color} hover:text-black important text-${option.text}`,
+					option: `bg-${option.color} text-${option.text}`
+				}}
+				value={option.value}
+			>
 				{option.label.label}</ToggleOption
 			>
 		{/each}

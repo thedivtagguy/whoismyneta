@@ -8,6 +8,7 @@
 	import { formatAge, formatRupee } from '$lib/utils';
 	import AttendanceMarker from './AttendanceMarker.svelte';
 	import AssetsCriminalCases from './AssetsCriminalCases.svelte';
+	import { partyColors } from '$lib/colors';
 
 	$: results = $searchMode === 'location' ? $selectedConstituency : $selectedCandidate;
 </script>
@@ -22,7 +23,13 @@
 					<div class="inline-flex items-end justify-between">
 						<h2 class="w-full text-pretty font-bold text-4xl">
 							{results.candidate}
-							<span class="  inline-flex text-lg text-neutral-500"> {results.party_x}</span>
+							<span
+								style:background-color={partyColors[results.party_x].backgroundColor}
+								style:color={partyColors[results.party_x].textColor}
+								class=" px-2 font-mono text-sm rounded-md inline-flex text-neutral-500"
+							>
+								{results.party_x}</span
+							>
 						</h2>
 					</div>
 					<div class="inline-flex gap-2 justify-start items-center">

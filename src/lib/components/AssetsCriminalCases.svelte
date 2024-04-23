@@ -6,7 +6,9 @@
 	criminalCases = Number(criminalCases);
 </script>
 
-<div class="flex my-2 flex-row justify-start items-start gap-2">
+<div
+	class="flex py-4 border-b-[1px] border-neutral-100/50 flex-row justify-start items-start gap-2"
+>
 	<div class="flex flex-col w-1/2 gap-1">
 		<span class="font-bold">Declared Assets</span>
 		<div class="inline-flex justify-between items-start">

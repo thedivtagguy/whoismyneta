@@ -24,11 +24,9 @@
 	$: svgWidth = width ? width.clientWidth : 80;
 	// get outliers beyond the max
 	let outliers = sortedData.filter((d) => Number(d.total_assets) > max);
-
-	$: console.log(xScale(assets));
 </script>
 
-<div bind:this={width} class="w-full">
+<div bind:this={width} class="w-full py-4">
 	<span class="font-bold">Relative wealth</span>
 	<svg width={svgWidth} class="w-full h-[85px]">
 		<line y1={center} y2={center} x1={xScale(min)} x2={xScale(max)} class=" stroke-neutral-500" />

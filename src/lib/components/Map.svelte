@@ -6,10 +6,12 @@
 		schemePurples,
 		schemeGreens,
 		schemePuRd,
-		schemeObservable10
+		schemeObservable10,
+		format,
+		formatLocale
 	} from 'd3';
 	import { feature } from 'topojson-client';
-	import { Chart, GeoPoint, Svg, GeoPath, Text, Transform } from 'layerchart';
+	import { Chart, Legend, Svg, GeoPath, Text, Transform } from 'layerchart';
 	import country from '$lib/data/india_ls_seats_545.json';
 	import { cubicOut } from 'svelte/easing';
 	import TransformControls from './TransformControls.svelte';
@@ -22,36 +24,58 @@
 
 	let transform = Transform;
 
+	let IN = formatLocale({
+		decimal: '.',
+		thousands: ',',
+		grouping: [3],
+		currency: ['₹', '']
+	});
 	let category = {
 		all: {
 			key: 'all',
 			type: 'all',
-			label: 'All'
+			label: 'All',
+			color: 'bg-surface-100',
+			text: 'black'
 		},
 		assets: {
 			key: 'total_assets',
-			label: 'Total Assets',
+			label: 'Declared Assets',
 			type: 'number',
-			scheme: schemePurples[5]
+			scheme: schemePurples[5],
+			color: 'bg-orangePrimary',
+			text: 'white'
 		},
 		criminalCases: {
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeGreens[5]
+			scheme: schemeGreens[5],
+			color: 'bg-bluePrimary',
+			text: 'white'
 		},
 		attendance: {
 			key: 'attendance',
 			type: 'number',
 			label: 'Attendance',
-			scheme: schemePuRd[5]
+			scheme: schemePuRd[5],
+			color: 'bg-sagePrimary',
+			text: 'white'
 		},
 		education: {
 			key: 'education_x',
 			type: 'categorical',
 			label: 'Education',
-			scheme: schemeObservable10
+			scheme: schemeObservable10,
+			color: 'bg-yellowPrimary',
+			text: 'black'
 		}
+		// party: {
+		//	key: 'party_x',
+		//	type: 'categorical',
+		//	label: 'Party',
+		//	scheme: schemeObservable10
+		// }
 	};
 	let selectedCategory = category.all;
 	let numericColorScale, categoricalColorScale;
@@ -72,6 +96,10 @@
 			: selectedCategory.type === 'number'
 				? numericColorScale
 				: categoricalColorScale;
+
+	const formatCurrency = () => {
+		return format(IN.format('$,'));
+	};
 </script>
 
 <main
@@ -87,6 +115,33 @@
 			fitGeojson: states
 		}}
 	>
+		{#if selectedCategory.type === 'categorical'}
+			<Legend
+				scale={colorScale}
+				let:values
+				let:scale
+				classes={{
+					root: 'bg-white'
+				}}
+				title={selectedCategory.label}
+			>
+				<div class="flex bg-white flex-col gap-1">
+					{#each values as value}
+						{#if value !== undefined}
+							{@const scaledValue = selectedCategory.valueScale
+								? selectedCategory.valueScale[value]
+								: value}
+							<div class="flex items-center gap-1">
+								<div class="size-2 rounded-full" style:background-color={scale(scaledValue)} />
+								<div class="text-xs text-surface-content/50">{value}</div>
+							</div>
+						{/if}
+					{/each}
+				</div>
+			</Legend>
+		{:else if selectedCategory.type === 'number'}
+			<Legend scale={colorScale} tickFormat={formatCurrency()} title={selectedCategory.label} />
+		{/if}
 		<Svg>
 			<Transform
 				bind:this={transform}

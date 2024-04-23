@@ -19,7 +19,6 @@ export function slugify(str) {
 }
 
 export function setConstituency(constituency = '') {
-	console.log('setConstituency', constituency);
 	const constituencyData = data.find(
 		(constituencyData) => slugify(constituencyData.ls_seat_name) === constituency
 	);
