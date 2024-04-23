@@ -94,14 +94,11 @@
 	const formatCurrency = () => {
 		return format(IN.format('$,'));
 	};
+
+	$: console.log(selectedCategory);
 </script>
 
-<ToggleMap
-	on:change={(e) => {
-		selectedCategory = category[e.detail.value];
-	}}
-	options={category}
-/>
+<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
 
 <main
 	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[650px] w-full max-w-[900px]"
@@ -116,33 +113,35 @@
 			fitGeojson: states
 		}}
 	>
-		{#if selectedCategory.type === 'categorical'}
-			<Legend
-				scale={colorScale}
-				let:values
-				let:scale
-				classes={{
-					root: 'bg-white'
-				}}
-				title={selectedCategory.label}
-			>
-				<div class="flex flex-col gap-1 bg-white">
-					{#each values as value}
-						{#if value !== undefined}
-							{@const scaledValue = selectedCategory.valueScale
-								? selectedCategory.valueScale[value]
-								: value}
-							<div class="flex items-center gap-1">
-								<div class="rounded-full size-2" style:background-color={scale(scaledValue)} />
-								<div class="text-xs text-surface-content/50">{value}</div>
-							</div>
-						{/if}
-					{/each}
-				</div>
-			</Legend>
-		{:else if selectedCategory.type === 'number'}
-			<Legend scale={colorScale} tickFormat={formatCurrency()} title={selectedCategory.label} />
-		{/if}
+		<div class="bg-white z-[1000]">
+			{#if selectedCategory.type === 'categorical'}
+				<Legend
+					scale={colorScale}
+					let:values
+					let:scale
+					classes={{
+						root: 'bg-white z-[9000]'
+					}}
+					title={selectedCategory.label}
+				>
+					<div class="flex flex-col gap-1 bg-white">
+						{#each values as value}
+							{#if value !== undefined}
+								{@const scaledValue = selectedCategory.valueScale
+									? selectedCategory.valueScale[value]
+									: value}
+								<div class="flex items-center gap-1">
+									<div class="rounded-full size-2" style:background-color={scale(scaledValue)} />
+									<div class="text-xs text-surface-content/50">{value}</div>
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</Legend>
+			{:else if selectedCategory.type === 'number'}
+				<Legend scale={colorScale} tickFormat={formatCurrency()} title={selectedCategory.label} />
+			{/if}
+		</div>
 		<Svg>
 			<Transform
 				scroll="scale"
@@ -157,8 +156,9 @@
 						<GeoPath
 							on:click={(e) => {
 								const { geoPath, event } = e.detail;
-								let [[left, top], [right, bottom]] = geoPath.bounds(feature);
 
+								let [[left, top], [right, bottom]] = geoPath.bounds(feature);
+								selectedCategory = category.all;
 								setConstituency(feature.properties.ls_seat_name);
 								let width = right - left;
 								let height = bottom - top;

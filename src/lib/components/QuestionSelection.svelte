@@ -2,12 +2,14 @@
 	import { Button, scrollIntoView } from 'svelte-ux';
 	import { scrollShadow } from 'svelte-ux';
 	import { questions } from './questions';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
 	import data from '$lib/data/data.json';
 
 	export let candidate = 'Dharambir Singh';
 
 	let candidateData = data.find((d) => d.candidate === candidate);
-	console.log(candidateData);
 
 	// find the questions that the candidate answered
 	//
@@ -15,13 +17,16 @@
 		(key) => questions[key] !== undefined
 	);
 
-	console.log(questionsInCandidateData);
-
 	let questionsArray = Object.keys(questions).map((key) => {
 		return { value: key, label: questions[key] };
 	});
 
 	let selectedQuestion = questionsArray[0];
+
+	$: dispatch('change', {
+		selectedQuestion,
+		candidateData
+	});
 </script>
 
 <span class="mb-2 font-bold">Questions raised <br /> in parliament about...</span>
