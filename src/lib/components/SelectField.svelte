@@ -17,14 +17,23 @@
 	const searchConstituency = data.map((item) => {
 		return {
 			id: slugify(item.ls_seat_name),
-			text: `${item.ls_seat_name} | ${item.state_ut_name}`
+			text: `${item.ls_seat_name}, ${item.state_ut_name} | <span class="text-xs">
+                    ${item.candidate}
+                </span>`
 		};
 	});
 
 	let searchIndex = [];
 	$: searchIndex = searchType === 'people' ? searchPeople : searchConstituency;
 
-	const extract = (option) => option.text;
+	const extract = (option) => {
+		// take text out of html tags
+		// and remove empty spaces
+		return option.text
+			.replace(/<[^>]*>?/gm, '')
+			.replace(/\s+/g, ' ')
+			.trim();
+	};
 
 	function handleSelect(detail) {
 		if (searchType === 'location') {
@@ -37,7 +46,9 @@
 
 <div class="search-container border-neutral-100 border-[1px] mb-4 w-full mx-auto shadow-sm">
 	<Typeahead
-		label={searchType === 'location' ? 'Search for your constituency' : 'Search for a candidate'}
+		label={searchType === 'location'
+			? 'Search for your constituency or a candidate'
+			: 'Search for a candidate'}
 		value={searchType === 'location' && $selectedConstituency.ls_seat_name
 			? $selectedConstituency.ls_seat_name
 			: ''}

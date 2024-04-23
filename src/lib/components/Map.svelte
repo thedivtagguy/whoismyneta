@@ -3,10 +3,10 @@
 		geoMercator,
 		scaleQuantile,
 		scaleOrdinal,
-		schemePurples,
+		schemeOrRd,
+		schemeBlues,
 		schemeGreens,
-		schemePuRd,
-		schemeObservable10,
+		schemeTableau10,
 		format,
 		formatLocale
 	} from 'd3';
@@ -42,7 +42,7 @@
 			key: 'total_assets',
 			label: 'Declared Assets',
 			type: 'number',
-			scheme: schemePurples[5],
+			scheme: schemeOrRd[5],
 			color: 'bg-orangePrimary',
 			text: 'white'
 		},
@@ -50,7 +50,7 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeGreens[5],
+			scheme: schemeBlues[5],
 			color: 'bg-bluePrimary',
 			text: 'white'
 		},
@@ -58,7 +58,7 @@
 			key: 'attendance',
 			type: 'number',
 			label: 'Attendance',
-			scheme: schemePuRd[5],
+			scheme: schemeGreens[5],
 			color: 'bg-sagePrimary',
 			text: 'white'
 		},
@@ -66,7 +66,7 @@
 			key: 'education_x',
 			type: 'categorical',
 			label: 'Education',
-			scheme: schemeObservable10,
+			scheme: schemeTableau10,
 			color: 'bg-yellowPrimary',
 			text: 'black'
 		}
@@ -74,7 +74,7 @@
 		//	key: 'party_x',
 		//	type: 'categorical',
 		//	label: 'Party',
-		//	scheme: schemeObservable10
+		//	scheme: schemeTableau10
 		// }
 	};
 	let selectedCategory = category.all;
@@ -165,7 +165,7 @@
 										]
 									)
 								: '#ECEFF4'}
-							style="fill-opacity:0.5"
+							style="fill-opacity:0.8"
 							class="{$selectedConstituency &&
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-900'
