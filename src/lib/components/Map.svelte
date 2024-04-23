@@ -1,7 +1,7 @@
 <script>
 	import { geoMercator } from 'd3';
 	import { feature } from 'topojson-client';
-	import { Chart, Svg, GeoPath, Text, Transform } from 'layerchart';
+	import { Chart, GeoPoint, Svg, GeoPath, Text, Transform } from 'layerchart';
 	import country from '$lib/data/india_ls_seats_545.json';
 	import { cubicOut } from 'svelte/easing';
 	import TransformControls from './TransformControls.svelte';
@@ -11,6 +11,8 @@
 	const states = feature(country, country.objects.india_ls_seats_545);
 
 	let transform = Transform;
+
+	$: console.log($selectedConstituency);
 </script>
 
 <main
@@ -43,8 +45,7 @@
 							geojson={feature}
 							class=" fill-surface-200 hover:cursor-pointer stroke-neutral-50 stroke-[0.1px]  
                             {$selectedConstituency &&
-							$selectedConstituency.ls_seat_name != null &&
-							$selectedConstituency.ls_seat_name === slugify(feature.properties.ls_seat_name)
+							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-50'
 								: 'fill-surface-200'} 
                             hover:fill-neutral-50"
@@ -55,14 +56,14 @@
 					{#each states.features as feature}
 						<GeoPath geojson={feature} let:geoPath>
 							{@const [x, y] = geoPath.centroid(feature)}
-							{#if $selectedConstituency.ls_seat_name === slugify(feature.properties.ls_seat_name)}
+							{#if $selectedConstituency && $selectedConstituency.ls_seat_name === feature.properties.ls_seat_name}
 								<Text
 									{x}
-									y={y - 10}
+									y={y - 20}
 									value={feature.properties.ls_seat_name}
 									textAnchor="middle"
 									verticalAnchor="start"
-									class="text-[14px] stroke-surface-100 [stroke-width:1px]"
+									class="text-[14px] stroke-surface-100 stroke-[2px] shadow-md"
 								/>
 							{/if}
 						</GeoPath>
