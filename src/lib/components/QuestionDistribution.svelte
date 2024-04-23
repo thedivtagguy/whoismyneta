@@ -9,6 +9,7 @@
 		Axis,
 		Bars,
 		Highlight,
+		Bar,
 		Tooltip,
 		TooltipItem
 	} from 'layerchart';
@@ -30,15 +31,16 @@
 		.thresholds(thresholds)
 		.value((d) => d.questions)(questionData);
 
-	$: console.log(binQuestions);
-
 	// get candidates value
 	$: questionValue =
 		binQuestions.flat().find((candidate) => candidate.candidate === candidate)?.questions ?? null;
 </script>
 
 <div>
-	<div class="p-4" style:height="{binQuestions.length * 20}px">
+	{#if binQuestions.length === 0}
+		<p>No data available</p>
+	{/if}
+	<div class="p-4" style:height="280px">
 		<Chart
 			data={binQuestions}
 			x="length"
@@ -52,7 +54,9 @@
 			<Svg>
 				<Axis placement="left" rule />
 				<Axis placement="bottom" grid rule />
-				<Bars radius={1} class="fill-neutral-100" />
+				{#each binQuestions as binQuestion, i}
+					<Bar bar={binQuestion} fill="#5C6578" />
+				{/each}
 				<Highlight area>
 					<svelte:fragment slot="area" let:area>
 						<RectClipPath x={0} y={questionValue} width={area.width} height={area.height} spring>

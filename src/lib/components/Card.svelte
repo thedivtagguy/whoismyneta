@@ -92,7 +92,7 @@
 		class="flex flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
 	>
 		<p class="text-lg text-neutral-500">Select a constituency to view details</p>
-		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-center">
+		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
 			Find out more about your constituency's representative, their declared assets, criminal cases,
 			and attendance in the Lok Sabha.
 		</p>
