@@ -9,7 +9,7 @@
 			<h1
 				class="px-2 py-4 text-2xl font-bold leading-tight text-left text-black md:text-left md:w-2/3 md:text-5xl"
 			>
-				Wondering how your constituency's neta is doing?
+				Wondering what your constituency's neta has done?
 			</h1>
 		</div>
 	</div>

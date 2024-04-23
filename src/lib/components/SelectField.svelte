@@ -52,8 +52,8 @@
 >
 	<Typeahead
 		label={searchType === 'location'
-			? 'Search for your constituency or a candidate'
-			: 'Search for a candidate'}
+			? 'Search for your constituency or an MP'
+			: 'Search for an MP'}
 		value={$selectedConstituency.ls_seat_name ? $selectedConstituency.ls_seat_name : ''}
 		{extract}
 		limit={5}
