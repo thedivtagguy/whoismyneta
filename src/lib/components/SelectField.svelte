@@ -88,7 +88,7 @@
 		font-size: 1rem;
 		line-height: 1.5;
 		color: #4a5568;
-
+		z-index: 1000;
 		background-clip: padding-box;
 		transition:
 			border-color 0.15s ease-in-out,
@@ -103,5 +103,9 @@
 
 	:global([data-svelte-typeahead] > label) {
 		font-weight: 800;
+	}
+
+	:global(.svelte-typeahead-list) {
+		z-index: 1000 !important;
 	}
 </style>

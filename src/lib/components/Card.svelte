@@ -13,6 +13,7 @@
 	import QuestionViz from './QuestionViz.svelte';
 
 	$: results = $selectedConstituency;
+	$: console.log(results);
 </script>
 
 {#if results && Object.keys(results).length > 0}
@@ -78,7 +79,12 @@
 			<span class="text-xs font-medium text-base-content"
 				>Share <CopyButton value={$page.url.href} color="#f2f2f2" variant="fill" size="md" /></span
 			>
-			<div class="align-start"><Button /></div>
+			<div class="align-start">
+				<Button
+					link={'https://www.myneta.info/LokSabha2019/candidate.php?candidate_id=' +
+						results.candidate_id}
+				/>
+			</div>
 		</div>
 	</section>
 {:else if Object.keys($selectedConstituency).length === 0}
