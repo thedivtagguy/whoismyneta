@@ -9,9 +9,9 @@
 	<a href="/lists">Lists</a>
 </nav> -->
 
-<main class=" max-w-6xl mx-auto md:py-8">
+<main class="h-screen flex flex-col w-full justify-center items-center max-w-6xl mx-auto md:py-8">
 	<Header />
-	<main class="md:px-0 px-2 py-2 md:flex-row flex flex-col justify-center items-center">
+	<main class="md:px-0 w-full px-2 py-2 md:flex-row flex flex-col justify-center items-center">
 		<slot></slot>
 	</main>
 </main>

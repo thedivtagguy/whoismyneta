@@ -8,7 +8,6 @@
 	$: searchType = $searchMode;
 
 	const searchPeople = data.map((item) => {
-		console.log(item);
 		return {
 			id: slugify(item.candidate),
 			text: `${item.candidate} | ${item.party_x}`

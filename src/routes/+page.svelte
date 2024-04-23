@@ -6,11 +6,11 @@
 </script>
 
 <section class=" flex flex-col md:flex-row w-full gap-6 justify-start">
-	<div class=" w-1/2 self-start">
+	<div class=" md:w-1/2 self-start">
 		<SelectField />
 		<Map />
 	</div>
-	<div class="w-1/2">
+	<div class="md:w-1/2">
 		<Card />
 	</div>
 </section>
