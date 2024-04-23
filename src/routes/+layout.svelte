@@ -1,13 +1,18 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
+	import Seo from '$lib/components/SEO.svelte';
 	import '../lib/styles.css';
+	import ShareCard from '$lib/assets/sharecard.jpg';
 </script>
 
-<!-- <nav>
-	<a href="/">Home</a>
-	<a href="/about">About</a>
-	<a href="/lists">Lists</a>
-</nav> -->
+<Seo
+	seoTitle="What's the neta in your constituency up to?"
+	seoDesc="Find out more about your constituency's representative, their declared assets, criminal cases, and attendance in the Lok Sabha."
+	keywords={['elections', 'india', 'constituency', 'neta', 'dashboard']}
+	siteName="What's your neta up to?"
+	twitter="thedivtagguy"
+	shareImg={ShareCard}
+/>
 
 <main
 	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl mx-auto mt-4 mb-4 md:mb-8"
