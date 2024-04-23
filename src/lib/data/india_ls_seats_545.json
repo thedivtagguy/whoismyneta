@@ -48695,7 +48695,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Uttar Pradesh",
-						"ls_seat_name": "Hamirpur",
+						"ls_seat_name": "Hamirpur (UP)",
 						"state_ut_code": "S24",
 						"ls_seat_code": "47",
 						"unique_id": "S24_47"
@@ -48937,7 +48937,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Bihar",
-						"ls_seat_name": "Aurangabad",
+						"ls_seat_name": "Aurangabad (BR)",
 						"state_ut_code": "S04",
 						"ls_seat_code": "37",
 						"unique_id": "S04_37"
@@ -51181,7 +51181,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Uttar Pradesh",
-						"ls_seat_name": "Maharajganj",
+						"ls_seat_name": "Maharajganj (UP)",
 						"state_ut_code": "S24",
 						"ls_seat_code": "63",
 						"unique_id": "S24_63"
@@ -51442,7 +51442,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Bihar",
-						"ls_seat_name": "Maharajganj",
+						"ls_seat_name": "Maharajganj (BR)",
 						"state_ut_code": "S04",
 						"ls_seat_code": "19",
 						"unique_id": "S04_19"
@@ -51819,7 +51819,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Maharashtra",
-						"ls_seat_name": "Aurangabad",
+						"ls_seat_name": "Aurangabad (MH)",
 						"state_ut_code": "S13",
 						"ls_seat_code": "19",
 						"unique_id": "S13_19"
@@ -52017,7 +52017,7 @@
 					"type": "Polygon",
 					"properties": {
 						"state_ut_name": "Himachal Pradesh",
-						"ls_seat_name": "Hamirpur",
+						"ls_seat_name": "Hamirpur (HP)",
 						"state_ut_code": "S08",
 						"ls_seat_code": "3",
 						"unique_id": "S08_3"
