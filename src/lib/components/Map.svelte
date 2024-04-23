@@ -70,19 +70,13 @@
 			color: 'bg-yellowPrimary',
 			text: 'black'
 		}
-		// party: {
-		//	key: 'party_x',
-		//	type: 'categorical',
-		//	label: 'Party',
-		//	scheme: schemeTableau10
-		// }
 	};
 	let selectedCategory = category.all;
 	let numericColorScale, categoricalColorScale;
 
 	$: if (selectedCategory.key != 'all') {
 		numericColorScale = scaleQuantile()
-			.domain(data.map((d) => d[selectedCategory.key]))
+			.domain(data.map((d) => Number(d[selectedCategory.key])))
 			.range(selectedCategory.scheme);
 
 		categoricalColorScale = scaleOrdinal()
@@ -102,7 +96,12 @@
 	};
 </script>
 
-<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
+<ToggleMap
+	on:change={(e) => {
+		selectedCategory = category[e.detail.value];
+	}}
+	options={category}
+/>
 
 <main
 	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[650px] w-full max-w-[900px]"
@@ -156,7 +155,18 @@
 				<g class="states">
 					{#each states.features as feature}
 						<GeoPath
-							on:click={() => setConstituency(feature.properties.ls_seat_name)}
+							on:click={(e) => {
+								const { geoPath, event } = e.detail;
+								let [[left, top], [right, bottom]] = geoPath.bounds(feature);
+
+								setConstituency(feature.properties.ls_seat_name);
+								let width = right - left;
+								let height = bottom - top;
+								let x = (left + right) / 2;
+								let y = (top + bottom) / 2;
+								const padding = 80;
+								zoomTo({ x, y }, { width: width + padding, height: height + padding });
+							}}
 							on:mousemove={() => (hovered = feature)}
 							on:mouseleave={() => (hovered = null)}
 							geojson={feature}
@@ -187,11 +197,12 @@
 							{#if $selectedConstituency && $selectedConstituency.ls_seat_name === feature.properties.ls_seat_name}
 								<Text
 									{x}
+									scaleToFit
 									y={y - 20}
 									value={feature.properties.ls_seat_name}
 									textAnchor="middle"
 									verticalAnchor="start"
-									class="text-[14px] stroke-surface-100 stroke-[2px] shadow-md"
+									class=" stroke-surface-100 font-serif  text-[5px] stroke-[2px] shadow-md"
 								/>
 							{/if}
 						</GeoPath>

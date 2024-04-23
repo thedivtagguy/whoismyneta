@@ -2,7 +2,16 @@
 	import data from '$lib/data/data.json';
 	import { questions } from './questions';
 	import { scaleLinear, bin as d3bin, scaleBand, bin } from 'd3';
-	import { Chart, Svg, Axis, Bars, Highlight, Tooltip, TooltipItem } from 'layerchart';
+	import {
+		Chart,
+		Svg,
+		RectClipPath,
+		Axis,
+		Bars,
+		Highlight,
+		Tooltip,
+		TooltipItem
+	} from 'layerchart';
 	export let questionKey = 'environment_forest_and_climate_change';
 	export let candidate = 'Dharambir Singh';
 
@@ -22,6 +31,10 @@
 		.value((d) => d.questions)(questionData);
 
 	$: console.log(binQuestions);
+
+	// get candidates value
+	$: questionValue =
+		binQuestions.flat().find((candidate) => candidate.candidate === candidate)?.questions ?? null;
 </script>
 
 <div>
@@ -40,7 +53,13 @@
 				<Axis placement="left" rule />
 				<Axis placement="bottom" grid rule />
 				<Bars radius={1} class="fill-neutral-100" />
-				<Highlight area />
+				<Highlight area>
+					<svelte:fragment slot="area" let:area>
+						<RectClipPath x={0} y={questionValue} width={area.width} height={area.height} spring>
+							<Bars radius={4} strokeWidth={1} class="fill-primary" />
+						</RectClipPath>
+					</svelte:fragment>
+				</Highlight>
 			</Svg>
 		</Chart>
 	</div>

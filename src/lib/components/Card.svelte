@@ -13,7 +13,6 @@
 	import QuestionViz from './QuestionViz.svelte';
 
 	$: results = $selectedConstituency;
-	$: console.log(results);
 </script>
 
 {#if results && Object.keys(results).length > 0}

@@ -36,7 +36,7 @@
 				reality.
 			</p>
 		</div>
-		<div class="pl-4 text-left md:w-1/2">
+		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/2">
 			<h3 class="text-sm font-semibold text-neutral-600">Data Sources</h3>
 
 			<ul
@@ -60,7 +60,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="pl-4 text-left md:w-1/4">
+		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/4">
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				Developed by <a href="https://twitter.com/thedivtagguy">Aman Bhargava</a>.
 				<br />

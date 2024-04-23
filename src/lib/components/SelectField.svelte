@@ -17,6 +17,7 @@
 	});
 
 	const searchConstituency = data.map((item) => {
+		if ($selectedConstituency === null) return;
 		return {
 			id: slugify(item.ls_seat_name),
 			text: `${item.ls_seat_name}, ${item.state_ut_name} | <span class="text-xs">
@@ -53,9 +54,7 @@
 		label={searchType === 'location'
 			? 'Search for your constituency or a candidate'
 			: 'Search for a candidate'}
-		value={searchType === 'location' && $selectedConstituency.ls_seat_name
-			? $selectedConstituency.ls_seat_name
-			: ''}
+		value={$selectedConstituency.ls_seat_name ? $selectedConstituency.ls_seat_name : ''}
 		{extract}
 		limit={5}
 		on:select={({ detail }) => handleSelect(detail)}

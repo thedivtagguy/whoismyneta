@@ -10,7 +10,7 @@
 </script>
 
 <div class="h-[175px] flex flex-col justify-center rounded p-4">
-	<span class="text-sm text-center mb-2 -mt-1 font-medium leading-6 text-gray-900">Attendance</span>
+	<span class="mb-2 -mt-1 text-sm font-medium leading-6 text-center text-gray-900">Attendance</span>
 	<Chart>
 		<Svg>
 			<Group center>
@@ -18,7 +18,7 @@
 					{@const segmentAngle = (2 * Math.PI) / segments}
 					{@const startAngle = segmentIndex * segmentAngle}
 					{@const endAngle = (segmentIndex + 1) * segmentAngle}
-					<SpringValue {value} let:value>
+					<SpringValue value={Number(value)} let:value>
 						<Arc
 							{startAngle}
 							{endAngle}

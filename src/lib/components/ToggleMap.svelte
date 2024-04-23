@@ -14,11 +14,11 @@
 	});
 
 	$: selected = optionsArray.find((option) => option.value === selectedStr);
-	$: if (reset) selectedStr = '';
+
 	$: dispatch('change', selected);
 </script>
 
-<div class=" mb-3">
+<div class="mb-3">
 	<ToggleGroup
 		classes={{
 			root: 'grid grid-flow-col overflow-hidden'
