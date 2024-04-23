@@ -102,8 +102,10 @@
 	};
 </script>
 
+<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
+
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[500px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[550px] w-full max-w-[900px]"
 >
 	<div class=" absolute top-2 right-2">
 		<TransformControls {transform} />
@@ -198,5 +200,3 @@
 		</Svg>
 	</Chart>
 </main>
-
-<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />

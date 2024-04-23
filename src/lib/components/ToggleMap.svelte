@@ -3,6 +3,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let options = {};
+	export let reset = false;
 	let selectedStr = '';
 	let variant = 'fill-surface';
 	const dispatch = createEventDispatcher();
@@ -13,10 +14,11 @@
 	});
 
 	$: selected = optionsArray.find((option) => option.value === selectedStr);
+	$: if (reset) selectedStr = '';
 	$: dispatch('change', selected);
 </script>
 
-<div class=" mt-2">
+<div class=" mb-3">
 	<ToggleGroup
 		classes={{
 			root: 'grid grid-flow-col overflow-hidden'
@@ -28,8 +30,8 @@
 		{#each optionsArray as option}
 			<ToggleOption
 				classes={{
-					root: `${option.color} hover:text-black important text-${option.text}`,
-					option: `bg-${option.color} text-${option.text}`
+					root: 'text-sm ',
+					indicator: `${option.color}`
 				}}
 				value={option.value}
 			>

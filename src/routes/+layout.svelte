@@ -13,15 +13,17 @@
 	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl mx-auto mt-4 mb-4 md:mb-8"
 >
 	<Header />
-	<main class="md:px-0 w-full px-2 py-2 md:flex-row flex flex-col justify-center items-center">
+	<main class="flex flex-col items-center justify-center w-full px-2 py-2 md:px-0 md:flex-row">
 		<slot></slot>
 	</main>
 </main>
-<footer class="bg-surface-100 mx-2 mb-8 px-4 py-4 max-w-6xl md:mx-auto">
-	<div class="flex divide-y-[1px] md:divide-x-[1px] justify-between md:flex-row flex-col">
-		<div class="md:w-1/2 md:pb-0 pb-4">
-			<h3 class=" font-semibold text-neutral-600 text-sm">Methodology</h3>
-			<p class="text-left max-w-lg pt-2 text-neutral-500 text-xs">
+<footer class="max-w-6xl px-4 py-4 mx-2 mb-8 bg-surface-100 md:mx-auto">
+	<div
+		class="flex divide-y-[1px] md:divide-y-0 md:divide-x-[1px] justify-between md:flex-row flex-col"
+	>
+		<div class="pb-4 pr-4 md:w-1/2 md:pb-0">
+			<h3 class="text-sm font-semibold text-neutral-600">Methodology</h3>
+			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. The data
 				was scraped from candidate affidavits filed during the runup to the 2024 general elections.
 				Sourced from MyNeta, an open data repository platform of Association for Democratic Reforms
@@ -29,11 +31,11 @@
 				reality.
 			</p>
 		</div>
-		<div class="text-right md:w-1/2">
-			<h3 class=" font-semibold text-neutral-600 text-sm">Data Sources</h3>
+		<div class="pl-4 text-left md:w-1/2">
+			<h3 class="text-sm font-semibold text-neutral-600">Data Sources</h3>
 
 			<ul
-				class=" align-bottom text-right list-outside max-w-[20rem] gap-2 flex flex-col pt-2 text-neutral-500 text-xs"
+				class=" align-bottom text-left list-outside max-w-[20rem] gap-2 flex flex-col pt-2 text-neutral-500 text-xs"
 			>
 				<li>
 					<a href="https://github.com/Vonter/india-election-affidavits"
@@ -52,6 +54,14 @@
 					>
 				</li>
 			</ul>
+		</div>
+		<div class="pl-4 text-left md:w-1/4">
+			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
+				Developed by <a href="https://twitter.com/thedivtagguy">Aman Bhargava</a>.
+				<br />
+				Data by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional inputs by
+				<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>
+			</p>
 		</div>
 	</div>
 </footer>

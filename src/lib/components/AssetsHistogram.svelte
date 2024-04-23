@@ -26,9 +26,9 @@
 	let outliers = sortedData.filter((d) => Number(d.total_assets) > max);
 </script>
 
-<div bind:this={width} class="w-full py-4">
+<div bind:this={width} class="w-full border-b-[1px] pt-4">
 	<span class="font-bold">Relative wealth</span>
-	<svg width={svgWidth} class="w-full h-[85px]">
+	<svg width={svgWidth} class="w-full h-[70px]">
 		<line y1={center} y2={center} x1={xScale(min)} x2={xScale(max)} class=" stroke-neutral-500" />
 
 		<rect
@@ -69,7 +69,7 @@
 			y2={center + height / 2}
 			x1={xScale(assets) >= 470 ? 320 : xScale(assets)}
 			x2={xScale(assets) >= 470 ? 320 : xScale(assets)}
-			class="stroke-info-500 marker stroke-2"
+			class="stroke-2 stroke-info-800 marker"
 		/>
 		<text
 			y={center + 28}
@@ -78,9 +78,9 @@
 			class="text-xs marker text-neutral-500"
 		>
 			<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="0.2em">
-				{assets < q1 ? 'Lower' : assets < median ? 'Average' : assets < q3 ? 'Upper' : 'Top'} wealth
-				range
+				{assets < q1 ? 'Lower' : assets < median ? 'Average' : assets < q3 ? 'Upper' : 'Top'}
 			</tspan>
+			<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="1.2em"> wealth range </tspan>
 		</text>
 	</svg>
 </div>
