@@ -18,6 +18,7 @@
 </script>
 
 {#if results && Object.keys(results).length > 0}
+	{@const baseURl = results.recontesting ? 'LokSabha2024' : 'LokSabha2019'}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
 		class="relative flex flex-col justify-between w-full h-full px-6 py-4 rounded-md bg-surface-200"
@@ -66,6 +67,7 @@
 						</dl>
 						<div class="flex border-b-[1px] border-neutral-100/50 w-full">
 							<AssetsCriminalCases
+								currentAssets={results?.end_total_assets}
 								assets={results.total_assets}
 								criminalCases={results.criminal_cases}
 							/>
@@ -76,7 +78,9 @@
 						<AttendanceMarker value={results.attendance} />
 					</div>
 				</div>
-				<AssetsHistogram assets={results.total_assets} />
+				<AssetsHistogram
+					assets={results.end_total_assets ? results.end_total_assets : results.total_assets}
+				/>
 				<QuestionViz />
 			</div>
 		</div>
@@ -88,7 +92,9 @@
 
 			<div class="align-start">
 				<Button
-					link={'https://www.myneta.info/LokSabha2019/candidate.php?candidate_id=' +
+					link={'https://www.myneta.info/' +
+						baseURl +
+						'/candidate.php?candidate_id=' +
 						results.candidate_id}
 				/>
 			</div>
