@@ -36,7 +36,7 @@
 	});
 </script>
 
-<span class="mb-2 font-bold">Questions raised <br /> in parliament about...</span>
+<span class="mb-2 font-bold">No. of questions raised <br /> in parliament about...</span>
 <div use:scrollShadow class="overflow-auto mt-2 w-full h-[12rem]">
 	{#each questionsInCandidateData as question}
 		{@const isSelected = selectedQuestion === question}

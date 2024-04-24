@@ -32,8 +32,13 @@
 				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. Election
 				affidavits filed by candidates during the 2019 general elections was scraped from MyNeta.
 				Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was scraped from
-				PRS India. Election affidavits are self-reported by candidates and do not necessarily
-				reflect reality.
+				PRS India.
+				<br />
+				<br />
+
+				Age, attendance and questions raised data are from PRS India as of 2024. All other data is
+				from MyNeta as per 2019 election affidavits. Attendance is calculated as average attendance
+				percentage across every session of parliament where the neta's attendance was tracked.
 			</p>
 		</div>
 		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/2">

@@ -80,8 +80,8 @@
 				<QuestionViz />
 			</div>
 		</div>
-		<div class="flex items-center justify-between w-full align-bottom">
-			<span class="text-[0.6rem] max-w-[280px] text-neutral-500"
+		<div class="flex items-center justify-between w-full gap-2 align-bottom">
+			<span class="text-[0.6rem] md:max-w-[280px] text-neutral-500"
 				>Neta details from 2019 election affidavits (MyNeta). Parliament activity from 2019-2024 Lok
 				Sabha sessions (PRS India).</span
 			>
