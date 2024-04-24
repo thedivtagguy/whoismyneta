@@ -5,8 +5,8 @@
 	import SelectField from '$lib/components/SelectField.svelte';
 </script>
 
-<section class=" flex flex-col md:flex-row w-full gap-6 justify-start">
-	<div class=" md:w-1/2 self-start">
+<section class="flex flex-col justify-start w-full gap-6 md:flex-row">
+	<div class="self-start md:w-1/2">
 		<SelectField />
 		<Map />
 	</div>

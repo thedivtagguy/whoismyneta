@@ -3,6 +3,10 @@
 	import Seo from '$lib/components/SEO.svelte';
 	import '../lib/styles.css';
 	import ShareCard from '$lib/assets/sharecard.jpg';
+	import { Button } from 'svelte-ux';
+	import { setConstituency } from '$lib/utils';
+	import data from '$lib/data/data.json';
+	import InfoPopover from '$lib/components/InfoPopover.svelte';
 </script>
 
 <Seo
@@ -15,12 +19,39 @@
 />
 
 <main
-	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl mx-auto mt-4 mb-4 md:mb-8"
+	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-4 mb-4 md:mb-8"
 >
 	<Header />
 	<main class="flex flex-col items-center justify-center w-full px-2 py-2 md:px-0 md:flex-row">
 		<slot></slot>
 	</main>
+	<section class="self-start w-full pt-2 mx-2 mt-1 mb-4">
+		<h2 class="inline-flex items-center font-bold text-neutral">
+			Browse MPs recontesting in 2024 <InfoPopover
+				text="List including only individuals who filed affidavits as of April 24th, 2024"
+			/>
+		</h2>
+		<ul
+			class="grid grid-flow-row grid-cols-3 gap-2 pt-4 text-sm recontesting md:grid-cols-6 text-neutral-800"
+		>
+			{#each data as mps}
+				{#if mps.recontesting}
+					<li>
+						<Button
+							fullWidth
+							on:click={() => {
+								setConstituency(mps.ls_seat_name);
+
+								window.scrollTo(0, 0);
+							}}
+							variant="default"
+							size="sm">{mps.candidate}</Button
+						>
+					</li>
+				{/if}
+			{/each}
+		</ul>
+	</section>
 </main>
 <footer class="max-w-6xl px-4 py-4 mx-2 mb-4 md:mb-8 bg-surface-100 md:mx-auto">
 	<div
@@ -30,15 +61,15 @@
 			<h3 class="text-sm font-semibold text-neutral-600">Methodology</h3>
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. Election
-				affidavits filed by candidates during the 2019 general elections was scraped from MyNeta.
-				Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was scraped from
-				PRS India.
+				affidavits filed by candidates during the 2019 and 2024 general elections was scraped from
+				MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was
+				scraped from PRS India.
 				<br />
 				<br />
 
-				Age, attendance and questions raised data are from PRS India as of 2024. All other data is
-				from MyNeta as per 2019 election affidavits. Attendance is calculated as average attendance
-				percentage across every session of parliament where the neta's attendance was tracked.
+				Data on age, attendance and questions, are from PRS India. Other data is from MyNeta, as per
+				2019 and 2024 (where available) election affidavits. Attendance shown is the average
+				attendance percentage across parliamentary sessions where the neta's attendance was tracked.
 			</p>
 		</div>
 		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/2">
@@ -83,5 +114,12 @@
 
 	a:hover {
 		@apply text-neutral-600 underline font-medium;
+	}
+
+	:global(.recontesting button) {
+		text-align: left !important;
+		margin: none;
+		display: block;
+		padding: 8px 5px;
 	}
 </style>

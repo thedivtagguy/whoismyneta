@@ -79,7 +79,7 @@
 					dx={75}
 					y={220}
 					width={280}
-					value=" 🟧  Candidate's activity"
+					value=" 🟧  Selected candidate"
 					anchor="center"
 					class="text-[#E8845A] text-xs font-medium"
 				></Text>
@@ -87,7 +87,7 @@
 				<Text
 					y={267}
 					width={280}
-					value=" Number of people"
+					value=" Number of MPs"
 					anchor="center"
 					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
 				></Text>

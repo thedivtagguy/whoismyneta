@@ -84,7 +84,7 @@
 	let selectedCategory = category.all;
 
 	$: if (selectedCategory && selectedCategory.key != 'all' && selectedCategory.type === 'number') {
-		numericColorScale = scaleOrdinal(selectedCategory.scheme).domain(selectedCategory.tickValues);
+		numericColorScale = scaleQuantile(selectedCategory.scheme).domain(selectedCategory.tickValues);
 	}
 	if (selectedCategory && selectedCategory.type === 'number') {
 		numericColorScale.range(['#f7fbff', '#08519c']); // Adjust the range of colors here
@@ -223,7 +223,6 @@
 				<div class="legend">
 					<Legend
 						scale={colorScale}
-						{tickValues}
 						tickFormat={selectedCategory.format}
 						classes={{
 							root: 'bg-white  text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]',

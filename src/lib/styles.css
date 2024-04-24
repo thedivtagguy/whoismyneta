@@ -8,3 +8,10 @@
 h1, h2, h3 {
     font-family: 'LibreCaslonCondensed', serif;
   }
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.search-container .dropdown{
+  width: 100%;
+}
