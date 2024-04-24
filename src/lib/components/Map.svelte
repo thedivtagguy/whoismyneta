@@ -9,6 +9,9 @@
 		schemeTableau10,
 		format,
 		scaleLinear,
+		min,
+		max,
+		scaleQuantize,
 		range,
 		scaleThreshold,
 		formatLocale
@@ -57,7 +60,7 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeBlues[6],
+			scheme: schemeBlues[8],
 			color: 'bg-bluePrimary',
 			tickValues: criminalCasesTicks,
 			text: 'white'
@@ -84,11 +87,14 @@
 	let selectedCategory = category.all;
 
 	$: if (selectedCategory && selectedCategory.key != 'all' && selectedCategory.type === 'number') {
-		numericColorScale = scaleQuantile(selectedCategory.scheme).domain(selectedCategory.tickValues);
+		numericColorScale = scaleQuantile()
+			// pass entire data to the domain
+			.domain(
+				data.map((d) => (d[selectedCategory.key] !== undefined ? d[selectedCategory.key] : 0))
+			)
+			.range(selectedCategory.scheme);
 	}
-	if (selectedCategory && selectedCategory.type === 'number') {
-		numericColorScale.range(['#f7fbff', '#08519c']); // Adjust the range of colors here
-	}
+
 	$: if (
 		selectedCategory &&
 		selectedCategory.key != 'all' &&
@@ -101,12 +107,12 @@
 
 	$: colorScale =
 		selectedCategory.type === 'all'
-			? null
+			? undefined
 			: selectedCategory.type === 'number'
 				? numericColorScale
 				: categoricalColorScale;
 
-	$: tickValues = selectedCategory.tickValues;
+	$: console.log(assetsTicks);
 </script>
 
 <div class="overflow-auto">
@@ -203,6 +209,7 @@
 					classes={{
 						root: 'bg-white z-[9000]'
 					}}
+					tickValues={selectedCategory.tickValues}
 					title={selectedCategory.label}
 				>
 					<div class="flex flex-col gap-1 bg-white">
