@@ -18,7 +18,7 @@
 	export let candidate = 'Dharambir Singh';
 
 	let questionData = [];
-	let thresholds = 10;
+	let thresholds = 6;
 	let binQuestions = [];
 
 	$: {
@@ -54,16 +54,16 @@
 	<div class="p-4 mb-6 md:mb-0" style:height="280px">
 		<Chart
 			data={binQuestions}
-			x="length"
-			xDomain={[0, 545]}
-			xNice
-			y={['x0', 'x1']}
-			yScale={scaleBand().padding(0.1)}
+			y="length"
+			yDomain={[0, 545]}
+			yNice
+			x={['x0', 'x1']}
+			xScale={scaleBand().padding(0.1)}
 			padding={{ left: 16, bottom: 16 }}
 		>
 			<Svg>
-				<Axis placement="left" rule ticks={6} />
-				<Axis placement="bottom" ticks={6} grid rule />
+				<Axis placement="bottom" rule ticks={6} />
+				<Axis placement="left" ticks={6} grid rule />
 				{#each binQuestions as binQuestion, i}
 					<Bar bar={binQuestion} fill="#8F9090" />
 				{/each}
@@ -72,12 +72,12 @@
 					bar={{
 						class: 'fill-[#E8845A]'
 					}}
-					axis="y"
+					axis="x"
 				/>
 
 				<Text
 					dx={75}
-					y={220}
+					dy={25}
 					width={280}
 					value=" 🟧  Selected candidate"
 					anchor="center"
@@ -85,9 +85,25 @@
 				></Text>
 
 				<Text
-					y={267}
+					x={267}
 					width={280}
 					value=" Number of MPs"
+					anchor="center"
+					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
+				></Text>
+
+				<Text
+					y={264}
+					width={280}
+					value=" No. of questions raised"
+					anchor="center"
+					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
+				></Text>
+				<Text
+					x={6}
+					y={25}
+					width={280}
+					value=" MPs"
 					anchor="center"
 					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
 				></Text>
