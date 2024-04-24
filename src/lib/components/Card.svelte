@@ -11,6 +11,8 @@
 	import { partyColors } from '$lib/colors';
 	import Button from './Button.svelte';
 	import QuestionViz from './QuestionViz.svelte';
+	import CriminalCases from './CriminalCases.svelte';
+	import AssetsHistogram from './AssetsHistogram.svelte';
 
 	$: results = $selectedConstituency;
 </script>
@@ -51,7 +53,7 @@
 						<dl class="flex border-b-[1px] divide-x gap-4 md:w-full">
 							<div class="py-2 pr-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
 								<dt class="col-span-1 font-bold leading-6 text-gray-900 text-md">Education</dt>
-								<dd class="pl-4 mt-1 leading-6 text-gray-700 text-md sm:col-span-3 sm:mt-0">
+								<dd class="mt-1 leading-6 text-gray-700 md:pl-4 text-md sm:col-span-3 sm:mt-0">
 									{results.education_x}
 								</dd>
 							</div>
@@ -62,16 +64,20 @@
 								</dd>
 							</div>
 						</dl>
-						<AssetsCriminalCases
-							assets={results.total_assets}
-							criminalCases={results.criminal_cases}
-						/>
+						<div class="flex border-b-[1px] border-neutral-100/50 w-full">
+							<AssetsCriminalCases
+								assets={results.total_assets}
+								criminalCases={results.criminal_cases}
+							/>
+							<CriminalCases criminalCases={results.criminal_cases} />
+						</div>
 					</div>
 					<div class="w-2/3 md:w-1/3">
 						<AttendanceMarker value={results.attendance} />
 					</div>
 				</div>
-				<QuestionViz candidate={results.candidate} />
+				<AssetsHistogram assets={results.total_assets} />
+				<QuestionViz />
 			</div>
 		</div>
 		<div class="flex items-center justify-between w-full align-bottom">
@@ -91,7 +97,7 @@
 {:else if Object.keys($selectedConstituency).length === 0}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
-		class="flex flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
+		class="flex min-h-[300px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
 	>
 		<p class="text-lg text-neutral-500">Select a constituency to view details</p>
 		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">

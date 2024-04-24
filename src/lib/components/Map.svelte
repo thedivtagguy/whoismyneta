@@ -110,7 +110,9 @@
 	$: tickValues = selectedCategory.tickValues;
 </script>
 
-<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
+<div class="overflow-auto">
+	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
+</div>
 
 <main
 	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[650px] w-full max-w-[900px]"

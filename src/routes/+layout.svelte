@@ -22,18 +22,18 @@
 		<slot></slot>
 	</main>
 </main>
-<footer class="max-w-6xl px-4 py-4 mx-2 mb-8 bg-surface-100 md:mx-auto">
+<footer class="max-w-6xl px-4 py-4 mx-2 mb-4 md:mb-8 bg-surface-100 md:mx-auto">
 	<div
 		class="flex divide-y-[1px] md:divide-y-0 md:divide-x-[1px] justify-between md:flex-row flex-col"
 	>
 		<div class="pb-4 pr-4 md:w-1/2 md:pb-0">
 			<h3 class="text-sm font-semibold text-neutral-600">Methodology</h3>
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
-				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. 
-        Election affidavits filed by candidates during the 2019 general elections was scraped from
-        MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was 
-        scraped from PRS India. Election affidavits are self-reported by candidates and do not
-        necessarily reflect reality.
+				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. Election
+				affidavits filed by candidates during the 2019 general elections was scraped from MyNeta.
+				Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was scraped from
+				PRS India. Election affidavits are self-reported by candidates and do not necessarily
+				reflect reality.
 			</p>
 		</div>
 		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/2">
@@ -49,8 +49,9 @@
 				</li>
 				<li>
 					<a href="https://github.com/Vonter/india-representatives-activity"
-						>Legislative activity of parliamentary representatives, compiled from PRS India,
-            by Vonter</a>
+						>Legislative activity of parliamentary representatives, compiled from PRS India, by
+						Vonter</a
+					>
 				</li>
 				<li>
 					<a href="https://github.com/shijithpk/2024_maps_supplement/"

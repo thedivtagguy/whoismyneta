@@ -13,7 +13,7 @@
 	$: dispatch('change', selected);
 </script>
 
-<div class="inline-grid gap-2 mb-2">
+<div class="flex md:w-full mb-2 gap-2 md:max-w-[700px] max-w-[300px]">
 	<ToggleGroup gap {variant} bind:value={selectedStr}>
 		{#each optionsArray as option}
 			<ToggleOption value={option.value}>

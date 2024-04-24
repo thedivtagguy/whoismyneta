@@ -51,7 +51,7 @@
 	{#if binQuestions.length === 0}
 		<p>No data available</p>
 	{/if}
-	<div class="p-4" style:height="280px">
+	<div class="p-4 mb-6 md:mb-0" style:height="280px">
 		<Chart
 			data={binQuestions}
 			x="length"
@@ -85,12 +85,11 @@
 				></Text>
 
 				<Text
-					dx={50}
 					y={267}
 					width={280}
 					value=" Number of people"
 					anchor="center"
-					class="text-[#E8845A] text-[0.6rem] font-mono font-medium"
+					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
 				></Text>
 			</Svg>
 		</Chart>
