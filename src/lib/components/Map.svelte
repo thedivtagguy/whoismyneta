@@ -6,15 +6,7 @@
 		schemeOrRd,
 		schemeBlues,
 		schemeGreens,
-		schemeTableau10,
-		format,
-		scaleLinear,
-		min,
-		max,
-		scaleQuantize,
-		range,
-		scaleThreshold,
-		formatLocale
+		schemeTableau10
 	} from 'd3';
 	import { feature } from 'topojson-client';
 	import { Chart, Legend, Svg, GeoPath, Text, Transform } from 'layerchart';
@@ -33,10 +25,6 @@
 	let numericColorScale, categoricalColorScale;
 	let transform = Transform;
 
-	let assetsTicks = generateTickValues(data, 5, 'total_assets');
-	let attendanceTicks = generateTickValues(data, 5, 'attendance');
-	let criminalCasesTicks = generateTickValues(data, 5, 'criminal_cases');
-
 	let category = {
 		all: {
 			key: 'all',
@@ -50,26 +38,22 @@
 			label: 'Declared Assets',
 			type: 'number',
 			scheme: schemeOrRd[7],
-			intervals: ['0-210cr', '210-420cr', '420-630cr', '630+ cr'],
 			color: 'bg-orangePrimary',
 			text: 'white',
-			tickValues: assetsTicks,
 			format: (d) => '₹' + parseInt(d / 10000000, 10) + ' cr'
 		},
 		criminalCases: {
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeBlues[8],
+			scheme: ['#f0f0f0', '#9ecae1', '#3182bd'],
 			color: 'bg-bluePrimary',
-			tickValues: criminalCasesTicks,
 			text: 'white'
 		},
 		attendance: {
 			key: 'attendance',
 			type: 'number',
 			label: 'Attendance',
-			tickValues: attendanceTicks,
 			scheme: schemeGreens[5],
 			color: 'bg-sagePrimary',
 			text: 'white',
@@ -111,8 +95,6 @@
 			: selectedCategory.type === 'number'
 				? numericColorScale
 				: categoricalColorScale;
-
-	$: console.log(assetsTicks);
 </script>
 
 <div class="overflow-auto">

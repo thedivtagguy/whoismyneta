@@ -32,7 +32,7 @@
 			/>
 		</h2>
 		<ul
-			class="grid grid-flow-row grid-cols-3 gap-2 pt-4 text-sm recontesting md:grid-cols-6 text-neutral-800"
+			class="grid grid-flow-row grid-cols-2 gap-2 pt-4 text-sm recontesting md:grid-cols-6 text-neutral-800"
 		>
 			{#each data as mps}
 				{#if mps.recontesting}
