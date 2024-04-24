@@ -27,19 +27,23 @@
 	>
 		<slot></slot>
 	</main>
-	<section class="self-start w-full pt-2 pl-4 mx-2 mt-1 mb-4">
+	<section class="self-start w-full pt-2 pl-4 mx-2 mt-1 mb-4 md:pl-0 md:mx-0">
 		<h2 class="inline-flex items-center font-bold text-neutral">
 			Browse MPs recontesting in 2024 <InfoPopover
 				text="List including only individuals who filed affidavits as of April 24th, 2024"
 			/>
 		</h2>
 		<div
-			class="grid grid-flow-row grid-cols-1 gap-2 pt-4 max-w-[300px] text-sm gr md:grid-flow-col md:grid-rows-12 recontesting text-neutral-800"
+			class="grid grid-flow-row grid-cols-1 gap-2 pt-4 md:max-w-fit md:w-full max-w-[300px] text-sm gr md:grid-flow-col md:grid-rows-12 recontesting text-neutral-800"
 		>
 			{#each [...new Set(data
 						.filter((mps) => mps.recontesting)
 						.map((item) => item.state_ut_name))].sort() as state_ut_name}
-				<h3 class="border-b-[1px] ml-1 m-0 text-neutral-500 font-bold w-2/3">{state_ut_name}</h3>
+				<h3
+					class="inline-flex items-center w-2/3 m-0 ml-1 font-bold leading-none text-neutral-500 md:w-full"
+				>
+					{state_ut_name}
+				</h3>
 
 				{#each data
 					.filter((mps) => mps.state_ut_name === state_ut_name && mps.recontesting)
@@ -51,7 +55,7 @@
 							window.scrollTo(0, 0);
 						}}
 						classes={{
-							root: ' font-normal'
+							root: ' text-neutral-200 font-normal'
 						}}
 						variant="default"
 						size="sm">{mps.candidate}</Button
