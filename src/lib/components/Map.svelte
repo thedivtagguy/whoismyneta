@@ -8,6 +8,8 @@
 		schemeGreens,
 		schemeTableau10,
 		zoom,
+		scaleLinear,
+		geoPath,
 		scaleQuantize,
 		scaleThreshold
 	} from 'd3';
@@ -49,9 +51,10 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeBlues[5],
+			scheme: schemeBlues[3],
 			color: 'bg-bluePrimary',
-			text: 'white'
+			text: 'white',
+			tickValues: [0, 1, 2, 3]
 		},
 		attendance: {
 			key: 'attendance',
@@ -72,19 +75,22 @@
 		}
 	};
 	let selectedCategory = category.all;
+	let assetScale;
+	let criminalCasesScale;
+	let attendanceScale;
 
-	$: if (
-		selectedCategory &&
-		selectedCategory.key != 'all' &&
-		selectedCategory.key === 'criminal_cases'
-	) {
-		numericColorScale = scaleThreshold([0, 5, 10, 15], schemeBlues[4]);
-	} else if (
-		selectedCategory &&
-		selectedCategory.key != 'all' &&
-		selectedCategory.type === 'number'
-	) {
-		numericColorScale = scaleQuantile()
+	$: if (selectedCategory.key === 'total_assets') {
+		assetScale = scaleQuantile()
+			.domain(data.map((d) => d[selectedCategory.key]))
+			.range(selectedCategory.scheme);
+	}
+
+	$: if (selectedCategory.key === 'criminal_cases') {
+		criminalCasesScale = scaleLinear().domain([0, 1, 2, 3, 4, 5]).range(selectedCategory.scheme);
+	}
+
+	$: if (selectedCategory.key === 'attendance') {
+		attendanceScale = scaleQuantile()
 			.domain(data.map((d) => d[selectedCategory.key]))
 			.range(selectedCategory.scheme);
 	}
@@ -102,9 +108,39 @@
 	$: colorScale =
 		selectedCategory.type === 'all'
 			? undefined
-			: selectedCategory.type === 'number'
-				? numericColorScale
-				: categoricalColorScale;
+			: selectedCategory.key === 'total_assets'
+				? assetScale
+				: selectedCategory.key === 'criminal_cases'
+					? criminalCasesScale
+					: selectedCategory.key === 'attendance'
+						? attendanceScale
+						: categoricalColorScale;
+
+	// $: if ($selectedConstituency) {
+	// 	const selected = states.features.find(
+	// 		(feature) => feature.properties.ls_seat_name === $selectedConstituency.ls_seat_name
+	// 	);
+	// 	if (selected && transform) {
+	// 		const geoMercatorProjection = geoMercator().fitSize([650, 900], selected);
+
+	// 		const path = geoPath().projection(geoMercatorProjection);
+	// 		const [[left, top], [right, bottom]] = path.bounds(selected);
+	// 		const width = right - left;
+	// 		const height = bottom - top;
+	// 		const x = (left + right) / 2;
+	// 		const y = (top + bottom) / 2;
+
+	// 		// Calculate zoom level based on the bounding box dimensions
+	// 		const padding = 20;
+	// 		const zoomFactor = Math.min(400 / (width + padding), 800 / (height + padding));
+
+	// 		// Adjust the center point based on the padding
+	// 		const centerX = (left + right) / 2 - (400 / zoomFactor - width) / 2;
+	// 		const centerY = (top + bottom) / 2 - (800 / zoomFactor - height) / 2;
+
+	// 		transform.zoomTo({ x: x, y: y }, { width: width * 0.1, height: height * 0.1 });
+	// 	}
+	// }
 </script>
 
 <div class="overflow-auto">
@@ -147,6 +183,7 @@
 								let x = (left + right) / 2;
 								let y = (top + bottom) / 2;
 								const padding = 80;
+								console.log(left, top, right, bottom);
 								zoomTo({ x, y }, { width: width + padding, height: height + padding });
 							}}
 							on:mousemove={() => (hovered = feature)}
@@ -222,17 +259,19 @@
 					</div>
 				</Legend>
 			{:else if selectedCategory.type === 'number'}
-				<div class="legend">
-					<Legend
-						scale={colorScale}
-						tickFormat={selectedCategory.format}
-						classes={{
-							root: 'bg-white  text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]',
-							label: 'anchor-end'
-						}}
-						title={selectedCategory.label}
-					></Legend>
-				</div>
+				{#key selectedCategory.key}
+					<div class="legend">
+						<Legend
+							scale={colorScale}
+							tickFormat={selectedCategory.format}
+							classes={{
+								root: 'bg-white  text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]',
+								label: 'anchor-end'
+							}}
+							title={selectedCategory.label}
+						></Legend>
+					</div>
+				{/key}
 			{/if}
 		</div>
 	</Chart>
