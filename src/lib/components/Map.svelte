@@ -8,7 +8,9 @@
 		schemeGreens,
 		schemeTableau10,
 		format,
+		scaleLinear,
 		range,
+		scaleThreshold,
 		formatLocale
 	} from 'd3';
 	import { feature } from 'topojson-client';
@@ -24,11 +26,13 @@
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 
+	let colorScale;
+	let numericColorScale, categoricalColorScale;
 	let transform = Transform;
 
-	let assetsTicks = generateTickValues(data, 4, 'total_assets');
-	let attendanceTicks = generateTickValues(data, 4, 'attendance');
-	let criminalCasesTicks = generateTickValues(data, 4, 'criminal_cases');
+	let assetsTicks = generateTickValues(data, 5, 'total_assets');
+	let attendanceTicks = generateTickValues(data, 5, 'attendance');
+	let criminalCasesTicks = generateTickValues(data, 5, 'criminal_cases');
 
 	let category = {
 		all: {
@@ -42,8 +46,8 @@
 			key: 'total_assets',
 			label: 'Declared Assets',
 			type: 'number',
-			scheme: schemeOrRd[5],
-
+			scheme: schemeOrRd[7],
+			intervals: ['0-210cr', '210-420cr', '420-630cr', '630+ cr'],
 			color: 'bg-orangePrimary',
 			text: 'white',
 			tickValues: assetsTicks,
@@ -53,7 +57,7 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeBlues[5],
+			scheme: schemeBlues[6],
 			color: 'bg-bluePrimary',
 			tickValues: criminalCasesTicks,
 			text: 'white'
@@ -78,13 +82,18 @@
 		}
 	};
 	let selectedCategory = category.all;
-	let numericColorScale, categoricalColorScale;
 
-	$: if (selectedCategory && selectedCategory.key != 'all') {
-		numericColorScale = scaleQuantile()
-			.domain(data.map((d) => Number(d[selectedCategory.key])))
-			.range(selectedCategory.scheme);
-
+	$: if (selectedCategory && selectedCategory.key != 'all' && selectedCategory.type === 'number') {
+		numericColorScale = scaleOrdinal(selectedCategory.scheme).domain(selectedCategory.tickValues);
+	}
+	if (selectedCategory && selectedCategory.type === 'number') {
+		numericColorScale.range(['#f7fbff', '#08519c']); // Adjust the range of colors here
+	}
+	$: if (
+		selectedCategory &&
+		selectedCategory.key != 'all' &&
+		selectedCategory.type === 'categorical'
+	) {
 		categoricalColorScale = scaleOrdinal()
 			.domain(data.map((d) => d[selectedCategory.key]))
 			.range(selectedCategory.scheme);
@@ -185,7 +194,7 @@
 				</g>
 			</Transform>
 		</Svg>
-		<div class="bg-white z-[1000]">
+		<div class="bg-white legend z-[1000]">
 			{#if selectedCategory.type === 'categorical'}
 				<Legend
 					scale={colorScale}
@@ -211,16 +220,25 @@
 					</div>
 				</Legend>
 			{:else if selectedCategory.type === 'number'}
-				<Legend
-					scale={colorScale}
-					{tickValues}
-					tickFormat={selectedCategory.format}
-					classes={{
-						root: 'bg-white text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]'
-					}}
-					title={selectedCategory.label}
-				></Legend>
+				<div class="legend">
+					<Legend
+						scale={colorScale}
+						{tickValues}
+						tickFormat={selectedCategory.format}
+						classes={{
+							root: 'bg-white  text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]',
+							label: 'anchor-end'
+						}}
+						title={selectedCategory.label}
+					></Legend>
+				</div>
 			{/if}
 		</div>
 	</Chart>
 </main>
+
+<style>
+	:global(.legend *) {
+		text-anchor: end !important;
+	}
+</style>
