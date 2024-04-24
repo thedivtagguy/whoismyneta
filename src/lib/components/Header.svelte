@@ -2,7 +2,7 @@
 	import VoteIcon from '$lib/assets/vote.webp';
 </script>
 
-<header class="w-full px-2 pt-0 pb-2 mb-0 md:py-4 md:px-4 2 md:mb-4">
+<header class="w-full pt-0 pb-2 mb-0 2 md:mb-0">
 	<div
 		class="flex border-t-[1px] border-b-[1px] border-neutral-300 flex-row items-start justify-between w-full md:flex-row md:items-end"
 	>
