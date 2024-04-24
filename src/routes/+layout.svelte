@@ -108,12 +108,19 @@
 				</li>
 			</ul>
 		</div>
-		<div class="py-4 text-left md:pl-4 md:py-0 md:w-1/4">
+		<div class="flex flex-col justify-between py-4 text-left md:pl-4 md:py-0 md:w-1/4">
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				Developed by <a href="https://twitter.com/thedivtagguy">Aman Bhargava</a>.
 				<br />
 				Data by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional inputs by
 				<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>
+			</p>
+			<p class="text-[0.6rem] uppercase text-neutral-500">
+				Last updated: {new Date().toLocaleDateString('en-US', {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				})}
 			</p>
 		</div>
 	</div>
