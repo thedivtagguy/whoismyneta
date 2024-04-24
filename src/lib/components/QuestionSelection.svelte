@@ -3,23 +3,24 @@
 	import { scrollShadow } from 'svelte-ux';
 	import { questions } from './questions';
 	import { createEventDispatcher, onMount } from 'svelte';
+	import { selectedConstituency } from '$lib/store';
 
 	const dispatch = createEventDispatcher();
 	import data from '$lib/data/data.json';
 
 	export let candidate = 'Dharambir Singh';
 
-	let candidateData = data.find((d) => d.candidate === candidate);
+	$: if (selectedConstituency) {
+		candidate = $selectedConstituency.candidate;
+	}
+
+	$: candidateData = data.find((d) => d.candidate === candidate);
 
 	// find the questions that the candidate answered
 	//
-	let questionsInCandidateData = Object.keys(candidateData).filter(
+	$: questionsInCandidateData = Object.keys(candidateData).filter(
 		(key) => questions[key] !== undefined
 	);
-
-	let questionsArray = Object.keys(questions).map((key) => {
-		return { value: key, label: questions[key] };
-	});
 
 	$: selectedQuestion = questionsInCandidateData[0];
 
