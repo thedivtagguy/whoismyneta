@@ -6,7 +6,10 @@
 		schemeOrRd,
 		schemeBlues,
 		schemeGreens,
-		schemeTableau10
+		schemeTableau10,
+		zoom,
+		scaleQuantize,
+		scaleThreshold
 	} from 'd3';
 	import { feature } from 'topojson-client';
 	import { Chart, Legend, Svg, GeoPath, Text, Transform } from 'layerchart';
@@ -14,16 +17,16 @@
 	import { cubicOut } from 'svelte/easing';
 	import TransformControls from './TransformControls.svelte';
 	import { selectedConstituency } from '$lib/store';
-	import { setConstituency, slugify } from '$lib/utils';
+	import { setConstituency } from '$lib/utils';
 	import data from '$lib/data/data.json';
 	import ToggleMap from './ToggleMap.svelte';
-	import { generateTickValues } from '$lib/utils';
+
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 
 	let colorScale;
 	let numericColorScale, categoricalColorScale;
-	let transform = Transform;
+	let transform;
 
 	let category = {
 		all: {
@@ -46,7 +49,7 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: ['#f0f0f0', '#9ecae1', '#3182bd'],
+			scheme: schemeBlues[5],
 			color: 'bg-bluePrimary',
 			text: 'white'
 		},
@@ -70,12 +73,19 @@
 	};
 	let selectedCategory = category.all;
 
-	$: if (selectedCategory && selectedCategory.key != 'all' && selectedCategory.type === 'number') {
+	$: if (
+		selectedCategory &&
+		selectedCategory.key != 'all' &&
+		selectedCategory.key === 'criminal_cases'
+	) {
+		numericColorScale = scaleThreshold([0, 5, 10, 15], schemeBlues[4]);
+	} else if (
+		selectedCategory &&
+		selectedCategory.key != 'all' &&
+		selectedCategory.type === 'number'
+	) {
 		numericColorScale = scaleQuantile()
-			// pass entire data to the domain
-			.domain(
-				data.map((d) => (d[selectedCategory.key] !== undefined ? d[selectedCategory.key] : 0))
-			)
+			.domain(data.map((d) => d[selectedCategory.key]))
 			.range(selectedCategory.scheme);
 	}
 
@@ -120,7 +130,7 @@
 				bind:this={transform}
 				tweened={{ duration: 800, easing: cubicOut }}
 				let:zoomTo
-				let:reset={resetZoom}
+				let:reset
 				let:scale
 			>
 				<g class="states">
@@ -156,8 +166,11 @@
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-900'
 								: ''} hover:cursor-pointer 
-                                                             
-                            
+							transition-colors duration-200 ease-in-out 
+                           
+							{data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name).total_assets === undefined
+								? 'pointer-events-none'
+								: 'pointer-events-auto'}
                             hover:fill-neutral-50"
 						/>
 					{/each}

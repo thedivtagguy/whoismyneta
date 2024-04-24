@@ -45,28 +45,28 @@
 		<Button
 			icon={mdiMagnifyPlusOutline}
 			on:click={() => transform.zoomIn()}
-			class="text-surface-content/50 p-2"
+			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>
 	<Tooltip title="Zoom out">
 		<Button
 			icon={mdiMagnifyMinusOutline}
 			on:click={() => transform.zoomOut()}
-			class="text-surface-content/50 p-2"
+			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>
 	<Tooltip title="Center">
 		<Button
 			icon={mdiImageFilterCenterFocus}
 			on:click={() => transform.translateCenter()}
-			class="text-surface-content/50 p-2"
+			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>
 	<Tooltip title="Reset">
 		<Button
 			icon={mdiArrowULeftTop}
 			on:click={() => transform.reset()}
-			class="text-surface-content/50 p-2"
+			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>
 </div>

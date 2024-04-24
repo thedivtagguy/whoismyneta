@@ -22,7 +22,9 @@
 	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-4 mb-4 md:mb-8"
 >
 	<Header />
-	<main class="flex flex-col items-center justify-center w-full px-2 py-2 md:px-0 md:flex-row">
+	<main
+		class="flex flex-col items-center justify-center w-full px-2 pb-2 md:py-2 md:px-0 md:flex-row"
+	>
 		<slot></slot>
 	</main>
 	<section class="self-start w-full pt-2 pl-4 mx-2 mt-1 mb-4">
