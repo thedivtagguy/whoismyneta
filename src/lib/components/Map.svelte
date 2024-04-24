@@ -47,17 +47,7 @@
 			color: 'bg-orangePrimary',
 			text: 'white',
 			tickValues: assetsTicks,
-			format: (d) => {
-				let value = parseInt(d / 10000000, 10);
-
-				return (
-					'₹' +
-					value +
-					(value === Math.max(...data.map((item) => parseInt(item.total_assets / 10000000, 10)))
-						? ' cr'
-						: '')
-				);
-			}
+			format: (d) => '₹' + parseInt(d / 10000000, 10) + ' cr'
 		},
 		criminalCases: {
 			key: 'criminal_cases',
