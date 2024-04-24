@@ -45,7 +45,7 @@
 			scheme: schemeOrRd[5],
 			color: 'bg-orangePrimary',
 			text: 'white',
-      format: d => "₹" + (parseInt(d / 10000000, 10)) + " crore"
+			format: (d) => '₹' + parseInt(d / 10000000, 10) + ' cr'
 		},
 		criminalCases: {
 			key: 'criminal_cases',
@@ -62,7 +62,7 @@
 			scheme: schemeGreens[5],
 			color: 'bg-sagePrimary',
 			text: 'white',
-      format: d => parseInt(d, 10) + "%"
+			format: (d) => parseInt(d, 10) + '%'
 		},
 		education: {
 			key: 'education_x',
@@ -111,41 +111,6 @@
 			fitGeojson: states
 		}}
 	>
-		<div class="bg-white z-[1000]">
-			{#if selectedCategory.type === 'categorical'}
-				<Legend
-					scale={colorScale}
-					let:values
-					let:scale
-					classes={{
-						root: 'bg-white z-[9000]'
-					}}
-					title={selectedCategory.label}
-				>
-					<div class="flex flex-col gap-1 bg-white">
-						{#each values as value}
-							{#if value !== undefined}
-								{@const scaledValue = selectedCategory.valueScale
-									? selectedCategory.valueScale[value]
-									: value}
-								<div class="flex items-center gap-1">
-									<div class="rounded-full size-2" style:background-color={scale(scaledValue)} />
-									<div class="text-xs text-surface-content/50">{value}</div>
-								</div>
-							{/if}
-						{/each}
-					</div>
-				</Legend>
-			{:else if selectedCategory.type === 'number'}
-				<Legend
-          scale={colorScale}
-					let:values
-					let:scale
-          tickFormat={selectedCategory.format}
-          title={selectedCategory.label} 
-        />
-			{/if}
-		</div>
 		<Svg>
 			<Transform
 				scroll="scale"
@@ -214,5 +179,43 @@
 				</g>
 			</Transform>
 		</Svg>
+		<div class="bg-white z-[1000]">
+			{#if selectedCategory.type === 'categorical'}
+				<Legend
+					scale={colorScale}
+					let:values
+					let:scale
+					classes={{
+						root: 'bg-white z-[9000]'
+					}}
+					title={selectedCategory.label}
+				>
+					<div class="flex flex-col gap-1 bg-white">
+						{#each values as value}
+							{#if value !== undefined}
+								{@const scaledValue = selectedCategory.valueScale
+									? selectedCategory.valueScale[value]
+									: value}
+								<div class="flex items-center gap-1">
+									<div class="rounded-full size-2" style:background-color={scale(scaledValue)} />
+									<div class="text-xs text-surface-content/50">{value}</div>
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</Legend>
+			{:else if selectedCategory.type === 'number'}
+				<Legend
+					scale={colorScale}
+					let:values
+					let:scale
+					tickFormat={selectedCategory.format}
+					classes={{
+						root: 'bg-white text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]'
+					}}
+					title={selectedCategory.label}
+				></Legend>
+			{/if}
+		</div>
 	</Chart>
 </main>

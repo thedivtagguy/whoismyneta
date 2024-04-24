@@ -48,12 +48,10 @@
 </script>
 
 <div
-	class="search-container flex justify-center items-center border-neutral-100 border-[1px] mb-4 w-full mx-auto shadow-sm"
+	class="search-container flex justify-center items-center border-neutral-100 border-[1px] mb-2 w-full mx-auto shadow-sm"
 >
 	<Typeahead
-		label={searchType === 'location'
-			? 'Search for your constituency or an MP'
-			: 'Search for an MP'}
+		label={searchType === 'location' ? 'Search for your constituency or an MP' : 'Search for an MP'}
 		value={$selectedConstituency.ls_seat_name ? $selectedConstituency.ls_seat_name : ''}
 		{extract}
 		limit={5}
