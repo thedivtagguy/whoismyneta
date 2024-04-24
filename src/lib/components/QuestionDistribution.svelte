@@ -85,14 +85,6 @@
 				></Text>
 
 				<Text
-					x={267}
-					width={280}
-					value=" Number of MPs"
-					anchor="center"
-					class="text-[#E8845A]  text-[0.6rem] font-mono font-medium"
-				></Text>
-
-				<Text
 					y={264}
 					width={280}
 					value=" No. of questions raised"

@@ -16,7 +16,12 @@
 <div class="flex md:w-full mb-2 gap-2 md:max-w-[700px] max-w-[300px]">
 	<ToggleGroup gap {variant} bind:value={selectedStr}>
 		{#each optionsArray as option}
-			<ToggleOption value={option.value}>
+			<ToggleOption
+				classes={{
+					root: ' text-xs whitespace-nowrap w-fit max-w-[125px] '
+				}}
+				value={option.value}
+			>
 				{option.label.label}</ToggleOption
 			>
 		{/each}

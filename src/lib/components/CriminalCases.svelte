@@ -12,7 +12,7 @@
 				: criminalCases > 1
 					? 'Criminal  <br/>Cases'
 					: 'Criminal <br/> Case'
-		}`}
+		}`} (2019)
 		<span class="block text-2xl font-normal">{criminalCases}</span>
 	</p>
 </div>
