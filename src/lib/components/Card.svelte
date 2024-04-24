@@ -6,6 +6,7 @@
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { formatAge, formatRupee } from '$lib/utils';
+	import { mdiBankCheck } from '@mdi/js';
 	import AttendanceMarker from './AttendanceMarker.svelte';
 	import AssetsCriminalCases from './AssetsCriminalCases.svelte';
 	import { partyColors } from '$lib/colors';
@@ -13,6 +14,7 @@
 	import QuestionViz from './QuestionViz.svelte';
 	import CriminalCases from './CriminalCases.svelte';
 	import AssetsHistogram from './AssetsHistogram.svelte';
+	import InfoPopover from './InfoPopover.svelte';
 
 	$: results = $selectedConstituency;
 </script>
@@ -36,10 +38,13 @@
 				{results.party_x}</span
 			>
 			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
-				<div class="inline-flex items-end justify-between">
-					<h2 class="w-full text-4xl font-bold text-pretty">
+				<div class="inline-flex items-end justify-start gap-2">
+					<h2 class="text-4xl font-bold w-fit text-pretty">
 						{results.candidate}
 					</h2>
+					{#if results.recontesting}
+						<InfoPopover icon={mdiBankCheck} text="MP is recontesting in 2024" />
+					{/if}
 				</div>
 				<div class="inline-flex items-center justify-start gap-2">
 					<MapPin class="stroke-2 size-5 text-neutral-500" />

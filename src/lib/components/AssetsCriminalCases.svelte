@@ -16,9 +16,7 @@
 >
 	<div class="flex flex-col w-1/2 gap-1">
 		<span class="inline-flex items-end justify-start font-bold"
-			>Assets <br />(2019) <InfoPopover
-				text="Self-declared assets of the candidate in 2019."
-			/></span
+			>Assets <br />(2019) <InfoPopover text="Assets declared by the candidate in 2019" /></span
 		>
 		<div class="inline-flex items-start justify-between">
 			<span class="text-2xl">{formatRupee(assets)}</span>
@@ -28,7 +26,7 @@
 	{#if currentAssets}
 		<div class="flex flex-col w-1/2 gap-1">
 			<span class="inline-flex items-end justify-start font-bold"
-				>Assets <br />(2024) <InfoPopover text="Self-declared assets of the candidate in 2024." />
+				>Assets <br />(2024) <InfoPopover text="Assets declared by the candidate in 2024." />
 			</span>
 			<div class="inline-flex items-start justify-between">
 				<span class="text-2xl">{formatRupee(currentAssets)}</span>

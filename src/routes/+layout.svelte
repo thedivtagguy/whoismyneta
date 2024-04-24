@@ -25,32 +25,38 @@
 	<main class="flex flex-col items-center justify-center w-full px-2 py-2 md:px-0 md:flex-row">
 		<slot></slot>
 	</main>
-	<section class="self-start w-full pt-2 mx-2 mt-1 mb-4">
+	<section class="self-start w-full pt-2 pl-4 mx-2 mt-1 mb-4">
 		<h2 class="inline-flex items-center font-bold text-neutral">
 			Browse MPs recontesting in 2024 <InfoPopover
 				text="List including only individuals who filed affidavits as of April 24th, 2024"
 			/>
 		</h2>
-		<ul
-			class="grid grid-flow-row grid-cols-2 gap-2 pt-4 text-sm recontesting md:grid-cols-6 text-neutral-800"
+		<div
+			class="grid grid-flow-row grid-cols-1 gap-2 pt-4 max-w-[300px] text-sm gr md:grid-flow-col md:grid-rows-12 recontesting text-neutral-800"
 		>
-			{#each data as mps}
-				{#if mps.recontesting}
-					<li>
-						<Button
-							fullWidth
-							on:click={() => {
-								setConstituency(mps.ls_seat_name);
+			{#each [...new Set(data
+						.filter((mps) => mps.recontesting)
+						.map((item) => item.state_ut_name))].sort() as state_ut_name}
+				<h3 class="border-b-[1px] ml-1 m-0 text-neutral-500 font-bold w-2/3">{state_ut_name}</h3>
 
-								window.scrollTo(0, 0);
-							}}
-							variant="default"
-							size="sm">{mps.candidate}</Button
-						>
-					</li>
-				{/if}
+				{#each data
+					.filter((mps) => mps.state_ut_name === state_ut_name && mps.recontesting)
+					.sort((a, b) => a.candidate.localeCompare(b.candidate)) as mps}
+					<Button
+						fullWidth
+						on:click={() => {
+							setConstituency(mps.ls_seat_name);
+							window.scrollTo(0, 0);
+						}}
+						classes={{
+							root: ' font-normal'
+						}}
+						variant="default"
+						size="sm">{mps.candidate}</Button
+					>
+				{/each}
 			{/each}
-		</ul>
+		</div>
 	</section>
 </main>
 <footer class="max-w-6xl px-4 py-4 mx-2 mb-4 md:mb-8 bg-surface-100 md:mx-auto">
