@@ -2,7 +2,7 @@
 	import { Button, scrollIntoView } from 'svelte-ux';
 	import { scrollShadow } from 'svelte-ux';
 	import { questions } from './questions';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 	import data from '$lib/data/data.json';
@@ -21,11 +21,18 @@
 		return { value: key, label: questions[key] };
 	});
 
-	let selectedQuestion = questionsArray[0];
+	$: selectedQuestion = questionsInCandidateData[0];
 
 	$: dispatch('change', {
 		selectedQuestion,
 		candidateData
+	});
+
+	onMount(() => {
+		dispatch('change', {
+			selectedQuestion,
+			candidateData
+		});
 	});
 </script>
 

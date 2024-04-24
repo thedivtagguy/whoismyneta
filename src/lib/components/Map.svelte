@@ -8,6 +8,7 @@
 		schemeGreens,
 		schemeTableau10,
 		format,
+		range,
 		formatLocale
 	} from 'd3';
 	import { feature } from 'topojson-client';
@@ -19,17 +20,16 @@
 	import { setConstituency, slugify } from '$lib/utils';
 	import data from '$lib/data/data.json';
 	import ToggleMap from './ToggleMap.svelte';
+	import { generateTickValues } from '$lib/utils';
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 
 	let transform = Transform;
 
-	let IN = formatLocale({
-		decimal: '.',
-		thousands: ',',
-		grouping: [3],
-		currency: ['₹', '']
-	});
+	let assetsTicks = generateTickValues(data, 4, 'total_assets');
+	let attendanceTicks = generateTickValues(data, 4, 'attendance');
+	let criminalCasesTicks = generateTickValues(data, 4, 'criminal_cases');
+
 	let category = {
 		all: {
 			key: 'all',
@@ -43,9 +43,21 @@
 			label: 'Declared Assets',
 			type: 'number',
 			scheme: schemeOrRd[5],
+
 			color: 'bg-orangePrimary',
 			text: 'white',
-			format: (d) => '₹' + parseInt(d / 10000000, 10) + ' cr'
+			tickValues: assetsTicks,
+			format: (d) => {
+				let value = parseInt(d / 10000000, 10);
+
+				return (
+					'₹' +
+					value +
+					(value === Math.max(...data.map((item) => parseInt(item.total_assets / 10000000, 10)))
+						? ' cr'
+						: '')
+				);
+			}
 		},
 		criminalCases: {
 			key: 'criminal_cases',
@@ -53,12 +65,14 @@
 			label: 'Criminal Cases',
 			scheme: schemeBlues[5],
 			color: 'bg-bluePrimary',
+			tickValues: criminalCasesTicks,
 			text: 'white'
 		},
 		attendance: {
 			key: 'attendance',
 			type: 'number',
 			label: 'Attendance',
+			tickValues: attendanceTicks,
 			scheme: schemeGreens[5],
 			color: 'bg-sagePrimary',
 			text: 'white',
@@ -76,7 +90,7 @@
 	let selectedCategory = category.all;
 	let numericColorScale, categoricalColorScale;
 
-	$: if (selectedCategory.key != 'all') {
+	$: if (selectedCategory && selectedCategory.key != 'all') {
 		numericColorScale = scaleQuantile()
 			.domain(data.map((d) => Number(d[selectedCategory.key])))
 			.range(selectedCategory.scheme);
@@ -93,7 +107,7 @@
 				? numericColorScale
 				: categoricalColorScale;
 
-	$: console.log(selectedCategory);
+	$: tickValues = selectedCategory.tickValues;
 </script>
 
 <ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
@@ -207,8 +221,7 @@
 			{:else if selectedCategory.type === 'number'}
 				<Legend
 					scale={colorScale}
-					let:values
-					let:scale
+					{tickValues}
 					tickFormat={selectedCategory.format}
 					classes={{
 						root: 'bg-white text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]'

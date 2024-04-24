@@ -2,7 +2,9 @@
 	import QuestionDistribution from './QuestionDistribution.svelte';
 	import QuestionSelection from './QuestionSelection.svelte';
 	let questionKey = '';
-	let candidateKey = '';
+	export let candidateKey = '';
+
+	$: currentKey = questionKey;
 </script>
 
 <div class="grid gap-4 mt-3 md:justify-center md:grid-cols-4">
@@ -15,6 +17,6 @@
 		/>
 	</div>
 	<div class="col-span-2">
-		<QuestionDistribution {questionKey} candidate={candidateKey.candidate} />
+		<QuestionDistribution questionKey={currentKey} candidate={candidateKey.candidate} />
 	</div>
 </div>

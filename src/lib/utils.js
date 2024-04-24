@@ -1,6 +1,7 @@
 import { selectedConstituency, selectedCandidate } from './store';
 import data from '../lib/data/data.json';
 import { goto } from '$app/navigation';
+import { range } from 'd3';
 
 /**
  * Converts a string to a slug by removing spaces and special characters.
@@ -110,3 +111,17 @@ export function textMultiline(node) {
 	element.appendChild(tspan);
 	testElem.remove();
 }
+
+export const generateTickValues = (data, count, key) => {
+	// Filter out any invalid or missing values
+	const filteredData = data.filter((d) => typeof d[key] === 'number' && !isNaN(d[key]));
+
+	// Calculate the maximum value
+	const maxDataValue = Math.max(...filteredData.map((d) => d[key]));
+
+	// Calculate the step size
+	const step = maxDataValue / (count - 1);
+
+	// Generate evenly spaced tick values
+	return range(0, maxDataValue + 1, step);
+};
