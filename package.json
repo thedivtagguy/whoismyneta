@@ -13,6 +13,7 @@
 	},
 	"devDependencies": {
 		"@mdi/js": "^7.4.47",
+		"@netlify/edge-functions": "^2.5.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
