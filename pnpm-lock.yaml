@@ -53,8 +53,8 @@ devDependencies:
     specifier: ^2.35.1
     version: 2.37.0(eslint@8.57.0)(svelte@4.2.15)
   layerchart:
-    specifier: ^0.36.1
-    version: 0.36.1(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)(vite@5.2.10)
+    specifier: ^0.36.2
+    version: 0.36.2(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)(vite@5.2.10)
   lucide-svelte:
     specifier: ^0.372.0
     version: 0.372.0(svelte@4.2.15)
@@ -2197,8 +2197,8 @@ packages:
       typescript: 5.4.5
     dev: true
 
-  /layerchart@0.36.1(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)(vite@5.2.10):
-    resolution: {integrity: sha512-xhKfmeavyAuiYUdbXcAjnPTS6JA4pW68QjV9f9S+429nvzczuOrj1h8OclTDdF1qPAyjvnOLb853c6UyjjwMJQ==}
+  /layerchart@0.36.2(postcss@8.4.38)(svelte@4.2.15)(typescript@5.4.5)(vite@5.2.10):
+    resolution: {integrity: sha512-/a261NBVVTuxmuv2wa79BUtFWFZ+nWqtzAWJeffW5fNSd4NVrB6UbWvfTHrTBD6dK9Ka9CAGXUFJtvynoXpH3A==}
     peerDependencies:
       svelte: ^3.56.0 || ^4.0.0
     dependencies:
