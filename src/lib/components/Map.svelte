@@ -148,9 +148,9 @@
 </div>
 
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[400px] md:h-[650px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[360px] md:h-[650px] w-full max-w-[900px]"
 >
-	<div class="absolute top-2 right-2">
+	<div class="absolute top-1/2 md:top-2 right-2">
 		<TransformControls {transform} />
 	</div>
 

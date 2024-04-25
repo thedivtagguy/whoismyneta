@@ -14,4 +14,5 @@ h1, h2, h3 {
 
 .search-container .dropdown{
   width: 100%;
+  max-width: 500px;
 }

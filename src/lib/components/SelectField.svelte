@@ -9,15 +9,19 @@
 
 	$: searchType = $searchMode;
 
-	const searchPeople = data.map((item) => {
+	let filteredData = data.filter((item) => item.total_assets !== undefined);
+
+	const searchPeople = filteredData.map((item) => {
 		return {
 			id: slugify(item.candidate),
 			text: `${item.candidate} | ${item.party_x}`
 		};
 	});
 
-	const searchConstituency = data.map((item) => {
+	const searchConstituency = filteredData.map((item) => {
 		if ($selectedConstituency === null) return;
+		// skip if total_assets is missing
+
 		return {
 			id: slugify(item.ls_seat_name),
 			text: `${item.ls_seat_name}, ${item.state_ut_name} | <span class="text-xs">

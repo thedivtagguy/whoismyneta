@@ -19,7 +19,7 @@
 />
 
 <main
-	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-4 mb-4 md:mb-8"
+	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-2 mb-4 md:mb-8"
 >
 	<Header />
 	<main
