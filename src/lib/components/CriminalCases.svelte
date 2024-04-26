@@ -1,18 +1,20 @@
 <script>
-	export let criminalCases = 0;
+	export let criminalCases;
 
-	criminalCases = Number(criminalCases);
+	$: caseCount = criminalCases.end_criminal_cases
+		? criminalCases.end_criminal_cases
+		: criminalCases.criminal_cases;
 </script>
 
 <div class="flex flex-col gap-1 mt-4">
 	<p class="w-full font-bold text-md">
 		{@html `${
-			Number(criminalCases) === 0
+			Number(caseCount) === 0
 				? 'Criminal <br/> Cases'
-				: criminalCases > 1
+				: caseCount > 1
 					? 'Criminal  <br/>Cases'
 					: 'Criminal <br/> Case'
-		}`} (2019)
-		<span class="block text-2xl font-normal">{criminalCases}</span>
+		}`} ({criminalCases.end_criminal_cases ? '2024' : '2019'})
+		<span class="block text-2xl font-normal">{caseCount}</span>
 	</p>
 </div>

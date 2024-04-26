@@ -76,7 +76,7 @@
 								assets={results.total_assets}
 								criminalCases={results.criminal_cases}
 							/>
-							<CriminalCases criminalCases={results.criminal_cases} />
+							<CriminalCases criminalCases={results} />
 						</div>
 					</div>
 					<div class="w-2/3 md:w-1/3">
