@@ -51,7 +51,7 @@
 			key: 'criminal_cases',
 			type: 'number',
 			label: 'Criminal Cases',
-			scheme: schemeBlues[3],
+			scheme: schemeBlues[7],
 			color: 'bg-bluePrimary',
 			text: 'white',
 			tickValues: [0, 1, 2, 3]
