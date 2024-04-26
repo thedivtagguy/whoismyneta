@@ -6,7 +6,7 @@
 		: criminalCases.criminal_cases;
 </script>
 
-<div class="flex flex-col gap-1 mt-4">
+<div class="flex flex-col justify-between gap-1 mt-4">
 	<p class="w-full font-bold text-md">
 		{@html `${
 			Number(caseCount) === 0

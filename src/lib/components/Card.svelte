@@ -1,7 +1,6 @@
 <script>
-	import { selectedConstituency, searchMode, selectedCandidate } from '$lib/store';
-	import { page } from '$app/stores';
-	import { CopyButton, ProgressCircle } from 'svelte-ux';
+	import { selectedConstituency } from '$lib/store';
+	import { ProgressCircle } from 'svelte-ux';
 	import { MapPin } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -46,6 +45,17 @@
 						<InfoPopover icon={mdiBankCheck} text="MP is recontesting in 2024" />
 					{/if}
 				</div>
+				{#if !results.attendance}
+					<div class="block -mt-2">
+						<span class="inline-flex items-center justify-center font-sans text-xs font-normal 2">
+							This MP's data has different availibility
+							<InfoPopover
+								width="10rem"
+								text="This MP was a minister. Ministers represent the government in parliament, so their participation is not reported."
+							/>
+						</span>
+					</div>
+				{/if}
 				<div class="inline-flex items-center justify-start gap-2">
 					<MapPin class="stroke-2 size-5 text-neutral-500" />
 					<p class="text-lg font-medium capitalize">
