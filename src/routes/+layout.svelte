@@ -3,10 +3,11 @@
 	import Seo from '$lib/components/SEO.svelte';
 	import '../lib/styles.css';
 	import ShareCard from '$lib/assets/sharecard.jpg';
-	import { Button } from 'svelte-ux';
+	import { Button, Icon } from 'svelte-ux';
 	import { setConstituency } from '$lib/utils';
 	import data from '$lib/data/data.json';
 	import InfoPopover from '$lib/components/InfoPopover.svelte';
+	import { mdiGithub } from '@mdi/js';
 </script>
 
 <Seo
@@ -115,13 +116,25 @@
 				Data by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional inputs by
 				<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>
 			</p>
-			<p class="text-[0.6rem] uppercase text-neutral-500">
-				Last updated: {new Date().toLocaleDateString('en-US', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric'
-				})}
-			</p>
+			<div>
+				<a
+					href="https://github.com/thedivtagguy/whoismyneta"
+					class="text-xs underline text-neutral-500"
+					target="_blank"
+				>
+					<span>
+						<Icon data={mdiGithub} class="inline-block w-4 h-4" />
+					</span>
+					View source on GitHub</a
+				>
+				<p class="text-[0.6rem] uppercase text-neutral-500">
+					Last updated: {new Date().toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
+				</p>
+			</div>
 		</div>
 	</div>
 </footer>
