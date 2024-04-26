@@ -51,7 +51,7 @@
 	{#if binQuestions.length === 0}
 		<p>No data available</p>
 	{/if}
-	<div class="p-4 mb-6 md:mb-0" style:height="280px">
+	<div class="p-4 mb-6 md:mb-0" style:height="250px">
 		<Chart
 			data={binQuestions}
 			y="length"
@@ -85,7 +85,7 @@
 				></Text>
 
 				<Text
-					y={264}
+					y={234}
 					width={280}
 					value=" No. of questions raised"
 					anchor="center"
