@@ -9,11 +9,12 @@
 	// sort and get the quantiles of the data
 	// sort and get the quantiles of the data
 	let sortedData = sort(data, (a, b) => Number(a.total_assets) - Number(b.total_assets));
+	console.log(sortedData);
 	let q1 = quantile(sortedData, 0.25, (d) => Number(d.total_assets));
 	let median = quantile(sortedData, 0.5, (d) => Number(d.total_assets));
 	let q3 = quantile(sortedData, 0.75, (d) => Number(d.total_assets));
 	let interQuantileRange = q3 - q1;
-	let min = q1 - 1.5 * interQuantileRange;
+	let min = Math.floor(0, q1 - 1.5 * interQuantileRange);
 	let max = q3 + 1.5 * interQuantileRange;
 
 	let height = 15;
@@ -35,6 +36,45 @@
 	<svg width={svgWidth} class="w-full h-[70px]">
 		<line y1={center} y2={center} x1={xScale(min)} x2={xScale(max)} class=" stroke-neutral-500" />
 
+		<!-- Add labels for each percentile -->
+
+		<text
+			x={xScale(min)}
+			y={center - height / 2}
+			text-anchor="end"
+			dy="-0.5em"
+			class="text-[0.6rem] text-neutral-500"
+		>
+			{formatRupee(min)}
+		</text>
+
+		<text
+			x={xScale(q3)}
+			y={center - height / 2}
+			text-anchor="middle"
+			dy="-0.5em"
+			class="text-[0.6rem] text-neutral-500"
+		>
+			{formatRupee(q3, true)}
+		</text>
+		<text
+			x={xScale(max)}
+			y={center - height / 2}
+			text-anchor="middle"
+			dy="-0.5em"
+			class="text-[0.6rem] text-neutral-500"
+		>
+			{formatRupee(max, true)}
+		</text>
+		<text
+			x={xScale(q1)}
+			y={center - height / 2}
+			text-anchor="middle"
+			dy="-0.5em"
+			class="text-[0.6rem] text-neutral-500"
+		>
+			{formatRupee(q1, true)}
+		</text>
 		<rect
 			y={center - height / 2}
 			x={xScale(q1)}
@@ -75,17 +115,19 @@
 			x2={xScale(assets) >= 470 ? 320 : xScale(assets)}
 			class="stroke-2 stroke-info-800 marker"
 		/>
-		<text
-			y={center + 28}
-			alignment-baseline="middle"
-			text-anchor="middle"
-			class="text-xs marker text-neutral-500"
-		>
-			<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="0.2em">
-				{assets < q1 ? 'Lower' : assets < median ? 'Average' : assets < q3 ? 'Upper' : 'Top'}
-			</tspan>
-			<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="1.2em"> wealth range </tspan>
-		</text>
+		<g class=" bg-neutral">
+			<text
+				y={center + 28}
+				alignment-baseline="middle"
+				text-anchor={assets <= 100012120 ? 'start' : 'middle'}
+				class="text-xs marker text-neutral-500"
+			>
+				<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="0.2em">
+					{assets < q1 ? 'Lower' : assets < median ? 'Average' : assets < q3 ? 'Upper' : 'Top'}
+				</tspan>
+				<tspan x={xScale(assets) >= 470 ? 320 : xScale(assets)} dy="1.2em"> wealth range </tspan>
+			</text>
+		</g>
 	</svg>
 </div>
 
