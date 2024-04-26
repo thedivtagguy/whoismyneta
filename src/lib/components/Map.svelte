@@ -6,8 +6,10 @@
 		schemeOrRd,
 		schemeBlues,
 		schemeGreens,
-		schemeTableau10,
+		schemeSpectral,
 		zoom,
+		interpolateBlues,
+		scaleSequential,
 		scaleLinear,
 		geoPath,
 		scaleQuantize,
@@ -54,7 +56,8 @@
 			scheme: schemeBlues[7],
 			color: 'bg-bluePrimary',
 			text: 'white',
-			tickValues: [0, 1, 2, 3]
+			tickValues: [0, 1, 2, 3],
+			format: (d) => parseInt(d, 10) + (d === 5 ? '+' : '')
 		},
 		attendance: {
 			key: 'attendance',
@@ -69,7 +72,6 @@
 			key: 'education_x',
 			type: 'categorical',
 			label: 'Education',
-			scheme: schemeTableau10,
 			color: 'bg-yellowPrimary',
 			text: 'black'
 		}
@@ -78,6 +80,17 @@
 	let assetScale;
 	let criminalCasesScale;
 	let attendanceScale;
+
+	const educationLevels = [
+		'Others',
+
+		'10th Pass',
+		'12th Pass',
+		'Graduate',
+		'Graduate Professional',
+		'Post Graduate',
+		'Doctorate'
+	];
 
 	$: if (selectedCategory.key === 'total_assets') {
 		assetScale = scaleQuantile()
@@ -100,9 +113,7 @@
 		selectedCategory.key != 'all' &&
 		selectedCategory.type === 'categorical'
 	) {
-		categoricalColorScale = scaleOrdinal()
-			.domain(data.map((d) => d[selectedCategory.key]))
-			.range(selectedCategory.scheme);
+		categoricalColorScale = scaleOrdinal(educationLevels, schemeSpectral[educationLevels.length]);
 	}
 
 	$: colorScale =
@@ -191,7 +202,10 @@
 							geojson={feature}
 							stroke-width={0.4 / scale}
 							stroke="#8F96A3"
-							fill={colorScale
+							fill={colorScale &&
+							// also check if total_assets is not undefined
+							data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name).total_assets !==
+								undefined
 								? colorScale(
 										data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name)[
 											selectedCategory.key
@@ -239,7 +253,7 @@
 					let:values
 					let:scale
 					classes={{
-						root: 'bg-white z-[9000]'
+						root: 'bg-white  text-xs absolute py-2 px-4 rounded shadow-sm z-[9000]'
 					}}
 					tickValues={selectedCategory.tickValues}
 					title={selectedCategory.label}
