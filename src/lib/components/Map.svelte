@@ -230,16 +230,18 @@
 					{#each states.features as feature}
 						<GeoPath geojson={feature} let:geoPath>
 							{@const [x, y] = geoPath.centroid(feature)}
-							{#if $selectedConstituency && $selectedConstituency.ls_seat_name === feature.properties.ls_seat_name}
+							{#if (hovered === feature || ($selectedConstituency && $selectedConstituency.ls_seat_name === feature.properties.ls_seat_name))}
 								<Text
-									{x}
+									x={x}
 									scaleToFit
 									y={y - 20}
 									value={feature.properties.ls_seat_name}
 									textAnchor="middle"
 									verticalAnchor="start"
 									class=" stroke-surface-100 font-serif  text-[5px] stroke-[2px] shadow-md"
-								/>
+								>
+									{feature.properties.ls_seat_name}
+								</Text>
 							{/if}
 						</GeoPath>
 					{/each}
