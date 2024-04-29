@@ -11,9 +11,9 @@
 	import { partyColors } from '$lib/colors';
 	import Button from './Button.svelte';
 	import QuestionViz from './QuestionViz.svelte';
-	import CriminalCases from './CriminalCases.svelte';
 	import AssetsHistogram from './AssetsHistogram.svelte';
 	import InfoPopover from './InfoPopover.svelte';
+	import AgeEducation from './AgeEducation.svelte';
 
 	$: results = $selectedConstituency;
 </script>
@@ -48,7 +48,7 @@
 				{#if !results.attendance}
 					<div class="block -mt-2">
 						<span class="inline-flex items-center justify-center font-sans text-xs font-normal 2">
-							This MP's data has different availibility
+							This MP's data has different availability
 							<InfoPopover
 								width="10rem"
 								text="This MP was a minister. Ministers represent the government in parliament, so their participation is not reported."
@@ -65,32 +65,20 @@
 			</div>
 			<div class="metadata">
 				<div class="flex justify-between gap-1">
-					<div class="flex flex-col">
-						<dl class="flex border-b-[1px] divide-x gap-4 md:w-full">
-							<div class="py-2 pr-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
-								<dt class="col-span-1 font-bold leading-6 text-gray-900 text-md">Education</dt>
-								<dd class="mt-1 leading-6 text-gray-700 md:pl-4 text-md sm:col-span-3 sm:mt-0">
-									{results.education_x}
-								</dd>
+					<div class="flex flex-col w-full">
+						<div class="md:flex border-b-[1px] border-neutral-100/50 w-full">
+							<AgeEducation age={results.age_y} education={results.education_x} />
+							<div class="w-2/3 md:w-1/3 px-8">
+								<AttendanceMarker value={results.attendance} />
 							</div>
-							<div class="px-4 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
-								<dt class="col-span-2 font-bold leading-6 text-gray-900 text-md md:ml-4">Age</dt>
-								<dd class="mt-1 leading-6 text-gray-700 text-md sm:col-span-2 sm:mt-0">
-									{formatAge(results.age_y)}
-								</dd>
-							</div>
-						</dl>
+						</div>
 						<div class="flex border-b-[1px] border-neutral-100/50 w-full">
 							<AssetsCriminalCases
 								currentAssets={results?.end_total_assets}
 								assets={results.total_assets}
-								criminalCases={results.criminal_cases}
+								criminalCases={results}
 							/>
-							<CriminalCases criminalCases={results} />
 						</div>
-					</div>
-					<div class="w-2/3 md:w-1/3">
-						<AttendanceMarker value={results.attendance} />
 					</div>
 				</div>
 				<AssetsHistogram

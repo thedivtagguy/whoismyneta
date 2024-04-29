@@ -1,36 +1,41 @@
 <script>
 	import { formatRupee } from '$lib/utils';
 
-	import InfoPopover from './InfoPopover.svelte';
-	export let criminalCases = 0;
+	import GenericField from './GenericField.svelte';
+	export let criminalCases;
 	export let assets = 0;
 	export let currentAssets;
 
-	criminalCases = Number(criminalCases);
+	$: caseCount = criminalCases.end_criminal_cases
+		? criminalCases.end_criminal_cases
+		: criminalCases.criminal_cases;
 </script>
 
-<div
-	class="flex flex-col items-start justify-start {currentAssets
-		? 'w-2/3'
-		: 'w-1/2'} gap-2 py-4 md:flex-row"
->
-	<div class="flex flex-col w-1/2 gap-1">
-		<span class="inline-flex items-end justify-start font-bold"
-			>Assets <br />(2019) <InfoPopover text="Assets declared by the candidate in 2019" /></span
-		>
-		<div class="inline-flex items-start justify-between">
-			<span class="text-2xl">{formatRupee(assets)}</span>
-		</div>
-	</div>
+<div class="flex justify-start w-3/5 gap-4 py-4 md:flex-row">
+	<GenericField
+		title={'Assets (2019)'}
+		infoPopOverText={'Assets declared by the candidate in 2019'}
+		value={formatRupee(assets)}
+	/>
 
 	{#if currentAssets}
-		<div class="flex flex-col w-1/2 gap-1">
-			<span class="inline-flex items-end justify-start font-bold"
-				>Assets <br />(2024) <InfoPopover text="Assets declared by the candidate in 2024." />
-			</span>
-			<div class="inline-flex items-start justify-between">
-				<span class="text-2xl">{formatRupee(currentAssets)}</span>
-			</div>
-		</div>
+		<GenericField
+			title={'Assets (2024)'}
+			infoPopOverText={'Assets declared by the candidate in 2024'}
+			value={formatRupee(currentAssets)}
+		/>
 	{/if}
+</div>
+<div class="flex justify-start w-2/5 gap-4 py-4 md:flex-row">
+	<GenericField
+		title={`${
+			Number(caseCount) === 0
+				? 'Criminal Cases'
+				: caseCount > 1
+					? 'Criminal Cases'
+					: 'Criminal Case'
+		}`}
+		value={caseCount}
+		infoPopOverText={'Criminal cases on record'}
+	/>
 </div>

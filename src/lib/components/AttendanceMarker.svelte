@@ -3,51 +3,21 @@
 	import { SpringValue, cls } from 'svelte-ux';
 
 	export let value;
-	let segments = 50;
+	// let value = 100;
 
 	$: fillColor =
 		value >= 75 ? 'fill-success-400' : value >= 50 ? 'fill-warning-400' : 'fill-danger-400';
 </script>
 
-<div class="h-[175px] flex flex-col justify-center rounded p-4">
-	<span class="mb-2 -mt-1 text-sm font-medium leading-6 text-center text-gray-900">Attendance</span>
-	<Chart>
-		<Svg>
-			<Group center>
-				{#each { length: segments } as _, segmentIndex}
-					{@const segmentAngle = (2 * Math.PI) / segments}
-					{@const startAngle = segmentIndex * segmentAngle}
-					{@const endAngle = (segmentIndex + 1) * segmentAngle}
-					<SpringValue value={Number(value)} let:value>
-						<Arc
-							{startAngle}
-							{endAngle}
-							innerRadius={-15}
-							cornerRadius={2}
-							padAngle={0.01}
-							class={cls((segmentIndex / segments) * 100 < value ? fillColor : 'fill-gray-300')}
-						>
-							{#if value}
-								<Text
-									value={Math.round(value) + '%'}
-									textAnchor="middle"
-									verticalAnchor="middle"
-									dy={1}
-									class="text-3xl tabular-nums fill-primary-800"
-								/>
-							{:else}
-								<Text
-									value="Not available"
-									textAnchor="middle"
-									verticalAnchor="middle"
-									dy={1}
-									class="text-sm font-light fill-primary-300"
-								/>
-							{/if}
-						</Arc>
-					</SpringValue>
-				{/each}
-			</Group>
-		</Svg>
-	</Chart>
+<div class="flex flex-col items-start justify-between w-full gap-4 py-4 md:flex-row">
+	<div class="flex flex-col gap-1">
+		<span class="inline-flex items-end justify-start font-bold">Attendance</span>
+		<div class="inline-flex items-start justify-between">
+			<svg width={224} height={40}>
+				<rect y={5} x={12} width={2 * 100} height={25} class="fill-[#d1d5db]" />
+				<rect y={5} x={12} width={2 * value} height={25} class={fillColor} />
+				<text x={112} y={10} dominant-baseline="hanging" text-anchor="middle">{value}%</text>
+			</svg>
+		</div>
+	</div>
 </div>
