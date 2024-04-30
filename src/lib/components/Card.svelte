@@ -13,7 +13,8 @@
 	import QuestionViz from './QuestionViz.svelte';
 	import AssetsHistogram from './AssetsHistogram.svelte';
 	import InfoPopover from './InfoPopover.svelte';
-	import AgeEducation from './AgeEducation.svelte';
+	import AgeEducation from './AgeEducationAttendance.svelte';
+	import AgeEducationAttendance from './AgeEducationAttendance.svelte';
 
 	$: results = $selectedConstituency;
 </script>
@@ -67,10 +68,11 @@
 				<div class="flex justify-between gap-1">
 					<div class="flex flex-col w-full">
 						<div class="md:flex border-b-[1px] border-neutral-100/50 w-full">
-							<AgeEducation age={results.age_y} education={results.education_x} />
-							<div class="w-2/3 md:w-1/3 px-8">
-								<AttendanceMarker value={results.attendance} />
-							</div>
+							<AgeEducationAttendance
+								age={results.age_y}
+								education={results.education_x}
+								attendance={results.attendance}
+							/>
 						</div>
 						<div class="flex border-b-[1px] border-neutral-100/50 w-full">
 							<AssetsCriminalCases

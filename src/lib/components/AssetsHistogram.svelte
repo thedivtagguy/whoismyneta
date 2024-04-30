@@ -28,7 +28,7 @@
 	let outliers = sortedData.filter((d) => Number(d.total_assets) > max);
 </script>
 
-<div bind:this={width} class="w-full pb-4 mb-4 border-b-[1px]">
+<div bind:this={width} class="w-full py-4 mb-4 border-b-[1px]">
 	<span class="inline-flex items-center font-bold"
 		>Relative wealth
 		<InfoPopover text="The wealth of the candidate relative to other candidates in the dataset." />
