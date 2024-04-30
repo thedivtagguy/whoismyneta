@@ -1,7 +1,6 @@
 <script>
-	import { interpolateRound } from 'd3-interpolate';
+	import { interpolateRound } from 'd3';
 	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
 
 	export let value;
 
@@ -15,15 +14,22 @@
 
 	$: fillColor =
 		value >= 75 ? 'fill-success-400' : value >= 50 ? 'fill-warning-400' : 'fill-danger-400';
+
+	let width;
 </script>
 
-<div class="flex flex-col gap-1">
+<div bind:clientWidth={width} class="flex flex-col gap-1">
 	<span class="inline-flex items-end justify-start font-bold">Attendance</span>
-	<svg width={224} height={50}>
-		<rect y={2} x={12} width={2 * 100} height={30} class="fill-[#d1d5db]" />
-		<rect y={2} x={12} width={2 * $progress} height={30} class={fillColor} />
-		<text x={112} y={5} dominant-baseline="hanging" text-anchor="middle" class="text-2xl"
-			>{$progress}%</text
+	<svg {width} height={50}>
+		<rect y={2} x={0} {width} height={30} class="fill-[#d1d5db]" />
+
+		<rect y={2} x={0} width={$progress * (width / 100)} height={30} class={fillColor} />
+		<text
+			x="20%"
+			y="18%"
+			dominant-baseline="hanging"
+			text-anchor="middle"
+			class="text-lg tabular-nums">{$progress}%</text
 		>
 	</svg>
 </div>

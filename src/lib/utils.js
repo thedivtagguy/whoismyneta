@@ -45,9 +45,11 @@ export function setCandidate(candidate = '') {
 
 export function formatRupee(value, integer = false) {
 	if (value >= 10000000) {
-		return (integer ? Math.round(value / 10000000) : Number((value / 10000000).toFixed(2))) + ' Cr';
+		return (
+			(integer ? Math.round(value / 10000000) : Number((value / 10000000).toFixed(2))) + ' crore'
+		);
 	} else if (value >= 100000) {
-		return (integer ? Math.round(value / 100000) : Number((value / 100000).toFixed(2))) + ' L';
+		return (integer ? Math.round(value / 100000) : Number((value / 100000).toFixed(2))) + ' lakhs';
 	} else {
 		return new Intl.NumberFormat('en-IN', {
 			style: 'currency',

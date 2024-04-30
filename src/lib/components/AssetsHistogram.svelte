@@ -28,12 +28,12 @@
 	let outliers = sortedData.filter((d) => Number(d.total_assets) > max);
 </script>
 
-<div bind:this={width} class="w-full py-4 mb-4 border-b-[1px]">
+<div bind:this={width} class="w-full py-4 mb-2 border-b-[1px]">
 	<span class="inline-flex items-center font-bold"
 		>Relative wealth
 		<InfoPopover text="The wealth of the candidate relative to other candidates in the dataset." />
 	</span>
-	<svg width={svgWidth} class="w-full h-[70px]">
+	<svg width={svgWidth} class="w-full pt-2 h-[75px]">
 		<line y1={center} y2={center} x1={xScale(min)} x2={xScale(max)} class=" stroke-neutral-500" />
 
 		<!-- Add labels for each percentile -->

@@ -9,14 +9,17 @@
 	$: console.log('String length', education.length);
 </script>
 
-<div class="grid grid-cols-2 w-2/3 gap-4 py-4">
-	<GenericField
-		title={'Education'}
-		value={education}
-		textHeight={education.length > 9 ? 'text-xl font-normal' : 'text-2xl'}
-	/>
-	<GenericField title={'Age'} value={age} />
-</div>
-<div class="w-1/3 gap-4 py-4 relative right-20">
+<div class="grid grid-cols-3 gap-1 pt-4">
+	<div class="col-span-1">
+		<GenericField
+			title={'Education'}
+			value={education}
+			textHeight={education.length > 12 ? 'text-lg font-normal' : 'text-lg'}
+		/>
+	</div>
+	<div class="col-span-1">
+		<GenericField title={'Age'} value={age} />
+	</div>
+
 	<AttendanceMarker value={attendance} />
 </div>

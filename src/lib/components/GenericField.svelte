@@ -3,7 +3,7 @@
 	export let title;
 	export let infoPopOverText = null;
 	export let value;
-	export let textHeight = 'text-2xl';
+	export let textHeight = 'text-xl';
 </script>
 
 <div class="flex flex-col gap-1 align-text-bottom">

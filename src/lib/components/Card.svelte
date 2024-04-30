@@ -26,27 +26,18 @@
 		class="relative flex flex-col justify-between w-full h-full px-6 py-4 rounded-md bg-surface-200"
 	>
 		<div>
-			<span
-				style:background-color={partyColors[results.party_x].backgroundColor
-					? partyColors[results.party_x].backgroundColor
-					: partyColors['IND'].backgroundColor}
-				style:color={partyColors[results.party_x].textColor
-					? partyColors[results.party_x].textColor
-					: partyColors['IND'].textColor}
-				class="inline-flex px-2 mb-2 font-mono text-sm font-bold rounded-md text-neutral-500"
-			>
-				{results.party_x}</span
-			>
-			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
-				<div class="inline-flex items-end justify-start gap-2">
-					<h2 class="text-4xl font-bold w-fit text-pretty">
-						{results.candidate}
-					</h2>
-					{#if results.recontesting}
-						<InfoPopover icon={mdiBankCheck} text="MP is recontesting in 2024" />
-					{/if}
-				</div>
-				{#if !results.attendance}
+			<div class="flex items-center justify-between">
+				<span
+					style:background-color={partyColors[results.party_x].backgroundColor
+						? partyColors[results.party_x].backgroundColor
+						: partyColors['IND'].backgroundColor}
+					style:color={partyColors[results.party_x].textColor
+						? partyColors[results.party_x].textColor
+						: partyColors['IND'].textColor}
+					class="inline-flex px-2 mb-2 font-mono text-sm font-bold rounded-md text-neutral-500"
+				>
+					{results.party_x}</span
+				>{#if !results.attendance}
 					<div class="block -mt-2">
 						<span class="inline-flex items-center justify-center font-sans text-xs font-normal 2">
 							This MP's data has different availability
@@ -57,6 +48,17 @@
 						</span>
 					</div>
 				{/if}
+			</div>
+			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
+				<div class="inline-flex items-end justify-start gap-2">
+					<h2 class="text-4xl font-bold w-fit text-pretty">
+						{results.candidate}
+					</h2>
+					{#if results.recontesting}
+						<InfoPopover icon={mdiBankCheck} text="MP is recontesting in 2024" />
+					{/if}
+				</div>
+
 				<div class="inline-flex items-center justify-start gap-2">
 					<MapPin class="stroke-2 size-5 text-neutral-500" />
 					<p class="text-lg font-medium capitalize">
