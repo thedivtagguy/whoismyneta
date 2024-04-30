@@ -194,7 +194,7 @@
 								let x = (left + right) / 2;
 								let y = (top + bottom) / 2;
 								const padding = 80;
-								console.log(left, top, right, bottom);
+
 								zoomTo({ x, y }, { width: width + padding, height: height + padding });
 							}}
 							on:mousemove={() => (hovered = feature)}

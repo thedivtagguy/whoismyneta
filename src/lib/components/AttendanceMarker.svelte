@@ -5,7 +5,7 @@
 	export let value;
 
 	const progress = tweened(0, {
-		duration: 400,
+		duration: 200,
 		interpolate: interpolateRound
 	});
 
@@ -18,15 +18,15 @@
 	let width;
 </script>
 
-<div bind:clientWidth={width} class="flex flex-col gap-1">
+<div bind:clientWidth={width} class="flex flex-col gap-1 pb-2">
 	<span class="inline-flex items-end justify-start font-bold">Attendance</span>
-	<svg {width} height={50}>
-		<rect y={2} x={0} {width} height={30} class="fill-[#d1d5db]" />
+	<svg {width} height={28}>
+		<rect y={2} x={0} {width} height="100%" class="fill-[#d1d5db]" />
 
 		<rect y={2} x={0} width={$progress * (width / 100)} height={30} class={fillColor} />
 		<text
 			x="20%"
-			y="18%"
+			y="25%"
 			dominant-baseline="hanging"
 			text-anchor="middle"
 			class="text-lg tabular-nums">{$progress}%</text

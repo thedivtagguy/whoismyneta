@@ -7,9 +7,8 @@
 	export let threshold = 10;
 
 	// sort and get the quantiles of the data
-	// sort and get the quantiles of the data
 	let sortedData = sort(data, (a, b) => Number(a.total_assets) - Number(b.total_assets));
-	console.log(sortedData);
+
 	let q1 = quantile(sortedData, 0.25, (d) => Number(d.total_assets));
 	let median = quantile(sortedData, 0.5, (d) => Number(d.total_assets));
 	let q3 = quantile(sortedData, 0.75, (d) => Number(d.total_assets));

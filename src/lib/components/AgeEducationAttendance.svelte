@@ -5,8 +5,6 @@
 	export let age;
 	export let education;
 	export let attendance;
-
-	$: console.log('String length', education.length);
 </script>
 
 <div class="grid grid-cols-3 gap-1 pt-4">
