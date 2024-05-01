@@ -216,9 +216,9 @@
 							class="{$selectedConstituency &&
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-900'
-								: ''} hover:cursor-pointer 
-							transition-colors duration-200 ease-in-out 
-                           
+								: ''} hover:cursor-pointer
+							transition-colors duration-200 ease-in-out
+
 							{data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name).total_assets === undefined
 								? 'pointer-events-none'
 								: 'pointer-events-auto'}

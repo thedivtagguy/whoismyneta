@@ -1,7 +1,9 @@
 import { selectedConstituency, selectedCandidate } from './store';
 import data from '../lib/data/data.json';
+import { feature } from 'topojson-client';
+import country from '../lib/data/india_ls_seats_545.json';
 import { goto } from '$app/navigation';
-import { range } from 'd3';
+import { geoContains, range } from 'd3';
 
 /**
  * Converts a string to a slug by removing spaces and special characters.
@@ -17,6 +19,18 @@ export function slugify(str) {
 		.toLowerCase()
 		.replace(/\s+/g, '-')
 		.replace(/[^a-z0-9-]/g, '');
+}
+
+export function getConstituency(point) {
+	const states = feature(country, country.objects.india_ls_seats_545);
+	const constituencyData = states.features.find(
+		(feature) => geoContains(feature, point)
+	);
+	if (constituencyData) {
+		return constituencyData;
+	}
+
+	return null;
 }
 
 export function setConstituency(constituency = '') {
