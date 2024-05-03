@@ -44,6 +44,7 @@
 	"dependencies": {
 		"@fontsource/source-sans-pro": "^5.0.8",
 		"d3-svg-legend": "^2.25.6",
+		"rollup": "^4.17.2",
 		"svelte-ux": "^0.62.8"
 	}
 }
