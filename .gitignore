@@ -11,6 +11,3 @@ vite.config.ts.timestamp-*
 
 # Local Netlify folder
 .netlify
-
-# Compile time files from rollup
-src/lib/build
