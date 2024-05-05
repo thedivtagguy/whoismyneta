@@ -73,14 +73,17 @@
 		<div class="pb-4 pr-4 md:w-1/2 md:pb-0">
 			<h3 class="text-sm font-semibold text-neutral-600">Methodology</h3>
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
-				This is a small project made as part of OpenCity.in's April 2024 Elections Datajam. Election
-				affidavits filed by candidates during the 2019 and 2024 general elections was scraped from
-				MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024) was
-				scraped from PRS India.
+				This is a small project made as part of the April 2024
+        <a href="https://opencity.in/"
+          >OpenCity.in</a
+        >
+        Elections Datajam. Election affidavits filed by candidates during the 2019 and 2024 general
+        elections from MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024)
+        from PRS India.
 				<br />
 				<br />
 
-				Data on age, attendance and questions, are from PRS India. Other data is from MyNeta, as per
+				Data on age, attendance and questions is from PRS India. Other data is from MyNeta, as per
 				2019 and 2024 (where available) election affidavits. Attendance shown is the average
 				attendance percentage across parliamentary sessions where the neta's attendance was tracked.
 			</p>
@@ -92,19 +95,18 @@
 				class=" align-bottom text-left list-outside max-w-[20rem] gap-2 flex flex-col pt-2 text-neutral-500 text-xs"
 			>
 				<li>
-					<a href="https://github.com/Vonter/india-election-affidavits"
-						>Election affidavits filed by candidates, compiled from MyNeta, by Vonter</a
+					<a href="https://myneta.info/"
+            >Election affidavits, from MyNeta</a
 					>
 				</li>
 				<li>
-					<a href="https://github.com/Vonter/india-representatives-activity"
-						>Legislative activity of parliamentary representatives, compiled from PRS India, by
-						Vonter</a
+					<a href="https://prsindia.org/"
+						>Legislative activity, from PRS India</a
 					>
 				</li>
 				<li>
 					<a href="https://github.com/shijithpk/2024_maps_supplement/"
-						>Lok Sabha constituencies Shapefile, compiled by Shijith PK</a
+						>Constituencies Shapefile, compiled by Shijith PK</a
 					>
 				</li>
 			</ul>
@@ -113,8 +115,8 @@
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				Developed by <a href="https://twitter.com/thedivtagguy">Aman Bhargava</a>.
 				<br />
-				Data by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional inputs by
-				<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>
+				Assisted by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional 
+        inputs by	<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>.
 			</p>
 			<div>
 				<a
