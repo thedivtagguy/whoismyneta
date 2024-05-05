@@ -128,11 +128,7 @@
 					View source on GitHub</a
 				>
 				<p class="text-[0.6rem] uppercase text-neutral-500">
-					Last updated: {new Date().toLocaleDateString('en-US', {
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric'
-					})}
+					Last updated: {BUILD_DATE}
 				</p>
 			</div>
 		</div>
