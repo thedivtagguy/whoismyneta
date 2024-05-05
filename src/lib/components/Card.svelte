@@ -58,7 +58,17 @@
 						<InfoPopover icon={mdiBankCheck} text="MP is recontesting in 2024" />
 					{/if}
 				</div>
-
+				{#if !results.attendance}
+					<div class="block -mt-2">
+						<span class="inline-flex items-center justify-center font-sans text-xs font-normal 2">
+							This MP's data has different availability
+							<InfoPopover
+								width="10rem"
+								text="This MP was a minister. Ministers represent the government in parliament, so their participation is not reported."
+							/>
+						</span>
+					</div>
+				{/if}
 				<div class="inline-flex items-center justify-start gap-2">
 					<MapPin class="stroke-2 size-5 text-neutral-500" />
 					<p class="text-lg font-medium capitalize">
