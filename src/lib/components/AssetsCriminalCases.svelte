@@ -37,3 +37,16 @@
 		/>
 	{/if}
 </div>
+<div class="flex justify-start w-2/5 gap-4 py-4 md:flex-row">
+	<GenericField
+		title={`${
+			Number(caseCount) === 0
+				? 'Criminal Cases'
+				: caseCount > 1
+					? 'Criminal Cases'
+					: 'Criminal Case'
+		}`}
+		value={caseCount}
+		infoPopOverText={'Criminal cases on record'}
+	/>
+</div>
