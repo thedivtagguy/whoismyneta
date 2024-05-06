@@ -11,7 +11,7 @@
 		: criminalCases.criminal_cases;
 </script>
 
-<div class="grid justify-start w-full grid-cols-3 gap-2 py-4">
+<div class="grid justify-start w-full grid-cols-4 gap-2 py-4">
 	<GenericField
 		title={`${
 			Number(caseCount) === 0
@@ -37,7 +37,7 @@
 		/>
 	{/if}
 </div>
-<div class="flex justify-start w-2/5 gap-4 py-4 md:flex-row">
+<!-- <div class="flex justify-start w-2/5 gap-4 py-4 md:flex-row">
 	<GenericField
 		title={`${
 			Number(caseCount) === 0
@@ -49,4 +49,4 @@
 		value={caseCount}
 		infoPopOverText={'Criminal cases on record'}
 	/>
-</div>
+</div> -->

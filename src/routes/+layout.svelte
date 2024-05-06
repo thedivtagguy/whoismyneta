@@ -8,6 +8,7 @@
 	import data from '$lib/data/data.json';
 	import InfoPopover from '$lib/components/InfoPopover.svelte';
 	import { mdiGithub } from '@mdi/js';
+	import LokSabhaRecontestingList from '$lib/components/LokSabhaRecontestingList.svelte';
 </script>
 
 <Seo
@@ -20,51 +21,12 @@
 />
 
 <main
-	class="min-h-[90vh] overflow-hidden h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-2 mb-4 md:mb-8"
+	class="min-h-[90vh] h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-2 mb-4 md:mb-8"
 >
 	<Header />
-	<main
-		class="flex flex-col items-center justify-center w-full px-2 pb-2 md:py-2 md:px-0 md:flex-row"
-	>
+	<main class="w-full h-full px-2 pb-2 md:py-2 md:px-0 md:flex-row">
 		<slot></slot>
 	</main>
-	<section class="self-start w-full pt-2 pl-4 mx-2 mt-1 mb-4 md:pl-0 md:mx-0">
-		<h2 class="inline-flex items-center font-bold text-neutral">
-			Browse MPs recontesting in 2024 <InfoPopover
-				text="List including only individuals who filed affidavits as of April 24th, 2024"
-			/>
-		</h2>
-		<div
-			class="grid grid-flow-row grid-cols-1 gap-2 pt-4 md:max-w-fit md:w-full max-w-[300px] text-sm gr md:grid-flow-col md:grid-rows-12 recontesting text-neutral-800"
-		>
-			{#each [...new Set(data
-						.filter((mps) => mps.recontesting)
-						.map((item) => item.state_ut_name))].sort() as state_ut_name}
-				<h3
-					class="inline-flex items-center w-2/3 m-0 ml-1 font-bold leading-none text-neutral-500 md:w-full"
-				>
-					{state_ut_name}
-				</h3>
-
-				{#each data
-					.filter((mps) => mps.state_ut_name === state_ut_name && mps.recontesting)
-					.sort((a, b) => a.candidate.localeCompare(b.candidate)) as mps}
-					<Button
-						fullWidth
-						on:click={() => {
-							setConstituency(mps.ls_seat_name);
-							window.scrollTo(0, 0);
-						}}
-						classes={{
-							root: ' text-neutral-200 font-normal'
-						}}
-						variant="default"
-						size="sm">{mps.candidate}</Button
-					>
-				{/each}
-			{/each}
-		</div>
-	</section>
 </main>
 <footer class="max-w-6xl px-4 py-4 mx-2 mb-4 md:mb-8 bg-surface-100 md:mx-auto">
 	<div
@@ -74,12 +36,10 @@
 			<h3 class="text-sm font-semibold text-neutral-600">Methodology</h3>
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				This is a small project made as part of the April 2024
-        <a href="https://opencity.in/"
-          >OpenCity.in</a
-        >
-        Elections Datajam. Election affidavits filed by candidates during the 2019 and 2024 general
-        elections from MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024)
-        from PRS India.
+				<a href="https://opencity.in/">OpenCity.in</a>
+				Elections Datajam. Election affidavits filed by candidates during the 2019 and 2024 general elections
+				from MyNeta. Legislative activity of representatives in the 17th Lok Sabha (2019-2024) from PRS
+				India.
 				<br />
 				<br />
 
@@ -95,14 +55,10 @@
 				class=" align-bottom text-left list-outside max-w-[20rem] gap-2 flex flex-col pt-2 text-neutral-500 text-xs"
 			>
 				<li>
-					<a href="https://myneta.info/"
-            >Election affidavits, from MyNeta</a
-					>
+					<a href="https://myneta.info/">Election affidavits, from MyNeta</a>
 				</li>
 				<li>
-					<a href="https://prsindia.org/"
-						>Legislative activity, from PRS India</a
-					>
+					<a href="https://prsindia.org/">Legislative activity, from PRS India</a>
 				</li>
 				<li>
 					<a href="https://github.com/shijithpk/2024_maps_supplement/"
@@ -115,8 +71,8 @@
 			<p class="max-w-lg pt-2 text-xs text-left text-neutral-500">
 				Developed by <a href="https://twitter.com/thedivtagguy">Aman Bhargava</a>.
 				<br />
-				Assisted by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional 
-        inputs by	<a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>.
+				Assisted by <a href="https://twitter.com/Vonterinon">Vivek Matthew</a> and additional inputs
+				by <a href="https://twitter.com/bengawalk">Pravar Chaudhary</a>.
 			</p>
 			<div>
 				<a
@@ -136,20 +92,3 @@
 		</div>
 	</div>
 </footer>
-
-<style>
-	a {
-		@apply text-neutral-500 underline;
-	}
-
-	a:hover {
-		@apply text-neutral-600 underline font-medium;
-	}
-
-	:global(.recontesting button) {
-		text-align: left !important;
-		margin: none;
-		display: block;
-		padding: 8px 5px;
-	}
-</style>

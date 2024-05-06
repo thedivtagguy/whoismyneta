@@ -129,3 +129,12 @@ export const generateTickValues = (data, count, key) => {
 	// Generate evenly spaced tick values
 	return range(0, maxDataValue + 1, step);
 };
+
+export const getScrollPercent = () => {
+	const h = document.documentElement,
+		b = document.body,
+		st = 'scrollTop',
+		sh = 'scrollHeight';
+
+	return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+};

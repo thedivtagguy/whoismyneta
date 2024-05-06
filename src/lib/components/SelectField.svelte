@@ -51,7 +51,7 @@
 	}
 </script>
 
-<div class="flex items-center justify-start w-full mx-auto mb-2 search-container">
+<div class="flex items-center justify-start w-full mx-auto search-container">
 	<Typeahead
 		label={searchType === 'location' ? 'Search by constituency or MP' : 'Search for an MP'}
 		value={$selectedConstituency.ls_seat_name ? $selectedConstituency.ls_seat_name : ''}
@@ -82,7 +82,7 @@
 <style>
 	.search-container {
 		width: 100%;
-		padding: 1rem 0;
+		padding: 0rem 0 1rem 0;
 		border-radius: 0.25rem;
 		font-size: 1rem;
 		line-height: 1.5;

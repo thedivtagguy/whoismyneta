@@ -7,13 +7,7 @@
 		schemeBlues,
 		schemeGreens,
 		schemeSpectral,
-		zoom,
-		interpolateBlues,
-		scaleSequential,
-		scaleLinear,
-		geoPath,
-		scaleQuantize,
-		scaleThreshold
+		scaleLinear
 	} from 'd3';
 	import { feature } from 'topojson-client';
 	import { Chart, Legend, Svg, GeoPath, Text, Transform } from 'layerchart';
@@ -21,9 +15,10 @@
 	import { cubicOut } from 'svelte/easing';
 	import TransformControls from './TransformControls.svelte';
 	import { selectedConstituency } from '$lib/store';
-	import { setConstituency } from '$lib/utils';
+	import { setConstituency, getScrollPercent } from '$lib/utils';
 	import data from '$lib/data/data.json';
 	import ToggleMap from './ToggleMap.svelte';
+	import { slide } from 'svelte/transition';
 
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
@@ -152,14 +147,26 @@
 	// 		transform.zoomTo({ x: x, y: y }, { width: width * 0.1, height: height * 0.1 });
 	// 	}
 	// }
+
+	let scrolled = 0;
 </script>
 
-<div class="overflow-auto">
-	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
-</div>
+<svelte:window
+	on:scroll={() => {
+		scrolled = getScrollPercent();
+	}}
+/>
+{#if scrolled < 33}
+	<div out:slide in:slide class="overflow-auto">
+		<ToggleMap
+			on:change={(e) => (selectedCategory = category[e.detail.value])}
+			options={category}
+		/>
+	</div>
+{/if}
 
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[360px] md:h-[650px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[720px] w-full max-w-[900px]"
 >
 	<div class="absolute top-1/2 md:top-2 right-2">
 		<TransformControls {transform} />
