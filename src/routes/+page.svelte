@@ -1,4 +1,5 @@
 <script>
+	import DataTable from '$lib/components/2024Candidates/DataTable.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Map from '$lib/components/Map.svelte';
@@ -13,6 +14,6 @@
 	<div class="flex flex-col gap-8 md:w-1/2">
 		<Card />
 
-		<Card />
+		<DataTable />
 	</div>
 </section>
