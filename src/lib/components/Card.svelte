@@ -23,7 +23,7 @@
 	{@const baseURl = results.recontesting ? 'LokSabha2024' : 'LokSabha2019'}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
-		class="relative flex flex-col justify-between w-full h-full px-6 py-4 rounded-md bg-surface-200"
+		class="relative flex flex-col justify-between w-full min-h-[750px] h-full px-6 py-4 rounded-md bg-surface-200"
 	>
 		<div>
 			<div class="flex items-center justify-between">
@@ -110,7 +110,7 @@
 {:else if Object.keys($selectedConstituency).length === 0}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
-		class="flex min-h-[300px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
+		class="flex min-h-[750px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
 	>
 		<p class="text-lg text-neutral-500">Select a constituency to view details</p>
 		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
