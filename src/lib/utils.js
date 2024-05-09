@@ -23,14 +23,27 @@ export function slugify(str) {
 
 export function getConstituency(point) {
 	const states = feature(country, country.objects.india_ls_seats_545);
-	const constituencyData = states.features.find(
-		(feature) => geoContains(feature, point)
-	);
+	const constituencyData = states.features.find((feature) => geoContains(feature, point));
 	if (constituencyData) {
 		return constituencyData;
 	}
 
 	return null;
+}
+
+export function locateMe() {
+	const successCallback = (position) => {
+		let constituency = getConstituency([position.coords.longitude, position.coords.latitude]);
+		if (constituency) {
+			setConstituency(constituency.properties.ls_seat_name);
+		}
+	};
+
+	const errorCallback = (error) => {
+		console.log(error);
+	};
+
+	navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }
 
 export function setConstituency(constituency = '') {

@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="metadata">
-				<div class="flex justify-between gap-1">
+				<div class="flex justify-between">
 					<div class="flex flex-col w-full">
 						<div class="md:flex border-b-[1px] border-neutral-100/50 w-full">
 							<AgeEducationAttendance

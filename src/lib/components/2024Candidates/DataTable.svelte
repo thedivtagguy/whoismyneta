@@ -32,7 +32,7 @@
 	];
 </script>
 
-<Paginate data={constituencyData} perPage={10} let:pageData let:pagination>
+<Paginate data={constituencyData} perPage={7} let:pageData let:pagination>
 	<Table
 		styles={{
 			table: 'border-separate'

@@ -2,10 +2,9 @@
 	import data from '$lib/data/data.json';
 	import Typeahead from 'svelte-typeahead';
 	import { Button } from 'svelte-ux';
-	import { mdiFilterRemove } from '@mdi/js';
-	import { slugify, setConstituency, setCandidate } from '$lib/utils';
+	import { mdiCrosshairsGps, mdiFilterRemove } from '@mdi/js';
+	import { slugify, setConstituency, setCandidate, locateMe } from '$lib/utils';
 	import { selectedCandidate, selectedConstituency, searchMode } from '$lib/store';
-	import { goto } from '$app/navigation';
 
 	$: searchType = $searchMode;
 
@@ -51,9 +50,10 @@
 	}
 </script>
 
-<div class="flex items-center justify-start w-full mx-auto search-container">
+<div
+	class="sticky flex items-center justify-center w-full max-w-sm pt-2 mx-auto top-2 md:max-w-xl md:w-full search-container"
+>
 	<Typeahead
-		label={searchType === 'location' ? 'Search by constituency or MP' : 'Search for an MP'}
 		value={$selectedConstituency.ls_seat_name ? $selectedConstituency.ls_seat_name : ''}
 		{extract}
 		limit={5}
@@ -66,20 +66,34 @@
 			}
 		}}
 		data={searchIndex}
+		hideLabel={true}
 		showDropdownOnFocus={true}
 	/>
-	<div class="pl-4 pt-7">
+	<div class="pl-2">
 		<Button
 			on:click={() => {
-				$selectedConstituency = {};
-				goto('/', { noScroll: true });
+				locateMe();
 			}}
-			icon={mdiFilterRemove}
-		/>
+			icon={mdiCrosshairsGps}
+			classes={{ root: ' bg-[#E6E6E6] ' }}
+		>
+			Locate me
+		</Button>
 	</div>
 </div>
 
 <style>
+	:global([data-svelte-typeahead]) {
+		background-color: transparent !important;
+		z-index: 1000 !important;
+		width: 100% !important;
+		max-width: 30rem;
+	}
+
+	:global(input[name='search']) {
+		background-color: #fff !important;
+		width: 100% !important;
+	}
 	.search-container {
 		width: 100%;
 		padding: 0rem 0 1rem 0;
@@ -92,6 +106,7 @@
 		transition:
 			border-color 0.15s ease-in-out,
 			box-shadow 0.15s ease-in-out;
+		background-color: none;
 	}
 
 	/* Style data-svelte-typeahead */
@@ -100,11 +115,11 @@
 		font-weight: 500;
 	}
 
-	:global([data-svelte-typeahead] > label) {
-		font-weight: 800;
+	:global([data-svelte-typeahead] label) {
+		display: none !important;
 	}
 
 	:global(.svelte-typeahead-list) {
-		z-index: 1000 !important;
+		z-index: 100054 !important;
 	}
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button, Tooltip, cls } from 'svelte-ux';
-	import { getConstituency, setConstituency } from '$lib/utils';
+	import { locateMe } from '$lib/utils';
 
 	import {
 		mdiArrowULeftTop,
@@ -24,21 +24,6 @@
 	export let transform;
 	export let placement: Placement = 'top-right';
 	export let orientation: 'horizontal' | 'vertical' = 'vertical';
-
-	let localMeAndZoom = function() {
-		const successCallback = (position: any) => {
-			let constituency = getConstituency([position.coords.longitude, position.coords.latitude]);
-			if(constituency) {
-				setConstituency(constituency.properties.ls_seat_name);
-			}
-		};
-
-		const errorCallback = (error: any) => {
-			console.log(error);
-		};
-
-		navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-	}
 </script>
 
 <div
@@ -82,7 +67,7 @@
 	<Tooltip title="Locate me">
 		<Button
 			icon={mdiCrosshairsGps}
-			on:click={() => localMeAndZoom()}
+			on:click={() => locateMe()}
 			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>

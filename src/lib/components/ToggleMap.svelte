@@ -1,6 +1,9 @@
 <script>
-	import { ToggleGroup, ToggleOption } from 'svelte-ux';
+	import { ToggleGroup, ToggleOption, Button } from 'svelte-ux';
 	import { createEventDispatcher } from 'svelte';
+	import { selectedConstituency } from '$lib/store';
+	import { mdiFilterRemove } from '@mdi/js';
+	import { goto } from '$app/navigation';
 	export let options = {};
 	let selectedStr = '';
 	let variant = 'fill-surface';
@@ -13,12 +16,25 @@
 	$: dispatch('change', selected);
 </script>
 
-<div class="flex md:w-full mb-2 gap-2 md:max-w-[700px] max-w-[300px]">
+<div class="flex md:w-full mb-2 gap-2 md:max-w-[700px]">
+	<div class="sticky left-0 z-10 bg-white">
+		<Button
+			on:click={() => {
+				$selectedConstituency = {};
+				goto('/', { noScroll: true });
+			}}
+			classes={{
+				root: 'text-xs whitespace-nowrap h-8 w-fit max-w-[125px] '
+			}}
+			color="neutral"
+			icon={mdiFilterRemove}
+		/>
+	</div>
 	<ToggleGroup gap {variant} bind:value={selectedStr}>
 		{#each optionsArray as option}
 			<ToggleOption
 				classes={{
-					root: ' text-xs whitespace-nowrap w-fit max-w-[125px] '
+					root: ' text-xs whitespace-nowrap h-8 w-fit max-w-[125px] '
 				}}
 				value={option.value}
 			>

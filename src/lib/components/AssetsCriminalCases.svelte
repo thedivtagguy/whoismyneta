@@ -11,7 +11,7 @@
 		: criminalCases.criminal_cases;
 </script>
 
-<div class="grid justify-start w-full grid-cols-4 gap-2 py-4">
+<div class="grid justify-start w-full grid-cols-4 gap-12 py-4">
 	<GenericField
 		title={`${
 			Number(caseCount) === 0

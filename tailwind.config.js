@@ -11,7 +11,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				serif: ['LibreCaslonCondensed', 'serif']
+				serif: ['LibreCaslonCondensed', 'serif'],
+				flourish: ['Nymphette']
 			},
 			colors: {
 				yellowPrimary: '#E8C85A',
