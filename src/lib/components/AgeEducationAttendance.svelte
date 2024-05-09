@@ -7,8 +7,8 @@
 	export let attendance;
 </script>
 
-<div class="grid grid-cols-4 gap-10 pt-4">
-	<div class="col-span-1">
+<div class="w-full">
+	<div class="col-span-3">
 		<GenericField
 			title={'Education'}
 			value={education}

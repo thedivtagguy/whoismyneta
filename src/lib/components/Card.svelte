@@ -15,8 +15,11 @@
 	import InfoPopover from './InfoPopover.svelte';
 	import AgeEducation from './AgeEducationAttendance.svelte';
 	import AgeEducationAttendance from './AgeEducationAttendance.svelte';
+	import GenericField from './GenericField.svelte';
 
 	$: results = $selectedConstituency;
+
+	$: caseCount = results.end_criminal_cases ? results.end_criminal_cases : results.criminal_cases;
 </script>
 
 {#if results && Object.keys(results).length > 0}
@@ -49,6 +52,7 @@
 					</div>
 				{/if}
 			</div>
+
 			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
 				<div class="inline-flex items-end justify-start gap-2">
 					<h2 class="text-4xl font-bold w-fit text-pretty">
@@ -67,24 +71,52 @@
 				</div>
 			</div>
 			<div class="metadata">
-				<div class="flex justify-between">
-					<div class="flex flex-col w-full">
-						<div class="md:flex border-b-[1px] border-neutral-100/50 w-full">
-							<AgeEducationAttendance
-								age={results.age_y}
-								education={results.education_x}
-								attendance={results.attendance}
-							/>
-						</div>
-						<div class="flex border-b-[1px] border-neutral-100/50 w-full">
-							<AssetsCriminalCases
-								currentAssets={results?.end_total_assets}
-								assets={results.total_assets}
-								criminalCases={results}
-							/>
-						</div>
-					</div>
+				<div
+					class="grid items-start border-b-[1px] border-neutral-100 pb-4 justify-start w-full grid-flow-row grid-cols-8 gap-4 my-4"
+				>
+					<GenericField
+						title="Education"
+						value={results.education_x}
+						infoPopOverText={'Education level as per 2024 affidavit'}
+						cols={3}
+					/>
+					<GenericField
+						title="Age"
+						value={formatAge(results.age_y)}
+						infoPopOverText={'Age as of 2024'}
+						cols={2}
+					/>
+					<AttendanceMarker value={results.attendance} cols={3} />
+					<GenericField
+						title={`${
+							Number(results.criminal_cases) === 0
+								? 'Criminal Cases'
+								: results.criminal_cases > 1
+									? 'Criminal Cases'
+									: 'Criminal Case'
+						}`}
+						value={results.criminal_cases}
+						infoPopOverText={'Criminal cases on record'}
+						cols={3}
+					/>
+
+					<GenericField
+						title={'Assets (2019)'}
+						infoPopOverText={'Assets declared by the candidate in 2019'}
+						value={formatRupee(results.total_assets)}
+						cols={2}
+					/>
+
+					{#if results.end_total_assets}
+						<GenericField
+							title={'Assets (2024)'}
+							infoPopOverText={'Assets declared by the candidate in 2024'}
+							value={formatRupee(results.end_total_assets)}
+							cols={2}
+						/>
+					{/if}
 				</div>
+
 				<AssetsHistogram
 					assets={results.end_total_assets ? results.end_total_assets : results.total_assets}
 				/>
