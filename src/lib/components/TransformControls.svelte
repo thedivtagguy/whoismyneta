@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { Button, Tooltip, cls } from 'svelte-ux';
+	import { getConstituency, setConstituency } from '$lib/utils';
 
 	import {
 		mdiArrowULeftTop,
 		mdiMagnifyPlusOutline,
 		mdiMagnifyMinusOutline,
-		mdiImageFilterCenterFocus
+		mdiImageFilterCenterFocus,
+		mdiCrosshairsGps
 	} from '@mdi/js';
 
 	type Placement =
@@ -20,8 +22,23 @@
 		| 'bottom-right';
 
 	export let transform;
-	export let placement: Placement | undefined = 'top-right';
+	export let placement: Placement = 'top-right';
 	export let orientation: 'horizontal' | 'vertical' = 'vertical';
+
+	let localMeAndZoom = function() {
+		const successCallback = (position: any) => {
+			let constituency = getConstituency([position.coords.longitude, position.coords.latitude]);
+			if(constituency) {
+				setConstituency(constituency.properties.ls_seat_name);
+			}
+		};
+
+		const errorCallback = (error: any) => {
+			console.log(error);
+		};
+
+		navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+	}
 </script>
 
 <div
@@ -59,6 +76,13 @@
 		<Button
 			icon={mdiImageFilterCenterFocus}
 			on:click={() => transform.translateCenter()}
+			class="p-2 text-surface-content/50"
+		/>
+	</Tooltip>
+	<Tooltip title="Locate me">
+		<Button
+			icon={mdiCrosshairsGps}
+			on:click={() => localMeAndZoom()}
 			class="p-2 text-surface-content/50"
 		/>
 	</Tooltip>
