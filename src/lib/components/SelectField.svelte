@@ -121,5 +121,6 @@
 
 	:global(.svelte-typeahead-list) {
 		z-index: 100054 !important;
+		background-color: #fff !important;
 	}
 </style>

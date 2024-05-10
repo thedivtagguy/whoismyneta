@@ -2,6 +2,9 @@
 	import DataTable from '$lib/components/2024Candidates/DataTable.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import Map from '$lib/components/Map.svelte';
+	import { selectedConstituency } from '$lib/store';
+	import { fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
 </script>
 
 <section class="flex flex-col justify-start w-full h-full gap-6 mb-4 md:flex-row">
@@ -17,4 +20,16 @@
 		<Card />
 	</div>
 </section>
-<DataTable />
+{#if Object.keys($selectedConstituency).length !== 0}
+	<DataTable />
+{:else}
+	<section
+		in:fade={{ duration: 300, easing: cubicInOut }}
+		class="flex min-h-[400px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
+	>
+		<p class="text-lg text-neutral-500">Select a constituency to see candidates</p>
+		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
+			Candidates contesting in the 2024 Lok Sabha elections and links to their election affidavits.
+		</p>
+	</section>
+{/if}
