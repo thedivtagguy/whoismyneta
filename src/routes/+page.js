@@ -1,12 +1,10 @@
 import data from '../lib/data/data.json';
 import { browser } from '$app/environment';
-import { selectedCandidate, selectedConstituency } from '$lib/store';
+import { selectedConstituency } from '$lib/store';
 import { slugify } from '$lib/utils';
 import { dev } from '$app/environment';
 export const load = async ({ fetch, url }) => {
-	const searchParams = url.searchParams;
-	console.log(searchParams.size);
-	if (searchParams.size === 0) {
+	if (browser && url.searchParams.size === 0) {
 		if (dev) {
 			const randomConstituencies = data.sort(() => 0.5 - Math.random()).slice(0, 5);
 			console.log(randomConstituencies);
@@ -38,8 +36,8 @@ export const load = async ({ fetch, url }) => {
 				}
 			};
 		}
-	} else {
-		const constituency = searchParams.get('constituency');
+	} else if (browser && url.searchParams.size > 0) {
+		const constituency = url.searchParams.get('constituency');
 		console.log('constituency', constituency);
 
 		if (constituency) {
