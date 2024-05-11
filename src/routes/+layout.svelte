@@ -54,11 +54,13 @@
 	shareImg={ShareCard}
 />
 
+<header></header>
 <main
-	class="min-h-[90vh] h-fit flex flex-col w-full justify-center items-center max-w-6xl md:mx-auto mt-2 mb-4 md:mb-8"
+	class="min-h-[90vh] z-10 bg-white h-fit flex flex-col w-full justify-center items-center mt-2 mb-4 md:mb-8"
 >
 	<Header />
-	<main class="w-full h-full px-2 pb-2 md:py-2 md:px-0 md:flex-row">
+
+	<main class="w-full h-full max-w-6xl px-2 pb-2 md:mx-auto md:pb-8 md:pt-4 md:px-0 md:flex-row">
 		<slot></slot>
 	</main>
 </main>

@@ -1,8 +1,13 @@
 <script>
+	import Constituency from '$lib/components/2024Candidates/Constituency.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import Header from '$lib/components/Header.svelte';
 	import Map from '$lib/components/Map.svelte';
-	import SelectField from '$lib/components/SelectField.svelte';
+	import { selectedConstituency } from '$lib/store';
+	import { fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	export let data;
+
+	console.log(data);
 </script>
 
 <section class="flex flex-col justify-start w-full h-full gap-6 md:flex-row">
@@ -14,3 +19,16 @@
 		<Card />
 	</div>
 </section>
+{#if Object.keys($selectedConstituency).length !== 0}
+	<Constituency />
+	<!-- {:else}
+	<section
+		in:fade={{ duration: 300, easing: cubicInOut }}
+		class="flex min-h-[400px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
+	>
+		<p class="text-lg text-neutral-500">Select a constituency to see candidates</p>
+		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
+			Candidates contesting in the 2024 Lok Sabha elections and links to their election affidavits.
+		</p>
+	</section> -->
+{/if}

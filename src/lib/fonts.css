@@ -70,3 +70,11 @@
      font-display: swap;
   }
   
+
+  @font-face {
+    font-family: 'Nymphette';
+    src: url('./fonts/Nymphette.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      font-display: block;
+  }

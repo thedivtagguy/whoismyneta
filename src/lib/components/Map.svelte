@@ -82,7 +82,7 @@
 		'10th Pass',
 		'12th Pass',
 		'Graduate',
-		'Graduate Professional',
+		// 'Graduate Professional',
 		'Post Graduate',
 		'Doctorate'
 	];
@@ -163,7 +163,7 @@
 <!-- {/if} -->
 
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[720px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[500px] md:h-[720px] w-full max-w-[900px]"
 >
 	<div class="absolute top-1/2 md:top-2 right-2">
 		<TransformControls {transform} />
@@ -220,9 +220,9 @@
 							class="{$selectedConstituency &&
 							$selectedConstituency.ls_seat_name === feature.properties.ls_seat_name
 								? 'fill-neutral-900'
-								: ''} hover:cursor-pointer 
-							transition-colors duration-200 ease-in-out 
-                           
+								: ''} hover:cursor-pointer
+							transition-colors duration-200 ease-in-out
+
 							{data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name).total_assets === undefined
 								? 'pointer-events-none'
 								: 'pointer-events-auto'}

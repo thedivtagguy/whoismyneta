@@ -3,6 +3,7 @@
 	import { tweened } from 'svelte/motion';
 
 	export let value;
+	export let cols = 1;
 
 	const progress = tweened(0, {
 		duration: 200,
@@ -18,9 +19,9 @@
 	let width;
 </script>
 
-<div bind:clientWidth={width} class="flex flex-col gap-1 pb-2">
+<div bind:clientWidth={width} class="flex flex-col col-span-{cols} gap-1 pb-2">
 	<span class="inline-flex items-end justify-start font-bold">Attendance</span>
-	<svg {width} height={28}>
+	<svg {width} class="max-w-[12rem]" height={28}>
 		<rect y={2} x={0} {width} height="100%" class="fill-[#d1d5db]" />
 
 		<rect y={2} x={0} width={$progress * (width / 100)} height={30} class={fillColor} />
