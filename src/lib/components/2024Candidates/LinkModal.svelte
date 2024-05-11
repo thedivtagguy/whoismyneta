@@ -7,7 +7,7 @@
 	export let linkURI = '';
 	export let linkText = 'Know more';
 
-	let open = true;
+	let open = false;
 </script>
 
 {#if !$firstClickOnModal}
