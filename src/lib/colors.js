@@ -95,7 +95,7 @@ export const partyColors = {
 	},
 	CPIML: {
 		fullName: 'Communist Party of India (Marxist-Leninist)',
-		backgroundColor: '#cc0d0d',
+		backgroundColor: '#ff0000',
 		textColor: '#FFFFFF'
 	},
 	BPF: {
@@ -105,7 +105,7 @@ export const partyColors = {
 	},
 	CPIM: {
 		fullName: 'Communist Party of India (Marxist)',
-		backgroundColor: '#c41301',
+		backgroundColor: '#cc0d0d',
 		textColor: '#000000'
 	},
 	DMDK: {
@@ -135,7 +135,7 @@ export const partyColors = {
 	},
 	IUML: {
 		fullName: 'Indian Union Muslim League',
-		backgroundColor: '#336600',
+		backgroundColor: '#006600',
 		textColor: '#FFFFFF'
 	},
 	JCC: {
@@ -145,7 +145,7 @@ export const partyColors = {
 	},
 	JD: {
 		fullName: 'Janata Dal',
-		backgroundColor: '#FFD700',
+		backgroundColor: '#2e8b57',
 		textColor: '#000000'
 	},
 	JDU: {
@@ -175,7 +175,7 @@ export const partyColors = {
 	},
 	NCP: {
 		fullName: 'Nationalist Congress Party',
-		backgroundColor: '#008000',
+		backgroundColor: '#00b2b2',
 		textColor: '#FFFFFF'
 	},
 	NPF: {
@@ -185,17 +185,17 @@ export const partyColors = {
 	},
 	PDP: {
 		fullName: 'Peoples Democratic Party',
-		backgroundColor: '#058532',
+		backgroundColor: '#ed1c24',
 		textColor: '#FFFFFF'
 	},
 	MPC: {
 		fullName: "Mizoram People's Conference",
-		backgroundColor: '#6A5ACD',
+		backgroundColor: '#fd7793',
 		textColor: '#FFFFFF'
 	},
 	PDF: {
 		fullName: "People's Democratic Front",
-		backgroundColor: '#FF4500',
+		backgroundColor: '#ffff34',
 		textColor: '#FFFFFF'
 	},
 	PPA: {
@@ -205,12 +205,12 @@ export const partyColors = {
 	},
 	PMK: {
 		fullName: 'Pattali Makkal Katchi',
-		backgroundColor: '#FF4500',
+		backgroundColor: '#ffff00',
 		textColor: '#FFFFFF'
 	},
 	RLD: {
 		fullName: 'Rashtriya Lok Dal',
-		backgroundColor: '#FFA500',
+		backgroundColor: '#006400',
 		textColor: '#000000'
 	},
 	RLP: {
@@ -220,12 +220,12 @@ export const partyColors = {
 	},
 	RJD: {
 		fullName: 'Rashtriya Janata Dal',
-		backgroundColor: '#FF4500',
+		backgroundColor: '#056d05',
 		textColor: '#FFFFFF'
 	},
 	RSP: {
 		fullName: 'Revolutionary Socialist Party',
-		backgroundColor: '#FF8C00',
+		backgroundColor: '#d84c4c',
 		textColor: '#FFFFFF'
 	},
 	SAD: {
@@ -235,7 +235,7 @@ export const partyColors = {
 	},
 	SDF: {
 		fullName: 'Sikkim Democratic Front',
-		backgroundColor: '#6A5ACD',
+		backgroundColor: '#fbec5d',
 		textColor: '#FFFFFF'
 	},
 	SHS: {
@@ -250,47 +250,73 @@ export const partyColors = {
 	},
 	BRS: {
 		fullName: 'Bharat Rashtra Samithi',
-		backgroundColor: '#FF008A',
+		backgroundColor: '#f84996',
 		textColor: '#FFFFFF'
 	},
 	TDP: {
 		fullName: 'Telugu Desam Party',
-		backgroundColor: '#FF008A',
+		backgroundColor: '#ffed00',
 		textColor: '#FFFFFF'
 	},
 	YSRCP: {
 		fullName: 'Yuvajana Sramika Rythu Congress Party',
-		backgroundColor: '#FF008A',
+		backgroundColor: '#1569c7',
 		textColor: '#FFFFFF'
 	},
-
 	JMM: {
-		backgroundColor: '#000080',
+		backgroundColor: '#337316',
 		textColor: 'white',
 		fullName: 'Jharkhand Mukti Morcha'
 	},
-	CPI: { backgroundColor: '#FF0000', textColor: 'white', fullName: 'Communist Party of India' },
+	CPI: {
+    backgroundColor: '#cb0922',
+    textColor: 'white',
+    fullName: 'Communist Party of India' 
+  },
 	VCK: {
-		backgroundColor: '#FFA500',
+		backgroundColor: '#1e90ff',
 		textColor: 'black',
 		fullName: 'Viduthalai Chiruthaigal Katchi'
 	},
-	ADS: { backgroundColor: '#FFD700', textColor: 'black', fullName: 'Apna Dal (Soneylal)' },
-	LJP: { backgroundColor: '#FFA500', textColor: 'black', fullName: 'Lok Janshakti Party' },
-
-	IND: { backgroundColor: '#808080', textColor: 'white', fullName: 'Independent' },
+	ADS: 
+  { 
+    backgroundColor: '#27176d',
+    textColor: 'black',
+    fullName: 'Apna Dal (Soneylal)' 
+  },
+	LJP: {
+    backgroundColor: '#0093dd',
+    textColor: 'black',
+    fullName: 'Lok Janshakti Party' 
+  },
+	IND: {
+    backgroundColor: '#808080',
+    textColor: 'white',
+    fullName: 'Independent' 
+  },
 	AITC: {
-		backgroundColor: '#008000',
+		backgroundColor: '#20c646',
 		textColor: 'white',
 		fullName: 'All India Trinamool Congress'
 	},
-	NPP: { backgroundColor: '#FFA500', textColor: 'black', fullName: 'National People’s Party' },
-
+	NPP: {
+    backgroundColor: '#ffca61',
+    textColor: 'black',
+    fullName: 'National People’s Party' 
+  },
 	NDPP: {
-		backgroundColor: '#FF6600',
+		backgroundColor: '#ed1b24',
 		textColor: 'black',
 		fullName: 'Nationalist Democratic Progressive Party'
 	},
-	SKM: { backgroundColor: '#FF0000', textColor: 'white', fullName: 'Sikkim Krantikari Morcha' },
-	JDS: { backgroundColor: '#FF0000', textColor: 'white', fullName: 'Janata Dal (Secular)' }
+	SKM: {
+    backgroundColor: '#ed1e26',
+    textColor: 'white',
+    fullName: 'Sikkim Krantikari Morcha' 
+  },
+	JDS: {
+    backgroundColor: '#02865a',
+    textColor: 'white',
+    fullName: 'Janata Dal (Secular)' 
+  }
 };
