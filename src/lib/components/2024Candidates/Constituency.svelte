@@ -24,10 +24,20 @@
 			{$selectedConstituency.ls_seat_name}
 		</h2>
 
-		<div class="flex flex-col items-start justify-between w-full max-w-2xl md:flex-row">
+		<div class="items-start justify-between hidden w-full max-w-2xl md:flex md:flex-row">
 			<HistoricalWins historical={constituencyData.historical} />
 			<VoteShare historical={constituencyData.historical} />
 			<Turnouts historical={constituencyData.historical} />
+		</div>
+
+		<div class="grid items-start w-full grid-cols-3 py-4">
+			<div class="flex w-full col-span-3 gap-8">
+				<HistoricalWins historical={constituencyData.historical} />
+				<Turnouts historical={constituencyData.historical} />
+			</div>
+			<div class="w-full col-span-full">
+				<VoteShare historical={constituencyData.historical} />
+			</div>
 		</div>
 	</section>
 
