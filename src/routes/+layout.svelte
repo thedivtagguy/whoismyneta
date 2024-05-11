@@ -94,3 +94,13 @@
 		</div>
 	</div>
 </footer>
+
+<style>
+	a {
+		@apply text-neutral-500 underline;
+	}
+
+	a:hover {
+		@apply text-neutral-900;
+	}
+</style>

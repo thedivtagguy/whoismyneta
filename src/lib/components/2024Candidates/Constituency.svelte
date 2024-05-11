@@ -13,9 +13,12 @@
 	import { quadInOut } from 'svelte/easing';
 	import { partyProminenceOrder as partyProminence } from '$lib/infoUtils';
 
-	$: candidates = data.filter(
-		(people) => people.constituency === $selectedConstituency.ls_seat_name
-	);
+	$: candidates = data
+		.filter((people) => people.constituency === $selectedConstituency.ls_seat_name)
+		.map((candidate) => {
+			candidate.combinedID = candidate.candidate + candidate.party;
+			return candidate;
+		});
 
 	$: originalCandidates = [...candidates];
 
@@ -99,7 +102,7 @@
 			{$selectedConstituency.ls_seat_name}
 		</h2>
 
-		<div class="items-start justify-between hidden w-full max-w-2xl md:flex md:flex-row">
+		<div class="items-start justify-between hidden w-full max-w-3xl md:flex md:flex-row">
 			<HistoricalWins historical={constituencyData.historical} />
 			<VoteShare historical={constituencyData.historical} />
 			<Turnouts historical={constituencyData.historical} />
@@ -144,25 +147,16 @@
 </div>
 
 <ul class="hidden grid-cols-1 gap-4 py-4 list-none md:grid md:grid-cols-3">
-	<!-- {#each sortedCandidates as candidate, i ((candidate.candidate, i))} -->
-	{#each sortedCandidates as candidate, i (i)}
-		<li
-			key={i}
-			in:fade={{ duration: 300 }}
-			animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}
-		>
+	{#each sortedCandidates as candidate (candidate.combinedID)}
+		<li in:fade={{ duration: 300 }} animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}>
 			<CandidateCard {candidate} constituencyID={constituencyData?.adr_id} />
 		</li>
 	{/each}
-	<!-- <li in:fade={{ duration: 300 }} animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}>
-			<CandidateCard {candidate} constituencyID={constituencyData?.adr_id} />
-		</li>
-	{/each} -->
 </ul>
 
 <ul use:scrollShadow class="h-[400px] mb-8 md:hidden block overflow-auto">
 	<InfiniteScroll items={sortedCandidates} let:visibleItems>
-		{#each visibleItems as candidate, i (i)}
+		{#each visibleItems as candidate (candidate.combinedID)}
 			<li
 				in:fade={{ duration: 300 }}
 				animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}
