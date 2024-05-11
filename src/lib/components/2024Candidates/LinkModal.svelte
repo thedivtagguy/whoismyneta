@@ -7,6 +7,11 @@
 	export let linkURI = '';
 	export let linkText = 'Know more';
 
+	let isFirefox = false;
+	$: if (typeof window !== 'undefined') {
+		isFirefox = /Firefox/.test(navigator.userAgent);
+	}
+
 	let open = false;
 </script>
 
@@ -43,6 +48,12 @@
 		<p class="pt-2 pb-4 text-md text-neutral-500">
 			Due to ADR's terms of use, we cannot display candidate information directly on our site. You
 			will be redirected to their website, with the candidate's name highlighted.
+
+			<span class="block pt-2 text-sm font-semibold">
+				{isFirefox
+					? 'Since you are using Firefox, please note that the highlighting feature may not work.'
+					: ''}
+			</span>
 		</p>
 
 		<img

@@ -9,6 +9,7 @@
 	import Turnouts from './Turnouts.svelte';
 	import { fade } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
+
 	import { quadInOut } from 'svelte/easing';
 	import { partyProminenceOrder as partyProminence } from '$lib/infoUtils';
 
@@ -16,6 +17,11 @@
 		(people) => people.constituency === $selectedConstituency.ls_seat_name
 	);
 
+	let isFirefox = false;
+	$: if (typeof window !== 'undefined') {
+		isFirefox = /Firefox/.test(navigator.userAgent);
+	}
+	$: console.log(isFirefox);
 	$: originalCandidates = [...candidates];
 
 	$: constituencyData = dataAboutConstituency.filter(
