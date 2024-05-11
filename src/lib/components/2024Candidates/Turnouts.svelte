@@ -1,6 +1,6 @@
 <script>
 	import { Chart, Svg, Labels, Spline, Axis, Highlight } from 'layerchart';
-	import { scaleTime } from 'd3';
+	import { scaleTime, curveBumpX } from 'd3';
 	import { format } from 'date-fns';
 
 	export let historical = {};
@@ -29,7 +29,7 @@
 					ticks={() => [new Date(2009, 0), new Date(2014, 0), new Date(2019, 0)]}
 					format={(d) => format(d, 'yyyy')}
 				></Axis>
-				<Spline class="stroke-2 stroke-primary" />
+				<Spline curve={curveBumpX} class="stroke-2 stroke-primary" />
 				<Highlight points lines />
 			</Svg>
 		</Chart>

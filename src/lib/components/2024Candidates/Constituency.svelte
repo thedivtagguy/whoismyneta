@@ -144,16 +144,25 @@
 </div>
 
 <ul class="hidden grid-cols-1 gap-4 py-4 list-none md:grid md:grid-cols-3">
-	{#each sortedCandidates as candidate (candidate.candidate)}
-		<li in:fade={{ duration: 300 }} animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}>
+	<!-- {#each sortedCandidates as candidate, i ((candidate.candidate, i))} -->
+	{#each sortedCandidates as candidate, i (i)}
+		<li
+			key={i}
+			in:fade={{ duration: 300 }}
+			animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}
+		>
 			<CandidateCard {candidate} constituencyID={constituencyData?.adr_id} />
 		</li>
 	{/each}
+	<!-- <li in:fade={{ duration: 300 }} animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}>
+			<CandidateCard {candidate} constituencyID={constituencyData?.adr_id} />
+		</li>
+	{/each} -->
 </ul>
 
 <ul use:scrollShadow class="h-[400px] mb-8 md:hidden block overflow-auto">
 	<InfiniteScroll items={sortedCandidates} let:visibleItems>
-		{#each visibleItems as candidate (candidate.candidate)}
+		{#each visibleItems as candidate, i (i)}
 			<li
 				in:fade={{ duration: 300 }}
 				animate:flip={{ delay: 300, duration: 500, easing: quadInOut }}
