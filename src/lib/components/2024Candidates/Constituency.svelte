@@ -26,24 +26,19 @@
 		{ value: 'default', label: 'Default order' },
 		{ value: 'party', label: 'Party prominence' },
 		{ value: 'candidate', label: 'Name (A-Z)' },
-		{ value: 'age', label: 'Age (Youngest first)' }
+		{ value: 'age_youngest', label: 'Age (Youngest first)' },
+		{ value: 'age_oldest', label: 'Age (Oldest first)' }
 	];
 
 	let sort = 'default';
 
 	$: sortedCandidates = candidates.sort((a, b) => {
-		if (sort === 'party') {
-			if (partyProminence.includes(a.party) && !partyProminence.includes(b.party)) {
-				return -1;
-			} else if (!partyProminence.includes(a.party) && partyProminence.includes(b.party)) {
-				return 1;
-			} else {
-				return a.party.localeCompare(b.party);
-			}
-		} else if (sort === 'candidate') {
+		if (sort === 'candidate') {
 			return a.candidate.localeCompare(b.candidate);
-		} else if (sort === 'age') {
+		} else if (sort === 'age_youngest') {
 			return a.age - b.age;
+		} else if (sort === 'age_oldest') {
+			return b.age - a.age;
 		} else {
 			return 0;
 		}
@@ -51,6 +46,33 @@
 
 	$: if (sort === 'default') {
 		sortedCandidates = [...originalCandidates];
+	}
+
+	// for party, we need to sort by the order in which they appear in the partyProminence array
+	// not all parties are in the array, so we need to check if they are in the array and sort accordingly
+	$: if (sort === 'party') {
+		sortedCandidates = candidates.sort((a, b) => {
+			let aIndex = partyProminence.indexOf(a.party);
+			let bIndex = partyProminence.indexOf(b.party);
+
+			if (aIndex === -1) {
+				aIndex = partyProminence.length;
+			}
+
+			if (bIndex === -1) {
+				bIndex = partyProminence.length;
+			}
+
+			if (a.party === 'Independent') {
+				aIndex = partyProminence.length + 1;
+			}
+
+			if (b.party === 'Independent') {
+				bIndex = partyProminence.length + 1;
+			}
+
+			return aIndex - bIndex;
+		});
 	}
 </script>
 
