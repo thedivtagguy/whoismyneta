@@ -32,7 +32,7 @@
 >
 	{#if partyColor.abbreviation && partyColor.abbreviation !== 'IND'}
 		<img
-			src="src/lib/assets/symbols/{partyColor.abbreviation}.webp"
+			src="/symbols/{partyColor.abbreviation}.webp"
 			alt="Party Logo"
 			class="object-fill rounded-full group-hover:border-[1px] border-neutral/50 size-16"
 		/>
