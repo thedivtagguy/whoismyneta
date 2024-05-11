@@ -6,13 +6,12 @@ import { dev } from '$app/environment';
 export const load = async ({ fetch, url }) => {
 	if (browser && url.searchParams.size === 0) {
 		if (dev) {
-			const randomConstituencies = data.sort(() => 0.5 - Math.random()).slice(0, 5);
-			console.log(randomConstituencies);
+			const loadConstituencies = data.sort(() => 0.5 - Math.random()).slice(0, 5);
 
 			return {
 				status: 200,
 				body: {
-					randomConstituencies
+					loadConstituencies
 				}
 			};
 		} else {
@@ -27,18 +26,17 @@ export const load = async ({ fetch, url }) => {
 				(constituencyData) => constituencyData.state_ut_name === state
 			);
 
-			const randomConstituencies = constituencies.sort(() => 0.5 - Math.random()).slice(0, 5);
-			console.log(randomConstituencies);
+			const loadConstituencies = constituencies.sort(() => 0.5 - Math.random()).slice(0, 5);
+
 			return {
 				status: 200,
 				body: {
-					randomConstituencies
+					loadConstituencies
 				}
 			};
 		}
 	} else if (browser && url.searchParams.size > 0) {
 		const constituency = url.searchParams.get('constituency');
-		console.log('constituency', constituency);
 
 		if (constituency) {
 			const constituencyData = data.find(

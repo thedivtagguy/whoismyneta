@@ -20,12 +20,12 @@
 		<Map />
 	</div>
 	<div class="flex flex-col gap-8 md:w-1/2">
-		<Card />
+		<Card onLoadData={data.body?.loadConstituencies} />
 	</div>
 </section>
 {#if Object.keys($selectedConstituency).length !== 0}
 	<Constituency />
-{:else}
+	<!-- {:else}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
 		class="flex min-h-[400px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
@@ -34,5 +34,5 @@
 		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
 			Candidates contesting in the 2024 Lok Sabha elections and links to their election affidavits.
 		</p>
-	</section>
+	</section> -->
 {/if}

@@ -7,16 +7,17 @@
 	import { formatAge, formatRupee } from '$lib/utils';
 	import { mdiBankCheck } from '@mdi/js';
 	import AttendanceMarker from './AttendanceMarker.svelte';
-	import AssetsCriminalCases from './AssetsCriminalCases.svelte';
 	import { partyColors } from '$lib/colors';
+	import { setConstituency, locateMe } from '$lib/utils';
 	import Button from './Button.svelte';
 	import QuestionViz from './QuestionViz.svelte';
 	import AssetsHistogram from './AssetsHistogram.svelte';
 	import InfoPopover from './InfoPopover.svelte';
-	import AgeEducation from './AgeEducationAttendance.svelte';
-	import AgeEducationAttendance from './AgeEducationAttendance.svelte';
 	import GenericField from './GenericField.svelte';
+	import { Button as SvelteUXButton } from 'svelte-ux';
+	import { mdiCrosshairsGps } from '@mdi/js';
 
+	export let onLoadData = [];
 	$: results = $selectedConstituency;
 
 	$: caseCount = results.end_criminal_cases ? results.end_criminal_cases : results.criminal_cases;
@@ -147,13 +148,47 @@
 {:else if Object.keys($selectedConstituency).length === 0}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}
-		class="flex min-h-[750px] shadow-inner flex-col items-center justify-center w-full h-full px-6 py-4 rounded-md bg-surface-200"
+		class="flex min-h-[750px] shadow-inner flex-col items-start justify-center w-full h-full px-16 py-4 rounded-md bg-surface-200"
 	>
-		<p class="text-lg text-neutral-500">Select a constituency to view details</p>
-		<p class=" text-gray-800 my-4 self-start text-sm max-w-[300px] mx-auto text-left">
-			Find out more about your constituency's representative, their declared assets, criminal cases,
-			and attendance in the Lok Sabha.
-		</p>
+		{#if onLoadData.length !== 0}
+			<div in:fade={{ duration: 300 }}>
+				<h2 class="text-3xl text-left">
+					Choose a constituency in <span class="inline-block font-bold"
+						>{onLoadData[0]?.state_ut_name}</span
+					>
+				</h2>
+				<p class="py-2 text-left text-md text-neutral-500">
+					and learn about your sitting MLA's declared assets, criminal cases, and attendanc — or
+					explore candidates in the 2024 Lok Sabha election.
+				</p>
+
+				<div class="flex flex-wrap max-w-sm gap-2">
+					{#each onLoadData as constituency}
+						{#if constituency.ls_seat_name}
+							<SvelteUXButton
+								variant="fill-light"
+								on:click={() => {
+									setConstituency(constituency.ls_seat_name);
+								}}
+							>
+								{constituency.ls_seat_name}
+							</SvelteUXButton>
+						{/if}
+					{/each}
+					<SvelteUXButton
+						on:click={() => {
+							locateMe();
+						}}
+						icon={mdiCrosshairsGps}
+						classes={{ root: ' bg-primary text-white ' }}
+					>
+						Locate me
+					</SvelteUXButton>
+				</div>
+			</div>
+		{:else}
+			<ProgressCircle class="mx-auto text-neutral-400" />
+		{/if}
 	</section>
 {:else if results && Object.keys(results).length === 0}
 	<section
