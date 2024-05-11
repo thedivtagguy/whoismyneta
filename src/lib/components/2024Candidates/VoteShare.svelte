@@ -21,7 +21,7 @@
 				{
 					label: 'Others',
 					value: restTotal,
-					color: 'gray' // Set the color for 'Others' as desired
+					color: 'gray'
 				}
 			];
 		} else {

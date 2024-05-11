@@ -1,18 +1,7 @@
 <script>
-	import {
-		Chart,
-		Svg,
-		Labels,
-		Spline,
-		Axis,
-		Text,
-		Tooltip,
-		TooltipItem,
-		Highlight
-	} from 'layerchart';
+	import { Chart, Svg, Labels, Spline, Axis, Highlight } from 'layerchart';
 	import { scaleTime } from 'd3';
 	import { format } from 'date-fns';
-	import { scale } from 'svelte/transition';
 
 	export let historical = {};
 
@@ -43,9 +32,6 @@
 				<Spline class="stroke-2 stroke-primary" />
 				<Highlight points lines />
 			</Svg>
-			<Tooltip header={(data) => format(data.date, 'yyyy')} let:data>
-				<TooltipItem label="Turnout" value={data.value + '%'} />
-			</Tooltip>
 		</Chart>
 	</div>
 </div>
