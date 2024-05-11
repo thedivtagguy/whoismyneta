@@ -19,7 +19,7 @@
 			{item.year}
 		</div>
 		<div
-			class="px-2 py-1 my-1 text-xs font-bold text-center uppercase rounded-sm text-surface-content/90 bg-surface-200"
+			class="py-1 my-1 text-xs font-bold text-center uppercase rounded-sm text-surface-content/90"
 			style="background-color: {item === winners[winners.length - 1]
 				? getPartyColor(item.winner, 'abbreviation').backgroundColor
 				: 'none'};
@@ -27,6 +27,8 @@
                 color: {item === winners[winners.length - 1]
 				? getPartyColor(item.winner, 'abbreviation').textColor
 				: 'none'};
+
+                padding: {item === winners[winners.length - 1] ? '0.0rem 0.5rem' : '0'};
                 "
 		>
 			{item.winner}

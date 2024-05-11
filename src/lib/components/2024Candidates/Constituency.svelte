@@ -2,7 +2,6 @@
 	import data from '$lib/data/2024-candidates.json';
 	import dataAboutConstituency from '$lib/data/constituencies.json';
 	import { selectedConstituency } from '$lib/store';
-	import AboutConstituency from './AboutConstituency.svelte';
 	import CandidateCard from './CandidateCard.svelte';
 	import HistoricalWins from './HistoricalWins.svelte';
 	$: candidates = data.filter(
@@ -18,9 +17,9 @@
 
 <div class="w-full">
 	<section
-		class="flex items-center justify-between border-b-[1px] border-neutral-100 w-full md:flex-row"
+		class="flex items-center justify-between border-b-[1px] border-neutral-100 py-2 w-full md:flex-row"
 	>
-		<h2 class="py-2 text-4xl font-bold break-words text-neutral-500">
+		<h2 class="px-4 py-2 text-4xl font-bold break-words bg-surface-100 text-neutral-500">
 			{$selectedConstituency.ls_seat_name}
 		</h2>
 
