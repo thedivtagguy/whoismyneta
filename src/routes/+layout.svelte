@@ -15,7 +15,7 @@
 	<script
 		defer
 		data-domain="whoismyneta.com"
-		src="https://analytics.aman.bh/js/script.manual.js"
+		src="https://analytics.aman.bh/js/script.outbound-links.manual.js"
 	></script>
 	<!-- define the `plausible` function to manually trigger events -->
 	<script>
