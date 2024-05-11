@@ -21,7 +21,7 @@
 </script>
 
 <div class="flex flex-col gap-2 md:flex-col md:justify-start">
-	<h3 class="font-sans text-xs font-bold uppercase text-neutral">Turnouts</h3>
+	<h3 class="font-sans text-xs font-bold uppercase text-neutral">Turnout</h3>
 	<div class="h-[60px] w-[200px]">
 		<Chart
 			data={turnouts}

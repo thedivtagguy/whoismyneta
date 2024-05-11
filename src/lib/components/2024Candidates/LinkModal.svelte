@@ -10,21 +10,27 @@
 	let open = false;
 </script>
 
-<Button
-	size="sm"
-	variant="fill-light"
-	classes={{
-		root: 'w-[6rem] transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200'
-	}}
-	on:click={() => {
-		if (!$firstClickOnModal) {
+{#if !$firstClickOnModal}
+	<Button
+		size="sm"
+		variant="fill-light"
+		classes={{
+			root: 'w-[6rem] transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200'
+		}}
+		on:click={() => {
 			open = true;
 			$firstClickOnModal = true;
-		} else {
-			window.open(linkURI, '_blank');
-		}
-	}}>{linkText}</Button
->
+		}}>{linkText}</Button
+	>
+{:else}
+	<a
+		href={linkURI}
+		target="_blank"
+		class="w-[6rem] transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200"
+		>{linkText}</a
+	>
+{/if}
+
 <Dialog
 	classes={{
 		dialog: 'w-[38rem] mx-2  bg-white rounded-lg shadow-lg border-[1px] border-neutral-200'
@@ -47,15 +53,11 @@
 		<p class="pt-4 pb-1 text-sm text-neutral-500">This popup will only show once.</p>
 	</div>
 	<div slot="actions" class="self-end">
-		<Button
-			variant="fill"
-			classes={{
-				root: 'text-white'
-			}}
-			on:click={() => {
-				window.open(linkURI, '_blank');
-			}}
-			color="primary">Continue to link</Button
+		<a
+			href={linkURI}
+			target="_blank"
+			class="max-w-[12rem] w-full transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200"
+			>{linkText}</a
 		>
 	</div>
 </Dialog>

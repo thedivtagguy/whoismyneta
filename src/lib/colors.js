@@ -269,54 +269,53 @@ export const partyColors = {
 		fullName: 'Jharkhand Mukti Morcha'
 	},
 	CPI: {
-    backgroundColor: '#cb0922',
-    textColor: 'white',
-    fullName: 'Communist Party of India' 
-  },
+		backgroundColor: '#cb0922',
+		textColor: 'white',
+		fullName: 'Communist Party of India'
+	},
 	VCK: {
 		backgroundColor: '#1e90ff',
 		textColor: 'black',
 		fullName: 'Viduthalai Chiruthaigal Katchi'
 	},
-	ADS: 
-  { 
-    backgroundColor: '#27176d',
-    textColor: 'black',
-    fullName: 'Apna Dal (Soneylal)' 
-  },
+	ADS: {
+		backgroundColor: '#27176d',
+		textColor: 'black',
+		fullName: 'Apna Dal (Soneylal)'
+	},
 	LJP: {
-    backgroundColor: '#0093dd',
-    textColor: 'black',
-    fullName: 'Lok Janshakti Party' 
-  },
+		backgroundColor: '#0093dd',
+		textColor: 'black',
+		fullName: 'Lok Janshakti Party'
+	},
 	IND: {
-    backgroundColor: '#808080',
-    textColor: 'white',
-    fullName: 'Independent' 
-  },
+		backgroundColor: '#808080',
+		textColor: 'white',
+		fullName: 'Independent'
+	},
 	AITC: {
 		backgroundColor: '#20c646',
 		textColor: 'white',
 		fullName: 'All India Trinamool Congress'
 	},
 	NPP: {
-    backgroundColor: '#ffca61',
-    textColor: 'black',
-    fullName: 'National People’s Party' 
-  },
+		backgroundColor: '#ffca61',
+		textColor: 'black',
+		fullName: 'National People’s Party'
+	},
 	NDPP: {
 		backgroundColor: '#ed1b24',
 		textColor: 'black',
 		fullName: 'Nationalist Democratic Progressive Party'
 	},
 	SKM: {
-    backgroundColor: '#ed1e26',
-    textColor: 'white',
-    fullName: 'Sikkim Krantikari Morcha' 
-  },
+		backgroundColor: '#ed1e26',
+		textColor: 'white',
+		fullName: 'Sikkim Krantikari Morcha'
+	},
 	JDS: {
-    backgroundColor: '#02865a',
-    textColor: 'white',
-    fullName: 'Janata Dal (Secular)' 
-  }
+		backgroundColor: '#02865a',
+		textColor: 'white',
+		fullName: 'Janata Dal (Secular)'
+	}
 };
