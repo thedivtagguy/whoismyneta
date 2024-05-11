@@ -2,16 +2,45 @@ import data from '../lib/data/data.json';
 import { browser } from '$app/environment';
 import { selectedCandidate, selectedConstituency } from '$lib/store';
 import { slugify } from '$lib/utils';
-export const load = async ({ url }) => {
-	const searchParams = browser && url.searchParams;
+import { dev } from '$app/environment';
+export const load = async ({ fetch, url }) => {
+	const searchParams = url.searchParams;
+	console.log(searchParams.size);
+	if (searchParams.size === 0) {
+		if (dev) {
+			const randomConstituencies = data.sort(() => 0.5 - Math.random()).slice(0, 5);
+			console.log(randomConstituencies);
 
-	if (!searchParams) {
-		return {
-			status: 200
-		};
+			return {
+				status: 200,
+				body: {
+					randomConstituencies
+				}
+			};
+		} else {
+			const response = await fetch('/geolocation');
+			const {
+				geo: {
+					subdivision: { name: state }
+				}
+			} = await response.json();
+
+			const constituencies = data.filter(
+				(constituencyData) => slugify(constituencyData.ls_seat_name) === state
+			);
+
+			const randomConstituencies = constituencies.sort(() => 0.5 - Math.random()).slice(0, 5);
+			console.log(randomConstituencies);
+			return {
+				status: 200,
+				body: {
+					randomConstituencies
+				}
+			};
+		}
 	} else {
 		const constituency = searchParams.get('constituency');
-		const candidate = searchParams.get('candidate');
+		console.log('constituency', constituency);
 
 		if (constituency) {
 			const constituencyData = data.find(
@@ -20,16 +49,6 @@ export const load = async ({ url }) => {
 
 			if (constituencyData) {
 				selectedConstituency.set(constituencyData);
-			}
-		}
-
-		if (candidate) {
-			const candidateData = data.find(
-				(candidateData) => slugify(candidateData.candidate) === candidate
-			);
-
-			if (candidateData) {
-				selectedCandidate.set(candidateData);
 			}
 		}
 

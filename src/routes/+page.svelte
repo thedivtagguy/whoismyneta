@@ -5,6 +5,9 @@
 	import { selectedConstituency } from '$lib/store';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
+	export let data;
+
+	console.log(data);
 </script>
 
 <section class="flex flex-col justify-start w-full h-full gap-6 mb-4 md:flex-row">
