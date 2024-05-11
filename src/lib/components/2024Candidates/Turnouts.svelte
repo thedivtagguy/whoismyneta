@@ -28,11 +28,11 @@
 			x="date"
 			xScale={scaleTime()}
 			y="value"
-			padding={{ bottom: 24 }}
+			padding={{ left: 10, bottom: 24 }}
 			tooltip={{ mode: 'bisect-x' }}
 		>
 			<Svg>
-				<Labels format="decimal" />
+				<Labels format={(d) => Math.round(d, 2) + '%'} />
 				<Axis placement="bottom" rule ticks={2} />
 				<Spline class="stroke-2 stroke-primary" />
 				<Highlight points lines />

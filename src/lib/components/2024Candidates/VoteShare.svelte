@@ -22,7 +22,7 @@
 	$: latest = voteShares[voteShares.length - 1].data;
 </script>
 
-<div class="flex flex-col gap-2 md:flex-col md:justify-start">
+<div class="flex flex-col w-full max-w-[15rem] gap-2 md:flex-col md:justify-start">
 	<h3 class="font-sans text-xs font-bold uppercase text-neutral">2019 Vote Shares</h3>
 	<BarStack
 		classes={{
