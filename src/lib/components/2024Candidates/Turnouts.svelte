@@ -12,11 +12,12 @@
 	} from 'layerchart';
 	import { scaleTime } from 'd3';
 	import { format } from 'date-fns';
+	import { scale } from 'svelte/transition';
 
 	export let historical = {};
 
 	$: turnouts = Object.keys(historical).map((year) => {
-		return { date: new Date(year), value: historical[year].Turnout };
+		return { date: new Date(year), value: Math.round(historical[year].Turnout * 10) / 10 };
 	});
 </script>
 
@@ -32,8 +33,13 @@
 			tooltip={{ mode: 'bisect-x' }}
 		>
 			<Svg>
-				<Labels format={(d) => Math.round(d, 2) + '%'} />
-				<Axis placement="bottom" rule ticks={2} />
+				<Labels format={(d) => d + '%'} />
+				<Axis
+					placement="bottom"
+					rule
+					ticks={() => [new Date(2009, 0), new Date(2014, 0), new Date(2019, 0)]}
+					format={(d) => format(d, 'yyyy')}
+				></Axis>
 				<Spline class="stroke-2 stroke-primary" />
 				<Highlight points lines />
 			</Svg>
