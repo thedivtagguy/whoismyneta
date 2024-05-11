@@ -17,7 +17,11 @@
 		data-domain="whoismyneta.com"
 		src="https://analytics.aman.bh/js/script.manual.js"
 	></script>
-
+	<script
+		defer
+		data-domain="whoismyneta.com"
+		src="https://analytics.aman.bh/js/script.outbound-links.js"
+	></script>
 	<!-- define the `plausible` function to manually trigger events -->
 	<script>
 		window.plausible =
@@ -122,3 +126,13 @@
 		</div>
 	</div>
 </footer>
+
+<style>
+	a {
+		@apply text-neutral-500 underline;
+	}
+
+	a:hover {
+		@apply text-neutral-900;
+	}
+</style>
