@@ -11,6 +11,9 @@
 	import LokSabhaRecontestingList from '$lib/components/LokSabhaRecontestingList.svelte';
 </script>
 
+<svelte:head>
+	<script defer data-domain="whoismyneta.com" src="https://analytics.aman.bh/js/script.js"></script>
+</svelte:head>
 <Seo
 	seoTitle="What's the neta in your constituency up to?"
 	seoDesc="Find out more about your constituency's representative, their declared assets, criminal cases, and attendance in the Lok Sabha."

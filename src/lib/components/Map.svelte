@@ -156,14 +156,11 @@
 		scrolled = getScrollPercent();
 	}}
 />
-{#if scrolled < 33}
-	<div out:slide in:slide class="overflow-auto">
-		<ToggleMap
-			on:change={(e) => (selectedCategory = category[e.detail.value])}
-			options={category}
-		/>
-	</div>
-{/if}
+<!-- {#if scrolled < 33} -->
+<div out:slide in:slide class="overflow-auto">
+	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
+</div>
+<!-- {/if} -->
 
 <main
 	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[720px] w-full max-w-[900px]"
