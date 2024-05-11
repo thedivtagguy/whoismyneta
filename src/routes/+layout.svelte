@@ -60,7 +60,9 @@
 >
 	<Header />
 
-	<main class="w-full h-full max-w-6xl px-2 pb-2 md:mx-auto md:pb-8 md:pt-4 md:px-0 md:flex-row">
+	<main
+		class="w-full h-full max-w-6xl px-2 pb-2 overflow-x-clip md:mx-auto md:pb-8 md:pt-4 md:px-0 md:flex-row"
+	>
 		<slot></slot>
 	</main>
 </main>

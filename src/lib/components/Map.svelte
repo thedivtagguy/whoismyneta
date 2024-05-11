@@ -147,23 +147,14 @@
 	// 		transform.zoomTo({ x: x, y: y }, { width: width * 0.1, height: height * 0.1 });
 	// 	}
 	// }
-
-	let scrolled = 0;
 </script>
 
-<svelte:window
-	on:scroll={() => {
-		scrolled = getScrollPercent();
-	}}
-/>
-<!-- {#if scrolled < 33} -->
-<div out:slide in:slide class="overflow-auto">
+<div out:slide in:slide class="w-[95vw] overflow-x-scroll">
 	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
 </div>
-<!-- {/if} -->
 
 <main
-	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[500px] md:h-[720px] w-full max-w-[900px]"
+	class="border-[1px] border-surface-300 p-6 relative overflow-clip h-[500px] md:h-[720px] w-screen md:w-full md:max-w-[900px]"
 >
 	<div class="absolute top-1/2 md:top-2 right-2">
 		<TransformControls {transform} />

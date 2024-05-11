@@ -16,7 +16,7 @@
 	$: dispatch('change', selected);
 </script>
 
-<div class="flex md:w-full mb-2 gap-2 md:max-w-[700px]">
+<div class="flex w-full md:w-full mb-2 py-2 gap-2 md:max-w-[700px]">
 	<div class="sticky left-0 z-10 bg-white">
 		<Button
 			on:click={() => {
