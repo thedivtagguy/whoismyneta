@@ -1,0 +1,58 @@
+<script>
+	import { Dialog, dirtyStore, Button, Icon } from 'svelte-ux';
+	import highlightScreenshot from '$lib/assets/highlight.webp';
+	import { writable } from 'svelte/store';
+	import { firstClickOnModal } from '$lib/store';
+
+	export let linkURI = '';
+	export let linkText = 'Know more';
+
+	let open = false;
+</script>
+
+<Button
+	size="sm"
+	variant="fill-light"
+	classes={{
+		root: 'w-[6rem] transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200'
+	}}
+	on:click={() => {
+		if (!$firstClickOnModal) {
+			open = true;
+			$firstClickOnModal = true;
+		} else {
+			window.open(linkURI, '_blank');
+		}
+	}}>{linkText}</Button
+>
+<Dialog
+	classes={{
+		dialog: 'w-[38rem] bg-white rounded-lg shadow-lg border-[1px] border-neutral-200'
+	}}
+	bind:open
+>
+	<div class="font-serif text-2xl text-neutral" slot="title">A little head's up</div>
+
+	<div class="px-6 mb-4">
+		<p class="pt-2 pb-4 text-md text-neutral-500">
+			Due to ADR's terms of use, we cannot display candidate information directly on our site. You
+			will be redirected to their website, with the candidate's name highlighted.
+		</p>
+
+		<img
+			src={highlightScreenshot}
+			alt="highlighted screenshot"
+			class="w-full h-auto border-neutral/50 border-[1px]"
+		/>
+		<p class="pt-4 pb-1 text-sm text-neutral-500">This popup will only show once.</p>
+	</div>
+	<div slot="actions" class="self-end">
+		<Button
+			variant="fill"
+			classes={{
+				root: 'text-white'
+			}}
+			color="primary">Continue to link</Button
+		>
+	</div>
+</Dialog>
