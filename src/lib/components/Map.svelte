@@ -82,7 +82,7 @@
 		'10th Pass',
 		'12th Pass',
 		'Graduate',
-		'Graduate Professional',
+		// 'Graduate Professional',
 		'Post Graduate',
 		'Doctorate'
 	];

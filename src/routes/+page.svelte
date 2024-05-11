@@ -1,5 +1,5 @@
 <script>
-	import DataTable from '$lib/components/2024Candidates/DataTable.svelte';
+	import Constituency from '$lib/components/2024Candidates/Constituency.svelte';
 	import Card from '$lib/components/Card.svelte';
 	import Map from '$lib/components/Map.svelte';
 	import { selectedConstituency } from '$lib/store';
@@ -21,7 +21,7 @@
 	</div>
 </section>
 {#if Object.keys($selectedConstituency).length !== 0}
-	<DataTable />
+	<Constituency />
 {:else}
 	<section
 		in:fade={{ duration: 300, easing: cubicInOut }}

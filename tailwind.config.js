@@ -21,7 +21,8 @@ export default {
 				greenPrimary: '#92DE86',
 				sagePrimary: '#949B80',
 				redPrimary: '#B56666',
-				purplePrimary: '#4F4E8D'
+				purplePrimary: '#4F4E8D',
+				offWhite: '#f4f4f4'
 			}
 		}
 	},

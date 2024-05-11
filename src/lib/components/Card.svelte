@@ -30,18 +30,23 @@
 	>
 		<div>
 			<div class="flex items-center justify-between">
-				<span
-					style:background-color={partyColors[results.party_x].backgroundColor
-						? partyColors[results.party_x].backgroundColor
-						: partyColors['IND'].backgroundColor}
-					style:color={partyColors[results.party_x].textColor
-						? partyColors[results.party_x].textColor
-						: partyColors['IND'].textColor}
-					class="inline-flex px-2 mb-2 font-mono text-sm font-bold rounded-md text-neutral-500"
-				>
-					{results.party_x}</span
-				>{#if !results.attendance}
-					<div class="block -mt-2">
+				<div>
+					<span
+						style:background-color={partyColors[results.party_x].backgroundColor
+							? partyColors[results.party_x].backgroundColor
+							: partyColors['IND'].backgroundColor}
+						style:color={partyColors[results.party_x].textColor
+							? partyColors[results.party_x].textColor
+							: partyColors['IND'].textColor}
+						class="inline-flex px-2 mb-2 font-mono text-sm font-bold rounded-md text-neutral-500"
+					>
+						{results.party_x}</span
+					>
+					<span class="pl-4 -mt-2 font-mono text-sm font-bold"> Sitting MP </span>
+				</div>
+
+				<div class="block -mt-2">
+					{#if !results.attendance}
 						<span class="inline-flex items-center justify-center font-sans text-xs font-normal 2">
 							This MP's data has different availability
 							<InfoPopover
@@ -49,8 +54,8 @@
 								text="This MP was a minister. Ministers represent the government in parliament, so their participation is not reported."
 							/>
 						</span>
-					</div>
-				{/if}
+					{/if}
+				</div>
 			</div>
 
 			<div class="  border-b-[1px] border-neutral-100 pb-4 flex flex-col gap-2">
@@ -72,13 +77,13 @@
 			</div>
 			<div class="metadata">
 				<div
-					class="grid items-start border-b-[1px] border-neutral-100 pb-4 justify-start w-full grid-flow-row grid-cols-8 gap-4 my-4"
+					class="grid items-start border-b-[1px] border-neutral-100 pb-4 justify-start w-full grid-flow-row grid-cols-7 gap-4 my-4"
 				>
 					<GenericField
 						title="Education"
 						value={results.education_x}
 						infoPopOverText={'Education level as per 2024 affidavit'}
-						cols={3}
+						cols={2}
 					/>
 					<GenericField
 						title="Age"
@@ -97,7 +102,7 @@
 						}`}
 						value={results.criminal_cases}
 						infoPopOverText={'Criminal cases on record'}
-						cols={3}
+						cols={2}
 					/>
 
 					<GenericField

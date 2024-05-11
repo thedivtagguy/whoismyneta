@@ -4,6 +4,7 @@ import { feature } from 'topojson-client';
 import country from '../lib/data/india_ls_seats_545.json';
 import { goto } from '$app/navigation';
 import { geoContains, range } from 'd3';
+import { partyColors } from './colors';
 
 /**
  * Converts a string to a slug by removing spaces and special characters.
@@ -165,3 +166,33 @@ export const getScrollPercent = () => {
 
 	return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
 };
+
+export function getPartyColor(candidateParty, type = 'fullName') {
+	for (const [abbreviation, data] of Object.entries(partyColors)) {
+		if (type === 'abbreviation' && abbreviation === candidateParty) {
+			return {
+				backgroundColor: data.backgroundColor,
+				textColor: data.textColor,
+				fullName: data.fullName,
+				abbreviation: abbreviation
+			};
+		} else if (type === 'fullName' && data.fullName === candidateParty) {
+			return {
+				backgroundColor: data.backgroundColor,
+				textColor: data.textColor,
+				fullName: data.fullName,
+				abbreviation: abbreviation
+			};
+		}
+	}
+	return {
+		backgroundColor: '#808080',
+		textColor: 'white',
+		fullName: candidateParty,
+		abbreviation: null
+	};
+}
+
+export function formatTextForHighlight(text) {
+	return '#:~:text=' + encodeURIComponent(text);
+}

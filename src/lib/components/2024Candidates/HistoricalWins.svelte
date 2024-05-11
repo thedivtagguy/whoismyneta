@@ -1,0 +1,35 @@
+<script>
+	import { getPartyColor } from '$lib/utils';
+	import { Breadcrumb } from 'svelte-ux';
+	export let historical = {};
+
+	$: winners = Object.keys(historical).map((year) => {
+		const parties = Object.entries(historical[year]).filter(([party, _]) => party !== 'Turnout');
+		const winner = parties.reduce(
+			(prev, current) => (current[1] > (prev ? prev[1] : 0) ? current : prev),
+			null
+		);
+		return { year, winner: winner[0] };
+	});
+</script>
+
+<Breadcrumb items={winners} class="gap-2">
+	<span slot="item" let:item>
+		<div class="text-xs uppercase text-surface-content/90">
+			{item.year}
+		</div>
+		<div
+			class="px-2 py-1 my-1 text-xs font-bold text-center uppercase rounded-sm text-surface-content/90 bg-surface-200"
+			style="background-color: {item === winners[winners.length - 1]
+				? getPartyColor(item.winner, 'abbreviation').backgroundColor
+				: 'none'};
+                
+                color: {item === winners[winners.length - 1]
+				? getPartyColor(item.winner, 'abbreviation').textColor
+				: 'none'};
+                "
+		>
+			{item.winner}
+		</div>
+	</span>
+</Breadcrumb>
