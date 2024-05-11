@@ -24,7 +24,7 @@ export const load = async ({ fetch, url }) => {
 			} = await response.json();
 
 			const constituencies = data.filter(
-				(constituencyData) => constituencyData.ls_seat_name === state
+				(constituencyData) => constituencyData.state_ut_name === state
 			);
 
 			const randomConstituencies = constituencies.sort(() => 0.5 - Math.random()).slice(0, 5);
