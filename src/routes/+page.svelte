@@ -3,20 +3,16 @@
 	import Card from '$lib/components/Card.svelte';
 	import Map from '$lib/components/Map.svelte';
 	import { selectedConstituency } from '$lib/store';
-	import { fade } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
-	export let data;
 
-	console.log(data);
+	export let data;
 </script>
 
 <section class="flex flex-col justify-start w-full h-full gap-6 md:flex-row">
 	<div class="self-start h-full top-6 md:w-1/2">
-		<SelectField />
 		<Map />
 	</div>
 	<div class="flex flex-col gap-8 md:w-1/2">
-		<Card />
+		<Card onLoadData={data.body?.loadConstituencies} />
 	</div>
 </section>
 {#if Object.keys($selectedConstituency).length !== 0}
