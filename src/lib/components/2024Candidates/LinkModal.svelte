@@ -27,7 +27,7 @@
 >
 <Dialog
 	classes={{
-		dialog: 'w-[38rem] bg-white rounded-lg shadow-lg border-[1px] border-neutral-200'
+		dialog: 'w-[38rem] mx-2  bg-white rounded-lg shadow-lg border-[1px] border-neutral-200'
 	}}
 	bind:open
 >
@@ -51,6 +51,9 @@
 			variant="fill"
 			classes={{
 				root: 'text-white'
+			}}
+			on:click={() => {
+				window.open(linkURI, '_blank');
 			}}
 			color="primary">Continue to link</Button
 		>
