@@ -30,7 +30,7 @@
 			<Turnouts historical={constituencyData.historical} />
 		</div>
 
-		<div class="grid items-start w-full grid-cols-3 py-4">
+		<div class="grid items-start w-full grid-cols-3 py-4 md:hidden">
 			<div class="flex w-full col-span-3 gap-8">
 				<HistoricalWins historical={constituencyData.historical} />
 				<Turnouts historical={constituencyData.historical} />

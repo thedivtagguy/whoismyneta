@@ -3,7 +3,7 @@
 	export let title;
 	export let infoPopOverText = null;
 	export let value;
-	export let textHeight = 'text-lg text-nowrap';
+	export let textHeight = 'text-lg md:text-nowrap';
 	export let cols = 1;
 </script>
 
