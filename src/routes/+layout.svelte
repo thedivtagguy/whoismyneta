@@ -12,7 +12,33 @@
 </script>
 
 <svelte:head>
-	<script defer data-domain="whoismyneta.com" src="https://analytics.aman.bh/js/script.js"></script>
+	<script
+		defer
+		data-domain="whoismyneta.com"
+		src="https://analytics.aman.bh/js/script.manual.js"
+	></script>
+	<!-- define the `plausible` function to manually trigger events -->
+	<script>
+		window.plausible =
+			window.plausible ||
+			function () {
+				(window.plausible.q = window.plausible.q || []).push(arguments);
+			};
+	</script>
+	<!-- trigger pageview -->
+	<script>
+		function prepareUrl(params) {
+			const url = new URL(location.href);
+			const queryParams = new URLSearchParams(location.search);
+			let customUrl = url.protocol + '//' + url.hostname + url.pathname.replace(/\/$/, '');
+			for (const paramName of params) {
+				const paramValue = queryParams.get(paramName);
+				if (paramValue) customUrl = customUrl + '/' + paramValue;
+			}
+			return customUrl;
+		}
+		plausible('pageview', { u: prepareUrl(['constituency']) + window.location.search });
+	</script>
 </svelte:head>
 <Seo
 	seoTitle="What's the neta in your constituency up to?"
