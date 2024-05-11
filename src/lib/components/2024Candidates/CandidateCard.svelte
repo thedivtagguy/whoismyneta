@@ -28,7 +28,7 @@
 
 <!-- Card -->
 <div
-	class="flex group transition hover:border-neutral/50 hover:bg-offWhite h-36 gap-2 p-4 bg-white rounded-lg shadow-sm border-surface-200 border-[1px]"
+	class="flex group transition hover:border-neutral/50 hover:bg-offWhite h-[9rem] gap-2 p-4 bg-white rounded-lg shadow-sm border-surface-200 border-[1px]"
 >
 	{#if partyColor.abbreviation && partyColor.abbreviation !== 'IND'}
 		<img

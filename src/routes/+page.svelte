@@ -12,7 +12,7 @@
 		<h3
 			class="inline-flex border-neutral/50 border-b-[1px] w-full items-center justify-start gap-2 py-2 pb-2 mb-2 mx-auto text-lg font-semibold text-center text-black/70"
 		>
-			MPs in the 17th Lok Sabha
+			Current MPs (2019-2024 Lok Sabha)
 		</h3>
 		<Map />
 	</div>

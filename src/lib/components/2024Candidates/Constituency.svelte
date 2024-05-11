@@ -17,11 +17,6 @@
 		(people) => people.constituency === $selectedConstituency.ls_seat_name
 	);
 
-	let isFirefox = false;
-	$: if (typeof window !== 'undefined') {
-		isFirefox = /Firefox/.test(navigator.userAgent);
-	}
-	$: console.log(isFirefox);
 	$: originalCandidates = [...candidates];
 
 	$: constituencyData = dataAboutConstituency.filter(
@@ -32,10 +27,17 @@
 		{ value: 'default', label: 'Default order' },
 		{ value: 'party', label: 'Party prominence' },
 		{ value: 'candidate', label: 'Name (A-Z)' },
-		{ value: 'age_youngest', label: 'Age (Youngest first)' },
-		{ value: 'age_oldest', label: 'Age (Oldest first)' }
+		{ value: 'age_youngest', label: 'Age (youngest first)' },
+		{ value: 'age_oldest', label: 'Age (oldest first)' }
 	];
 
+	$: if (candidates.some((candidate) => candidate.gender.toLowerCase() === 'f')) {
+		if (!sortOptions.some((option) => option.value === 'gender')) {
+			sortOptions = [...sortOptions, { value: 'gender', label: 'Women First' }];
+		}
+	} else {
+		sortOptions = sortOptions.filter((option) => option.value !== 'gender');
+	}
 	let sort = 'default';
 
 	$: sortedCandidates = candidates.sort((a, b) => {
@@ -45,8 +47,15 @@
 			return a.age - b.age;
 		} else if (sort === 'age_oldest') {
 			return b.age - a.age;
-		} else {
-			return 0;
+		} else if (sort === 'gender') {
+			// return candidates with f first
+			if (a.gender === 'f' && b.gender !== 'f') {
+				return -1;
+			} else if (b.gender === 'f' && a.gender !== 'f') {
+				return 1;
+			} else {
+				return 0;
+			}
 		}
 	});
 
