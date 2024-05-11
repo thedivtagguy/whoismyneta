@@ -6,7 +6,7 @@
 	import HistoricalWins from './HistoricalWins.svelte';
 	import { InfiniteScroll, scrollShadow } from 'svelte-ux';
 	import VoteShare from './VoteShare.svelte';
-
+	import Turnouts from './Turnouts.svelte';
 	$: candidates = data.filter(
 		(people) => people.constituency === $selectedConstituency.ls_seat_name
 	);
@@ -24,9 +24,10 @@
 			{$selectedConstituency.ls_seat_name}
 		</h2>
 
-		<div class="flex flex-col items-center justify-between w-full max-w-xl md:flex-row">
+		<div class="flex flex-col items-start justify-between w-full max-w-2xl md:flex-row">
 			<HistoricalWins historical={constituencyData.historical} />
 			<VoteShare historical={constituencyData.historical} />
+			<Turnouts historical={constituencyData.historical} />
 		</div>
 	</section>
 

@@ -14,21 +14,23 @@
 				label: party,
 				value,
 				color: getPartyColor(party, 'abbreviation').backgroundColor
-				// classes: {
-				// 	bar: `bg-[${getPartyColor(party, 'abbreviation').backgroundColor}]`
-				// }
 			})),
 			total
 		};
 	});
 
 	$: latest = voteShares[voteShares.length - 1].data;
-	$: console.log(latest);
 </script>
 
-<div class="flex flex-col gap-2 my-2 md:flex-col md:justify-start">
+<div class="flex flex-col gap-2 md:flex-col md:justify-start">
 	<h3 class="font-sans text-xs font-bold uppercase text-neutral">2019 Vote Shares</h3>
-	<BarStack data={voteShares[voteShares.length - 1].data} let:item let:total>
+	<BarStack
+		classes={{
+			root: 'w-full'
+		}}
+		data={voteShares[voteShares.length - 1].data}
+		let:item
+	>
 		<div
 			style="background-color: {item.color};"
 			class={cls(`group-first:rounded-l group-last:rounded-r`)}
@@ -39,12 +41,6 @@
 						{format(value / 100, 'percent', { fractionDigits: 1 })}
 					</TweenedValue>
 				</span>
-
-				<!-- <span class="text-xs text-gray-900 truncate">
-					<TweenedValue value={item.value} let:value options={{ duration }}>
-						({format(value, 'integer', { fractionDigits: 1 })})
-					</TweenedValue>
-				</span> -->
 			</div>
 		</div>
 		<div class="text-xs font-semibold truncate text-surface-content">
