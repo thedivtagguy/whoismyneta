@@ -103,7 +103,7 @@ export const partyColors = {
 		backgroundColor: '#ff6600',
 		textColor: '#FFFFFF'
 	},
-	CPIM: {
+	'CPI(M)': {
 		fullName: 'Communist Party of India (Marxist)',
 		backgroundColor: '#cc0d0d',
 		textColor: '#000000'
