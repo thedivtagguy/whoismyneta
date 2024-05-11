@@ -7,7 +7,7 @@
 	export let linkURI = '';
 	export let linkText = 'Know more';
 
-	let open = false;
+	let open = true;
 </script>
 
 {#if !$firstClickOnModal}
@@ -52,12 +52,12 @@
 		/>
 		<p class="pt-4 pb-1 text-sm text-neutral-500">This popup will only show once.</p>
 	</div>
-	<div slot="actions" class="self-end">
+	<div slot="actions" class="py-2 mx-auto">
 		<a
 			href={linkURI}
 			target="_blank"
-			class="max-w-[12rem] w-full transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200"
-			>{linkText}</a
+			class="w-full px-8 py-3 font-bold text-center text-white transition duration-150 rounded-sm text-md group-hover:bg-primary-300 group-hover:text-white bg-primary-200"
+			>Continue to page</a
 		>
 	</div>
 </Dialog>
