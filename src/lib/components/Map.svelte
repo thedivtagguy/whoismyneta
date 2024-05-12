@@ -24,7 +24,6 @@
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
 	const indianStates = feature(statesIndia, statesIndia.objects.states_india);
-	console.log(indianStates.features);
 
 	let colorScale;
 	let numericColorScale, categoricalColorScale;
@@ -152,7 +151,7 @@
 	// }
 </script>
 
-<div out:slide in:slide class="w-[95vw] overflow-x-scroll">
+<div out:slide in:slide class="w-[95vw] md:w-fit overflow-x-scroll">
 	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
 </div>
 

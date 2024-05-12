@@ -56,7 +56,7 @@
 
 <header></header>
 <main
-	class="min-h-[90vh] z-10 bg-white h-fit flex flex-col w-full justify-center items-center mt-2 mb-4 md:mb-8"
+	class="min-h-[90vh] z-10 bg-white h-fit flex flex-col w-full justify-center items-center mb-4 md:mb-8"
 >
 	<Header />
 
