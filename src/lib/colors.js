@@ -151,7 +151,7 @@ export const partyColors = {
 	JDU: {
 		fullName: 'Janata Dal (United)',
 		backgroundColor: '#003366',
-		textColor: '#000000'
+		textColor: '#ffffff'
 	},
 	JKNC: {
 		fullName: 'Jammu & Kashmir National Conference',

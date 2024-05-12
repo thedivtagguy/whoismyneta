@@ -15,7 +15,7 @@
 
 <div class="flex flex-col gap-2 md:flex-col md:justify-start">
 	<h3 class="font-sans text-sm font-bold uppercase text-neutral">Previous Winners</h3>
-	<Breadcrumb items={winners} class="gap-2">
+	<Breadcrumb items={winners} class="w-full gap-1">
 		<span slot="item" let:item>
 			<div class="text-xs uppercase text-surface-content/90">
 				{item.year}

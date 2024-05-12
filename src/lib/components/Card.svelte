@@ -20,7 +20,19 @@
 	export let onLoadData = [];
 	$: results = $selectedConstituency;
 
-	$: caseCount = results.end_criminal_cases ? results.end_criminal_cases : results.criminal_cases;
+	let partyBackgroundColor = '#FFFFFF'; // default color
+	let partyTextColor = '#000000'; // default color
+
+	$: {
+		if (partyColors && results && results.party_x) {
+			partyBackgroundColor =
+				partyColors[results.party_x]?.backgroundColor ||
+				partyColors['IND']?.backgroundColor ||
+				'#FFFFFF';
+			partyTextColor =
+				partyColors[results.party_x]?.textColor || partyColors['IND']?.textColor || '#000000';
+		}
+	}
 </script>
 
 {#if results && Object.keys(results).length > 0}
@@ -33,12 +45,8 @@
 			<div class="flex items-center justify-between">
 				<div>
 					<span
-						style:background-color={partyColors[results.party_x].backgroundColor
-							? partyColors[results.party_x].backgroundColor
-							: partyColors['IND'].backgroundColor}
-						style:color={partyColors[results.party_x].textColor
-							? partyColors[results.party_x].textColor
-							: partyColors['IND'].textColor}
+						style:background-color={partyBackgroundColor}
+						style:color={partyTextColor}
 						class="inline-flex px-2 mb-2 font-mono text-sm font-bold rounded-md text-neutral-500"
 					>
 						{results.party_x}</span
