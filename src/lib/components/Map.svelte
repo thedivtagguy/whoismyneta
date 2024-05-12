@@ -149,9 +149,24 @@
 	// 		transform.zoomTo({ x: x, y: y }, { width: width * 0.1, height: height * 0.1 });
 	// 	}
 	// }
+
+	function getFontSize(scale) {
+		const minScale = 1;
+		const maxScale = 2;
+		const minFontSize = 15;
+		const maxFontSize = 5;
+
+		// Cap the scale at maxScale
+		scale = Math.min(scale, maxScale);
+
+		let fontSize =
+			((maxFontSize - minFontSize) / (maxScale - minScale)) * (scale - minScale) + minFontSize;
+
+		return fontSize;
+	}
 </script>
 
-<div out:slide in:slide class="w-[95vw] md:w-fit overflow-x-scroll">
+<div out:slide in:slide class="w-[95vw] md:w-fit md:overflow-x-clip overflow-x-scroll">
 	<ToggleMap on:change={(e) => (selectedCategory = category[e.detail.value])} options={category} />
 </div>
 
@@ -194,8 +209,8 @@
 
 								zoomTo({ x, y }, { width: width + padding, height: height + padding });
 							}}
-							on:mousemove={() => (hovered = feature)}
 							on:mouseleave={() => (hovered = null)}
+							on:mousemove={() => (hovered = feature)}
 							geojson={feature}
 							stroke-width={0.4 / scale}
 							stroke="#8F96A3"
@@ -215,7 +230,7 @@
 								? 'fill-neutral-900'
 								: ''} hover:cursor-pointer
 							transition-colors duration-200 ease-in-out
-
+								
 							{data.find((d) => d.ls_seat_name === feature.properties.ls_seat_name).total_assets === undefined
 								? 'pointer-events-none'
 								: 'pointer-events-auto'}
@@ -238,6 +253,26 @@
 									class=" stroke-surface-100 font-serif  text-[5px] stroke-[2px] shadow-md"
 								/>
 							{/if}
+						</GeoPath>
+					{/each}
+				</g>
+				<g class="pointer-events-none labels">
+					{#each states.features as feature}
+						<GeoPath geojson={feature} let:geoPath>
+							{@const [x, y] = geoPath.centroid(feature)}
+							{#key scale}
+								{#if hovered === feature}
+									<text
+										{x}
+										y={y - 10}
+										style:font-size="{18 / scale}px"
+										text-anchor="middle"
+										class="font-serif"
+									>
+										{feature.properties.ls_seat_name}
+									</text>
+								{/if}
+							{/key}
 						</GeoPath>
 					{/each}
 				</g>

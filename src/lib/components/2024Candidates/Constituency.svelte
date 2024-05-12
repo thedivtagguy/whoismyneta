@@ -132,8 +132,8 @@
 
 		<p class="max-w-[35rem] text-xs text-neutral-300">
 			Explore affidavits by clicking "Know More" to go to an external portal with detailed
-			information about the candidate. Information on the external portal is available only under
-			ADR's terms of use.
+			information about the candidate. Due to limitations, this information is available exclusively
+			on ADR's platform.
 		</p>
 		<SelectField
 			clearable={false}
