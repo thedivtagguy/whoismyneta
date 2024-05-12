@@ -66,8 +66,6 @@
 		sortedCandidates = [...originalCandidates];
 	}
 
-	// for party, we need to sort by the order in which they appear in the partyProminence array
-	// not all parties are in the array, so we need to check if they are in the array and sort accordingly
 	$: if (sort === 'party') {
 		sortedCandidates = candidates.sort((a, b) => {
 			let aIndex = partyProminence.indexOf(a.party);
