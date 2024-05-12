@@ -19,9 +19,12 @@
 	import data from '$lib/data/data.json';
 	import ToggleMap from './ToggleMap.svelte';
 	import { slide } from 'svelte/transition';
+	import statesIndia from '$lib/data/states_india.json';
 
 	let hovered = null;
 	const states = feature(country, country.objects.india_ls_seats_545);
+	const indianStates = feature(statesIndia, statesIndia.objects.states_india);
+	console.log(indianStates.features);
 
 	let colorScale;
 	let numericColorScale, categoricalColorScale;

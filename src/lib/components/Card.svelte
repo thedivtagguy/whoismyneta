@@ -158,8 +158,8 @@
 					>
 				</h2>
 				<p class="py-2 text-left text-md text-neutral-500">
-					and learn about your sitting MLA's declared assets, criminal cases, and attendanc — or
-					explore candidates in the 2024 Lok Sabha election.
+					and see your sitting MLA's declared assets, criminal cases, and attendance — or explore
+					candidates contesting in the 2024 Lok Sabha elections.
 				</p>
 
 				<div class="flex flex-wrap max-w-sm gap-2">
