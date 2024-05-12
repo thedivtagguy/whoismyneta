@@ -91,7 +91,7 @@
 					<GenericField
 						title="Education"
 						value={results.education_x}
-						infoPopOverText={'Education level as per 2024 affidavit'}
+						infoPopOverText={'Education level as per 2019 affidavit'}
 						cols={2}
 					/>
 					<GenericField
@@ -110,13 +110,13 @@
 									: 'Criminal Case'
 						}`}
 						value={results.criminal_cases}
-						infoPopOverText={'Criminal cases on record'}
+						infoPopOverText={'Declared criminal cases as per 2019 affidavit'}
 						cols={2}
 					/>
 
 					<GenericField
 						title={'Assets (2019)'}
-						infoPopOverText={'Assets declared by the candidate in 2019'}
+						infoPopOverText={'Declared value of assets owned as per 2019 affidavit'}
 						value={formatRupee(results.total_assets)}
 						cols={2}
 					/>
@@ -124,7 +124,7 @@
 					{#if results.end_total_assets}
 						<GenericField
 							title={'Assets (2024)'}
-							infoPopOverText={'Assets declared by the candidate in 2024'}
+							infoPopOverText={'Declared value of assets owned as per 2024 affidavit'}
 							value={formatRupee(results.end_total_assets)}
 							cols={2}
 						/>

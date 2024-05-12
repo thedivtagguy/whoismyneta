@@ -7,7 +7,7 @@ export const load = async ({ fetch, url }) => {
 	if (browser && url.searchParams.size === 0) {
 		if (dev) {
 			const loadConstituencies = data.sort(() => 0.5 - Math.random()).slice(0, 5);
-			console.log(loadConstituencies);
+
 			return {
 				status: 200,
 				body: {
