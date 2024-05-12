@@ -1,6 +1,7 @@
 <script>
 	import { TweenedValue, BarStack, cls, format } from 'svelte-ux';
 	import { getPartyColor } from '$lib/utils';
+	import { text } from '@sveltejs/kit';
 
 	export let historical = {};
 	let duration = 100;
@@ -16,7 +17,8 @@
 				...largestParties.map(([party, value]) => ({
 					label: party,
 					value,
-					color: getPartyColor(party, 'abbreviation').backgroundColor
+					color: getPartyColor(party, 'abbreviation').backgroundColor,
+					textColor: getPartyColor(party, 'abbreviation').textColor
 				})),
 				{
 					label: 'Others',
@@ -28,7 +30,8 @@
 			combinedParties = parties.map(([party, value]) => ({
 				label: party,
 				value,
-				color: getPartyColor(party, 'abbreviation').backgroundColor
+				color: getPartyColor(party, 'abbreviation').backgroundColor,
+				textColor: getPartyColor(party, 'abbreviation').textColor
 			}));
 		}
 		return {
@@ -54,7 +57,7 @@
 				class={cls(`group-first:rounded-l group-last:rounded-r`)}
 			>
 				<div class="flex items-center gap-1 px-2 py-1 truncate">
-					<span class="text-sm font-semibold text-gray-900">
+					<span style:color={item.textColor} class="text-sm font-semibold">
 						<TweenedValue value={item.value} let:value options={{ duration }}>
 							{format(value / 100, 'percent', { fractionDigits: 1 })}
 						</TweenedValue>
