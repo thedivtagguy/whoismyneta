@@ -22,9 +22,17 @@ export const load = async ({ fetch, url }) => {
 				}
 			} = await response.json();
 
-			const constituencies = data.filter(
+			let constituencies = data.filter(
 				(constituencyData) => constituencyData.state_ut_name === state
 			);
+
+			// If no constituencies are found for the state, select a random state
+			if (constituencies.length === 0) {
+				const randomState = data[Math.floor(Math.random() * data.length)].state_ut_name;
+				constituencies = data.filter(
+					(constituencyData) => constituencyData.state_ut_name === randomState
+				);
+			}
 
 			const loadConstituencies = constituencies.sort(() => 0.5 - Math.random()).slice(0, 5);
 
