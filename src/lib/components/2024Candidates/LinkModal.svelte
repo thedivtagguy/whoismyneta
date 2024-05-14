@@ -6,6 +6,7 @@
 
 	export let linkURI = '';
 	export let linkText = 'Know more';
+	export let disabled = false;
 
 	let isFirefox = false;
 	$: if (typeof window !== 'undefined') {
@@ -18,15 +19,22 @@
 {#if !$firstClickOnModal}
 	<Button
 		size="sm"
+		{disabled}
 		variant="fill-light"
 		classes={{
-			root: 'w-[6rem] transition duration-150 px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200'
+			root: `w-[8rem]  transition duration-150 ${disabled ? 'pointer-events-none' : ''} px-2 py-1 group-hover:bg-primary-300 text-xs font-bold group-hover:text-white text-neutral-300 rounded-sm text-center bg-surface-200`
 		}}
 		on:click={() => {
 			open = true;
 			$firstClickOnModal = true;
-		}}>{linkText}</Button
+		}}>{disabled ? 'Not available yet' : linkText}</Button
 	>
+{:else if disabled}
+	<p
+		class="w-[6rem] transition duration-150 px-2 py-1 text-xs font-bold text-neutral-300 rounded-sm text-center bg-surface-200"
+	>
+		Not available
+	</p>
 {:else}
 	<a
 		href={linkURI}

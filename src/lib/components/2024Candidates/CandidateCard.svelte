@@ -24,6 +24,10 @@
 	$: link = `https://www.myneta.info/LokSabha2024/index.php?action=show_candidates&constituency_id=${constituencyID}${formatTextForHighlight(
 		candidate.candidate
 	)}`;
+
+	$: console.log(constituencyID);
+
+	$: isConstituencyID = constituencyID ? false : true;
 </script>
 
 <!-- Card -->
@@ -57,6 +61,6 @@
 			</h4>
 			<p class="text-sm text-neutral-400">{candidate.party}</p>
 		</div>
-		<LinkModal linkURI={link} />
+		<LinkModal disabled={isConstituencyID} linkURI={link} />
 	</div>
 </div>
