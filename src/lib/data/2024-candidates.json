@@ -10104,7 +10104,7 @@
         "age": "55"
     },
     {
-        "candidate": "Dr Nitesh Chopra Honey",
+        "candidate": "Dr. Nitesh Chopra (Honey)",
         "state": "HR",
         "constituency": "Ambala",
         "party": "Bhartiya Shakti Chetna Party",
@@ -10152,12 +10152,148 @@
         "age": "41"
     },
     {
-        "candidate": "Mohar Singh Station Master Retd",
+        "candidate": "Mohar Singh Station Master (Retd.)",
         "state": "HR",
         "constituency": "Ambala",
         "party": "Independent",
         "gender": "m",
         "age": "65"
+    },
+    {
+        "candidate": "Rao Dan Singh",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Dharambir Singh",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Bahadur Singh",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Jannayak Janta Party",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Sunil Kumar Sharma",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Anand Kumar",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Balwan",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Bharat Bhushan",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Bhartiya Shakti Chetna Party",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Rohtash",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Subhash",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Rashtrawadi Janlok Party (Satya)",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Jagdish",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Jai Singh",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "49"
+    },
+    {
+        "candidate": "Engineer Mahavir Singh Yadav",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Yogbir Singh",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Varsha",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "f",
+        "age": "26"
+    },
+    {
+        "candidate": "Ved Prakash",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Seema",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "f",
+        "age": "37"
+    },
+    {
+        "candidate": "Hemant",
+        "state": "HR",
+        "constituency": "Bhiwani-Mahendragarh",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
     },
     {
         "candidate": "Kishan Thakur",
@@ -10536,6 +10672,230 @@
         "age": "69"
     },
     {
+        "candidate": "Jai Parkash (J P) S/O Harikesh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Desh Raj",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "59"
+    },
+    {
+        "candidate": "Naina Singh Chautala",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Jannayak Janta Party",
+        "gender": "f",
+        "age": "56"
+    },
+    {
+        "candidate": "Ranjit Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "78"
+    },
+    {
+        "candidate": "Sunaina Chautala",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Indian National Lok Dal",
+        "gender": "f",
+        "age": "49"
+    },
+    {
+        "candidate": "Jagat Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Vikas India Party",
+        "gender": "m",
+        "age": "70"
+    },
+    {
+        "candidate": "Dev Giri",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Rashtriya Lokswaraj Party",
+        "gender": "m",
+        "age": "50"
+    },
+    {
+        "candidate": "Neeraj Kumar \u201cChhattar\u201d",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Bharatiya Asha Party",
+        "gender": "m",
+        "age": "30"
+    },
+    {
+        "candidate": "Advocate Pardeep Sihmar",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Master Vijender Jitpura",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Ajit Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "57"
+    },
+    {
+        "candidate": "Atma Ram Bishnoi",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Ishwar Jhajhria",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "34"
+    },
+    {
+        "candidate": "Kulbir",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Chander Mohan",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "25"
+    },
+    {
+        "candidate": "Jai Prakash (J.P.) S/O Uma Dutt",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Jile Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Dinesh Kumar",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Poonam Mor",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Pardeep Dahiya",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Mandeep",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "27"
+    },
+    {
+        "candidate": "Yogesh Boora",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "28"
+    },
+    {
+        "candidate": "Randhir Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Parjapati Rakesh Dhuwaria",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Rajender Kumar",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Vijay Singh",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "34"
+    },
+    {
+        "candidate": "Surender",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Surender Kumar",
+        "state": "HR",
+        "constituency": "Hisar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "54"
+    },
+    {
         "candidate": "Inder Singh",
         "state": "HR",
         "constituency": "Karnal",
@@ -10686,6 +11046,254 @@
         "party": "Independent",
         "gender": "m",
         "age": "47"
+    },
+    {
+        "candidate": "Abhay Singh Chautala",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Indian National Lok Dal",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Deepak Mehra",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "34"
+    },
+    {
+        "candidate": "Naveen Jindal",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Pala Ram Saini",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Jannayak Janta Party",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Dr Sushil Gupta",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Aam Aadmi Party",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Inderjeet Kamboj",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Comrade Om Parkash Shastri",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "70"
+    },
+    {
+        "candidate": "Om Parkash Indal",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Global Republican Party",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Khazan Singh Sehgal",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Shiromani Akali Dal (Amritsar)(Simranjit Singh Mann)",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Naresh Kumar",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Samata Party",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Advocate Pardeep Saini",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Rashtriya Garib Dal",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Mahavir Singh",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Ekam Sanatan Bharat Dal",
+        "gender": "m",
+        "age": "62"
+    },
+    {
+        "candidate": "Satnam Bhazigar",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Loktantrik Lok Rajyam Party",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Satbir Kashyap",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Rashtriya Janshakti Party(Eklavya)",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Satish Dhull",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Bharatiya Asha Party",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Pandit Anil Upadhyay",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Amit Malik",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Adv Ashwini Sharma Hrittwal",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Jai Kumar  Saini Hamidpur",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Jai Parkash Sharma",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Patasho Devi Ex-Sarpanch",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "f",
+        "age": "60"
+    },
+    {
+        "candidate": "Phool Singh",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "74"
+    },
+    {
+        "candidate": "Mangat Ram",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "59"
+    },
+    {
+        "candidate": "Dr Mahesh Chand Gaur",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Comrade Ramesh Khatkar",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Ramdiya",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Varun Gupta",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Er Vishal Kumar",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "26"
+    },
+    {
+        "candidate": "Sunny Kashyap Teora",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Surender Singh",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Sewa Singh",
+        "state": "HR",
+        "constituency": "Kurukshetra",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
     },
     {
         "candidate": "Dr. Arvind Kumar Sharm",
@@ -10894,6 +11502,334 @@
         "party": "Independent",
         "gender": "m",
         "age": "43"
+    },
+    {
+        "candidate": "Ashok Tanwar",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Ramesh Khatak",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Jannayak Janta Party",
+        "gender": "m",
+        "age": "58"
+    },
+    {
+        "candidate": "Lilu Ram Asakhera",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "77"
+    },
+    {
+        "candidate": "Sandeep Lot Valmiki",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Indian National Lok Dal",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Selja",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Indian National Congress",
+        "gender": "f",
+        "age": "61"
+    },
+    {
+        "candidate": "Mistri Daulat Ram Rolan",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Dharampal Vartia",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Loktantrik Lok Rajyam Party",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Rajinder Kumar",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Bharatiya Asha Party",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Dr. Rajesh Mehandia",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Bahujan Republican  Socialist Party",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Karnail Singh Odhan",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Jasvir Singh",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Joginder Ram",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "71"
+    },
+    {
+        "candidate": "Naveen Kumar Commando",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Bagdawat Ram",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "59"
+    },
+    {
+        "candidate": "Ran Singh Panwar",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Rahul Chouhan",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "26"
+    },
+    {
+        "candidate": "Satpal Ladwal",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Sukhdev Singh Sandhu",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Surender Kumar Phulan",
+        "state": "HR",
+        "constituency": "Sirsa",
+        "party": "Independent",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Anoop Singh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Indian National Lok Dal",
+        "gender": "m",
+        "age": "62"
+    },
+    {
+        "candidate": "Umesh Kumar",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Bhupender Singh Malik",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Jannayak Janta Party",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Mohan Lal Badoli",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Satpal Brahamchari",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Naresh Kashyap",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Aam Aadmi Parivartan Party",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Balbir Singh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Rakesh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Samata Party",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Rakesh Dhariwal",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Rashtriya Jatigat Aarakshan Virodhi Party",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Radhey Shyam",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Sunil Kumar",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Rashtriya Garib Dal",
+        "gender": "m",
+        "age": "28"
+    },
+    {
+        "candidate": "Ashwani",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Dr. Kamlesh Kumar Saini",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "57"
+    },
+    {
+        "candidate": "Jagbeer",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Nirmal Singh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Ramesh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Rohtash",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Sant Dharamveer Chotivala",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Sanjay Dass",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Satpal",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Gaubhagat Sumit Lather",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Surender Singh",
+        "state": "HR",
+        "constituency": "Sonipat",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
     },
     {
         "candidate": "Gaddigoudar. Parvatagouda. Chandanagouda.",
@@ -13390,14 +14326,6 @@
         "party": "Republican Party of India Bharatha",
         "gender": "m",
         "age": "49"
-    },
-    {
-        "candidate": "K.R. Gangadharappa",
-        "state": "KA",
-        "constituency": "Hassan",
-        "party": "Independent",
-        "gender": "m",
-        "age": "72"
     },
     {
         "candidate": "Basavaraju J.D (Ex-Army)",
@@ -19192,1550 +20120,6 @@
         "age": "41"
     },
     {
-        "candidate": "Zahoor Ahamad Mohamad Yusuf (Jam Jam)",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "56"
-    },
-    {
-        "candidate": "Bachhav Shobha Dinesh",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Indian National Congress",
-        "gender": "f",
-        "age": "64"
-    },
-    {
-        "candidate": "Bhamre Subhash Ramrao",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "71"
-    },
-    {
-        "candidate": "Namdeo Rohidas Yelave",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Bharatheeya Jawan Kisan Party",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Patil Shivaji Nathu",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "All India Forward Bloc",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Muqeem Meena Nagri",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Bhim Sena",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Shaikh Mohammad Zaid Shamim Ahmed",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Welfare Party Of India",
-        "gender": "m",
-        "age": "53"
-    },
-    {
-        "candidate": "Abdul Hafeez Abdul Haque",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Irfan. Mo. Ishak (Nadir)",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Bharat Baburao Jadhav",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Malay Prakash Patil",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Mohammad Aameen Mohammad Faruque",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "45"
-    },
-    {
-        "candidate": "Mohammad Ismail Jumman",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "64"
-    },
-    {
-        "candidate": "Raj Chavan",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Shafeeque Ahemad Md. Rafeeque",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "44"
-    },
-    {
-        "candidate": "Adv Sachin Umaji Nikam",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Suresh Jagannath Brahmankar (Suresh Bapu)",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "67"
-    },
-    {
-        "candidate": "Sanjay Rameshwar Sharma",
-        "state": "MH",
-        "constituency": "Dhule",
-        "party": "Independent",
-        "gender": "m",
-        "age": "54"
-    },
-    {
-        "candidate": "Karan Balasaheb Patil - Pawar",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
-        "gender": "m",
-        "age": "37"
-    },
-    {
-        "candidate": "Vilas Shankar Tayade",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "50"
-    },
-    {
-        "candidate": "Smita Uday Wagh",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Bharatiya Janata Party",
-        "gender": "f",
-        "age": "56"
-    },
-    {
-        "candidate": "Ex-Havildar Ishwar Dayaram More",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Sainik Samaj Party",
-        "gender": "m",
-        "age": "58"
-    },
-    {
-        "candidate": "Yuvraj Jadhav (Sambha Aappa)",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Abdul Shakur Deshpande",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "46"
-    },
-    {
-        "candidate": "Ahmad Khan",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "48"
-    },
-    {
-        "candidate": "Karan Pawar",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "26"
-    },
-    {
-        "candidate": "Adv. Namdeo Pandurang Koli",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Patil Sandip Yuvraj",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Mahendra Devram Koli",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "32"
-    },
-    {
-        "candidate": "Mukesh Mulchand Koli",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Lalit (Banti) Sharma",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Advocate Vijay Babulal Danej",
-        "state": "MH",
-        "constituency": "Jalgaon",
-        "party": "Independent",
-        "gender": "m",
-        "age": "56"
-    },
-    {
-        "candidate": "Kalyan Vaijinathrao Kale",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Indian National Congress",
-        "gender": "m",
-        "age": "61"
-    },
-    {
-        "candidate": "Danve Raosaheb Dadarao",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "69"
-    },
-    {
-        "candidate": "Nivrutti Vishwnath Bansode",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "54"
-    },
-    {
-        "candidate": "Dipak Bhimrao Borhade",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Samnak Janta Party",
-        "gender": "m",
-        "age": "40"
-    },
-    {
-        "candidate": "Dhananjay Rupraoji Kakde (Patil)",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Bharatheeya Jawan Kisan Party",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Bakale Prabhakar Devgan",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Babasaheb Santukrao Shelke",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Samata Party",
-        "gender": "m",
-        "age": "67"
-    },
-    {
-        "candidate": "Bhagwan Sahebrao Regude",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Hindustan Janta Party",
-        "gender": "m",
-        "age": "57"
-    },
-    {
-        "candidate": "Mukesh Prabhat Rathod",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Akhil Bhartiya Parivar Party",
-        "gender": "m",
-        "age": "30"
-    },
-    {
-        "candidate": "Shyam Rustumrao Shirsath",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Bahujan Republican  Socialist Party",
-        "gender": "m",
-        "age": "36"
-    },
-    {
-        "candidate": "Ajhar Anwar Sayyad",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "27"
-    },
-    {
-        "candidate": "Abdul Rafiq Abdul Latif",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Ahmad Rahim Saikh Bagwan",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "53"
-    },
-    {
-        "candidate": "Kaduba Mhatarba Ingle",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Kamble Maroti Dasharath",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Chabukswar Rahul Niranjan",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "37"
-    },
-    {
-        "candidate": "Tanaji Tukaram Bhojane",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Babasaheb Patil Shinde",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "67"
-    },
-    {
-        "candidate": "Manoj Neminath Kolte",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "40"
-    },
-    {
-        "candidate": "Mangesh Sanjay Sable",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "26"
-    },
-    {
-        "candidate": "Adv. Yogesh Dattu Gullapelli",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "34"
-    },
-    {
-        "candidate": "Ratan Asaram Landge",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Rajendra Namdeo Magre",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Vikas Chhagan Lahane",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Sham Pawals Rupekar",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Dnyaneshwar Dagduji Nade",
-        "state": "MH",
-        "constituency": "Jalna",
-        "party": "Independent",
-        "gender": "m",
-        "age": "57"
-    },
-    {
-        "candidate": "Alte Vishwanath Mahadev",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "41"
-    },
-    {
-        "candidate": "Dr. Kalge Shivaji Bandappa",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Indian National Congress",
-        "gender": "m",
-        "age": "54"
-    },
-    {
-        "candidate": "Sudhakar Tukaram Shrangare",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "62"
-    },
-    {
-        "candidate": "Atithi Khanderao Suryvanshi",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Swarajya Shakti Sena",
-        "gender": "f",
-        "age": "46"
-    },
-    {
-        "candidate": "Adv. Kasbekar Shridhar Limbaji",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Rashtriya Sant Sandesh Party",
-        "gender": "m",
-        "age": "74"
-    },
-    {
-        "candidate": "Kamant Machhindra Gunwantrao",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Bahujan Bharat Party",
-        "gender": "m",
-        "age": "64"
-    },
-    {
-        "candidate": "Narsingrao Udgirkar",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "67"
-    },
-    {
-        "candidate": "Pravin Madhav Johare",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Swarajya Sena (Maharashtra)",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Balaji Tukaram Gaikwad",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Bharat Peoples Sena",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Bharat Hariba Nanaware",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Peoples Party of India (Democratic)",
-        "gender": "m",
-        "age": "61"
-    },
-    {
-        "candidate": "Bhikaji Gangaram Jadhav",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Kranti Kari Jai Hind Sena",
-        "gender": "m",
-        "age": "61"
-    },
-    {
-        "candidate": "Lakhan Rajaram Kamble",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Rashtriy Bahujan Party",
-        "gender": "m",
-        "age": "33"
-    },
-    {
-        "candidate": "Vikas Kondiba Shinde",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Maharashtra Vikas Aghadi",
-        "gender": "m",
-        "age": "27"
-    },
-    {
-        "candidate": "Shankar Hari Tadakhe",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Baliraja Party",
-        "gender": "m",
-        "age": "63"
-    },
-    {
-        "candidate": "Shrikant Baburao Hoval",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Bahujan Mukti Party",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Abhang Gangaram Suryawanshi",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Amol Malu Hanmante",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "28"
-    },
-    {
-        "candidate": "Umesh Ambadas Kamble",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "28"
-    },
-    {
-        "candidate": "Dattu Sopan Narsinge",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Deepak Kedar",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Papita Raosaheb Randive",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "f",
-        "age": "43"
-    },
-    {
-        "candidate": "Pankaj Gopalrao Wakharadakar",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "33"
-    },
-    {
-        "candidate": "Panchshil Vikram Kamble",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "41"
-    },
-    {
-        "candidate": "Adv. Pradip S. Chincholikar",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Bansode Raghunath Waghoji",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "57"
-    },
-    {
-        "candidate": "Balaji Sheshrao Bansode",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Mukesh Govindrao Ghodake",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "33"
-    },
-    {
-        "candidate": "Sudhakar Tukaram Suryawanshi",
-        "state": "MH",
-        "constituency": "Latur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "56"
-    },
-    {
-        "candidate": "Nandesh Vithal Umap",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "48"
-    },
-    {
-        "candidate": "Mihir Chandrakant Kotecha",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "49"
-    },
-    {
-        "candidate": "Sanjay Dina Patil",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Sanjay B. Patil",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "National People's Party",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Dattatray Arjun Utekar",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Bharatheeya Jawan Kisan Party",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Daulat Kadar Khan",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "44"
-    },
-    {
-        "candidate": "Prof. Dr. Prashant Gangawane",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Desh Janhit Party",
-        "gender": "m",
-        "age": "41"
-    },
-    {
-        "candidate": "Bhawani H. Choudhary",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Sardar Vallabhbhai Patel Party",
-        "gender": "m",
-        "age": "45"
-    },
-    {
-        "candidate": "Bhopinder Singh Saini",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Viro Ke Vir Indian Party",
-        "gender": "m",
-        "age": "66"
-    },
-    {
-        "candidate": "Mohammad Arman Mohammad Wasi Khan",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Rashtriya Janhit Sangharsh Party",
-        "gender": "m",
-        "age": "46"
-    },
-    {
-        "candidate": "Comrade Surendra Sibag",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "All India Forward Bloc",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Sanjay Saoji Deshpande",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Republican Party of India",
-        "gender": "m",
-        "age": "58"
-    },
-    {
-        "candidate": "Sanju Maruti Pawar",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Maharashtra Vikas Aghadi",
-        "gender": "m",
-        "age": "44"
-    },
-    {
-        "candidate": "Prem Ramapati Gupta",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "m",
-        "age": "54"
-    },
-    {
-        "candidate": "Bansode Dilip",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "m",
-        "age": "64"
-    },
-    {
-        "candidate": "Mohammed Ahmed Shaikh",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "m",
-        "age": "32"
-    },
-    {
-        "candidate": "Vidya Naik",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "f",
-        "age": "52"
-    },
-    {
-        "candidate": "Shahaji  Nanai Thorat",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "m",
-        "age": "60"
-    },
-    {
-        "candidate": "Dr. Sushma Maurya",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "f",
-        "age": "45"
-    },
-    {
-        "candidate": "Sanjay Patil",
-        "state": "MH",
-        "constituency": "Mumbai North East",
-        "party": "Independent",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Ananda Sukalal Koli",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "56"
-    },
-    {
-        "candidate": "Adv Gowaal Kagada Padavi",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Indian National Congress",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Dr Heena Vijaykumar Gavit",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Bharatiya Janata Party",
-        "gender": "f",
-        "age": "35"
-    },
-    {
-        "candidate": "Nirmala Vasave",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Peoples Party of India (Democratic)",
-        "gender": "f",
-        "age": "38"
-    },
-    {
-        "candidate": "Ravindra Ranjit Valvi",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Bharat Adivasi Party",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Hemant Mansaram Koli",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Gitanjali Shashikant Koli",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Independent",
-        "gender": "f",
-        "age": "46"
-    },
-    {
-        "candidate": "Jalamsing Sutum Pawar",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Independent",
-        "gender": "m",
-        "age": "53"
-    },
-    {
-        "candidate": "Deepakkumar Madhukar Shirsath",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Independent",
-        "gender": "m",
-        "age": "40"
-    },
-    {
-        "candidate": "Rohidas Gemaji Valvi",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Independent",
-        "gender": "m",
-        "age": "58"
-    },
-    {
-        "candidate": "Sushilkumar Jahangir Pawara",
-        "state": "MH",
-        "constituency": "Nandurbar",
-        "party": "Independent",
-        "gender": "m",
-        "age": "40"
-    },
-    {
-        "candidate": "Chandrahar Subhash Patil",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
-        "gender": "m",
-        "age": "41"
-    },
-    {
-        "candidate": "Tipusulatan Sikandar Patavegar",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "34"
-    },
-    {
-        "candidate": "Sanjay (Kaka) Patil",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "59"
-    },
-    {
-        "candidate": "Anand Shankar Nalage",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Baliraja Party",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Pandurang Raosaheb Bhosale",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Bharatheeya Jawan Kisan Party",
-        "gender": "m",
-        "age": "61"
-    },
-    {
-        "candidate": "Mahesh Yashwant Kharade",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Swabhimani Paksha",
-        "gender": "m",
-        "age": "48"
-    },
-    {
-        "candidate": "Satish Lalita Krishna Kadam",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Hindustan Janta Party",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Ajit Dhanaji Khandare",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "36"
-    },
-    {
-        "candidate": "Allauddin Hayatchand Kazi",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "58"
-    },
-    {
-        "candidate": "Dr Akash Vhatkar",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Jalindar Machindra Thomake",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "47"
-    },
-    {
-        "candidate": "Touhid Ilahi Momin",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Dattatray Pandit Patil",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Prakash Shivajirao Shendge",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "65"
-    },
-    {
-        "candidate": "Bandagar Nanaso Balaso",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "51"
-    },
-    {
-        "candidate": "Ravindra Chandar Solankar",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "47"
-    },
-    {
-        "candidate": "Vishal (Dada) Prakashbapu Patil",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Shashikant Gautam Deshmukh",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "30"
-    },
-    {
-        "candidate": "Suwarnatai Sudhakar Gayakwad",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "f",
-        "age": "48"
-    },
-    {
-        "candidate": "Sangram Rajaram More",
-        "state": "MH",
-        "constituency": "Sangli",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Adhalrao Shivaji Dattatrey",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Nationalist Congress Party",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Dr. Amol Ramsing Kolhe",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Nationalist Congress Party \u2013 Sharadchandra Pawar",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Rahul Raghunath Owhal",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Dr. Anwar Shaikh",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "60"
-    },
-    {
-        "candidate": "Aslam Isak Bagwan",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Lok Sena Party",
-        "gender": "m",
-        "age": "56"
-    },
-    {
-        "candidate": "Kamble Trimbak Narayan",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Baliraja Party",
-        "gender": "m",
-        "age": "32"
-    },
-    {
-        "candidate": "Tukaram Namdeo Daphal",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Sainik Samaj Party",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Narayan Prabhakar Ankushe",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bharatheeya Jawan Kisan Party",
-        "gender": "m",
-        "age": "45"
-    },
-    {
-        "candidate": "Adv. Dr. Laxman Rambhau Damse",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bharat Adivasi Party",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Sanjay Laxman Padwal",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bhartiya Navjawan Sena (Paksha)",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Swapnil Dhanaji Londhe",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bhim Sena",
-        "gender": "m",
-        "age": "29"
-    },
-    {
-        "candidate": "Haridas Chandar Bhise",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Bharatiya Lokvikas Party",
-        "gender": "m",
-        "age": "41"
-    },
-    {
-        "candidate": "Amar Machindra Borhade",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Amol Vilas Pachundkar",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "29"
-    },
-    {
-        "candidate": "Umesh Mahadev Mhetre",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Gaikwad Niloba Changadeo",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "61"
-    },
-    {
-        "candidate": "Goraksh Kasabe",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "30"
-    },
-    {
-        "candidate": "Chandgude Vinod Vasant",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "38"
-    },
-    {
-        "candidate": "Chaaya Sanjay Jagdale-Solanke",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "f",
-        "age": "34"
-    },
-    {
-        "candidate": "Dada Alias Vikas Suresh Kasbe",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "30"
-    },
-    {
-        "candidate": "Pandurang Bhagwan Waghole",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Prakash Sukhadeo Jamdhade",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "40"
-    },
-    {
-        "candidate": "Bhor Vikas Rohidas",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "39"
-    },
-    {
-        "candidate": "Manohar Mahadu Wadekar",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Ravindra Motiram Sirsam",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "63"
-    },
-    {
-        "candidate": "Rahul Arjun Hore",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "36"
-    },
-    {
-        "candidate": "Wakhare Pradip Pandurang",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "62"
-    },
-    {
-        "candidate": "Salim Baba Sayyad",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "43"
-    },
-    {
-        "candidate": "Subash Kashinath Sarode",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "52"
-    },
-    {
-        "candidate": "Suraj Chandrakant Gaikwad",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "35"
-    },
-    {
-        "candidate": "Sushil Dnyandev Kanse",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Adv.Swapnil Bhausaheb Shelar",
-        "state": "MH",
-        "constituency": "Shirur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "26"
-    },
-    {
-        "candidate": "Amar Sharadrao Kale",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Nationalist Congress Party \u2013 Sharadchandra Pawar",
-        "gender": "m",
-        "age": "50"
-    },
-    {
-        "candidate": "Dr. Mohan Ramraoji  Raikwar",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "49"
-    },
-    {
-        "candidate": "Ramdas Chandrabhan Tadas",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "71"
-    },
-    {
-        "candidate": "Akshay Mehare Bhartiya",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Akhil Bhartiya Parivar Party",
-        "gender": "m",
-        "age": "29"
-    },
-    {
-        "candidate": "Ashish Lekhiram Izankar",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Vidarbha Rajya Aghadi",
-        "gender": "m",
-        "age": "37"
-    },
-    {
-        "candidate": "Umesh Somaji Waware",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Maharashtra Vikas Aghadi",
-        "gender": "m",
-        "age": "53"
-    },
-    {
-        "candidate": "Krushna Annaji Kalode",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Hindrashtra Sangh",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Krushna Subhashrao Fulkari",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Lok Swarajya Party",
-        "gender": "m",
-        "age": "27"
-    },
-    {
-        "candidate": "Dixita Anand",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Desh Janhit Party",
-        "gender": "f",
-        "age": "38"
-    },
-    {
-        "candidate": "Maroti Gulabrao Uike",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Gondvana Gantantra Party",
-        "gender": "m",
-        "age": "55"
-    },
-    {
-        "candidate": "Dr. Moreshwar Ramji Nagrale",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Republican Party of India",
-        "gender": "m",
-        "age": "70"
-    },
-    {
-        "candidate": "Prof. Rajendra Gulabrao  Salunkhe",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Vanchit Bahujan  Aaghadi",
-        "gender": "m",
-        "age": "64"
-    },
-    {
-        "candidate": "Ramrao Bajirao Ghodaskar",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "All India Forward Bloc",
-        "gender": "m",
-        "age": "74"
-    },
-    {
-        "candidate": "Anil K. Ghushe",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "65"
-    },
-    {
-        "candidate": "Arvind Shamrao Lillore",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "45"
-    },
-    {
-        "candidate": "Asif",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "31"
-    },
-    {
-        "candidate": "Kishor Baba Pavar",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "68"
-    },
-    {
-        "candidate": "Jagadish Uddvrao  Wankhade",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Pooja Pankaj Tadas",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "f",
-        "age": "32"
-    },
-    {
-        "candidate": "Adv. Bhaskar Marotrao  Neware",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "47"
-    },
-    {
-        "candidate": "Ramesh Sinha",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "71"
-    },
-    {
-        "candidate": "Rahul T. Bhoyar",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "42"
-    },
-    {
-        "candidate": "Vijay Dnyaneshwarrao  Shrirao",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "49"
-    },
-    {
-        "candidate": "Suhas V. Thakare",
-        "state": "MH",
-        "constituency": "Wardha",
-        "party": "Independent",
-        "gender": "m",
-        "age": "44"
-    },
-    {
         "candidate": "Umashankar Shyambabu Yadav",
         "state": "MH",
         "constituency": "Ahmednagar",
@@ -22928,6 +22312,150 @@
         "age": "60"
     },
     {
+        "candidate": "Zahoor Ahamad Mohamad Yusuf (Jam Jam)",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "56"
+    },
+    {
+        "candidate": "Bachhav Shobha Dinesh",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Indian National Congress",
+        "gender": "f",
+        "age": "64"
+    },
+    {
+        "candidate": "Bhamre Subhash Ramrao",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "71"
+    },
+    {
+        "candidate": "Namdeo Rohidas Yelave",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Patil Shivaji Nathu",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "All India Forward Bloc",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Muqeem Meena Nagri",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Bhim Sena",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Shaikh Mohammad Zaid Shamim Ahmed",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Welfare Party Of India",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Abdul Hafeez Abdul Haque",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Irfan. Mo. Ishak (Nadir)",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Bharat Baburao Jadhav",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Malay Prakash Patil",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Mohammad Aameen Mohammad Faruque",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "45"
+    },
+    {
+        "candidate": "Mohammad Ismail Jumman",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Raj Chavan",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Shafeeque Ahemad Md. Rafeeque",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Adv Sachin Umaji Nikam",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Suresh Jagannath Brahmankar (Suresh Bapu)",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Sanjay Rameshwar Sharma",
+        "state": "MH",
+        "constituency": "Dhule",
+        "party": "Independent",
+        "gender": "m",
+        "age": "54"
+    },
+    {
         "candidate": "Tulshiram Chiman Khotare",
         "state": "MH",
         "constituency": "Dindori",
@@ -23568,6 +23096,326 @@
         "age": "33"
     },
     {
+        "candidate": "Karan Balasaheb Patil - Pawar",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Vilas Shankar Tayade",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "50"
+    },
+    {
+        "candidate": "Smita Uday Wagh",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Bharatiya Janata Party",
+        "gender": "f",
+        "age": "56"
+    },
+    {
+        "candidate": "Ex-Havildar Ishwar Dayaram More",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Sainik Samaj Party",
+        "gender": "m",
+        "age": "58"
+    },
+    {
+        "candidate": "Yuvraj Jadhav (Sambha Aappa)",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Abdul Shakur Deshpande",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Ahmad Khan",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Karan Pawar",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "26"
+    },
+    {
+        "candidate": "Adv. Namdeo Pandurang Koli",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Patil Sandip Yuvraj",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Mahendra Devram Koli",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Mukesh Mulchand Koli",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Lalit (Banti) Sharma",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Advocate Vijay Babulal Danej",
+        "state": "MH",
+        "constituency": "Jalgaon",
+        "party": "Independent",
+        "gender": "m",
+        "age": "56"
+    },
+    {
+        "candidate": "Kalyan Vaijinathrao Kale",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Danve Raosaheb Dadarao",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Nivrutti Vishwnath Bansode",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Dipak Bhimrao Borhade",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Samnak Janta Party",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Dhananjay Rupraoji Kakde (Patil)",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Bakale Prabhakar Devgan",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Babasaheb Santukrao Shelke",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Samata Party",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Bhagwan Sahebrao Regude",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Hindustan Janta Party",
+        "gender": "m",
+        "age": "57"
+    },
+    {
+        "candidate": "Mukesh Prabhat Rathod",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Akhil Bhartiya Parivar Party",
+        "gender": "m",
+        "age": "30"
+    },
+    {
+        "candidate": "Shyam Rustumrao Shirsath",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Bahujan Republican  Socialist Party",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Ajhar Anwar Sayyad",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "27"
+    },
+    {
+        "candidate": "Abdul Rafiq Abdul Latif",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Ahmad Rahim Saikh Bagwan",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Kaduba Mhatarba Ingle",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Kamble Maroti Dasharath",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Chabukswar Rahul Niranjan",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Tanaji Tukaram Bhojane",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Babasaheb Patil Shinde",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Manoj Neminath Kolte",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Mangesh Sanjay Sable",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "26"
+    },
+    {
+        "candidate": "Adv. Yogesh Dattu Gullapelli",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "34"
+    },
+    {
+        "candidate": "Ratan Asaram Landge",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Rajendra Namdeo Magre",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Vikas Chhagan Lahane",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Sham Pawals Rupekar",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Dnyaneshwar Dagduji Nade",
+        "state": "MH",
+        "constituency": "Jalna",
+        "party": "Independent",
+        "gender": "m",
+        "age": "57"
+    },
+    {
         "candidate": "Prashant Ramesh Ingle",
         "state": "MH",
         "constituency": "Kalyan",
@@ -23974,6 +23822,230 @@
         "party": "Independent",
         "gender": "m",
         "age": "43"
+    },
+    {
+        "candidate": "Alte Vishwanath Mahadev",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Dr. Kalge Shivaji Bandappa",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Sudhakar Tukaram Shrangare",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "62"
+    },
+    {
+        "candidate": "Atithi Khanderao Suryvanshi",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Swarajya Shakti Sena",
+        "gender": "f",
+        "age": "46"
+    },
+    {
+        "candidate": "Adv. Kasbekar Shridhar Limbaji",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Rashtriya Sant Sandesh Party",
+        "gender": "m",
+        "age": "74"
+    },
+    {
+        "candidate": "Kamant Machhindra Gunwantrao",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Bahujan Bharat Party",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Narsingrao Udgirkar",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Pravin Madhav Johare",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Swarajya Sena (Maharashtra)",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Balaji Tukaram Gaikwad",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Bharat Peoples Sena",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Bharat Hariba Nanaware",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Bhikaji Gangaram Jadhav",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Kranti Kari Jai Hind Sena",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Lakhan Rajaram Kamble",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Rashtriy Bahujan Party",
+        "gender": "m",
+        "age": "33"
+    },
+    {
+        "candidate": "Vikas Kondiba Shinde",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Maharashtra Vikas Aghadi",
+        "gender": "m",
+        "age": "27"
+    },
+    {
+        "candidate": "Shankar Hari Tadakhe",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Baliraja Party",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Shrikant Baburao Hoval",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Bahujan Mukti Party",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Abhang Gangaram Suryawanshi",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Amol Malu Hanmante",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "28"
+    },
+    {
+        "candidate": "Umesh Ambadas Kamble",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "28"
+    },
+    {
+        "candidate": "Dattu Sopan Narsinge",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Deepak Kedar",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Papita Raosaheb Randive",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "f",
+        "age": "43"
+    },
+    {
+        "candidate": "Pankaj Gopalrao Wakharadakar",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "33"
+    },
+    {
+        "candidate": "Panchshil Vikram Kamble",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Adv. Pradip S. Chincholikar",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Bansode Raghunath Waghoji",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "57"
+    },
+    {
+        "candidate": "Balaji Sheshrao Bansode",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Mukesh Govindrao Ghodake",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "33"
+    },
+    {
+        "candidate": "Sudhakar Tukaram Suryawanshi",
+        "state": "MH",
+        "constituency": "Latur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "56"
     },
     {
         "candidate": "Jankar Swarup Dada",
@@ -24864,6 +24936,166 @@
         "age": "29"
     },
     {
+        "candidate": "Nandesh Vithal Umap",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Mihir Chandrakant Kotecha",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "49"
+    },
+    {
+        "candidate": "Sanjay Dina Patil",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Sanjay B. Patil",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "National People's Party",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Dattatray Arjun Utekar",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Daulat Kadar Khan",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Prof. Dr. Prashant Gangawane",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Desh Janhit Party",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Bhawani H. Choudhary",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Sardar Vallabhbhai Patel Party",
+        "gender": "m",
+        "age": "45"
+    },
+    {
+        "candidate": "Bhopinder Singh Saini",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Viro Ke Vir Indian Party",
+        "gender": "m",
+        "age": "66"
+    },
+    {
+        "candidate": "Mohammad Arman Mohammad Wasi Khan",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Rashtriya Janhit Sangharsh Party",
+        "gender": "m",
+        "age": "46"
+    },
+    {
+        "candidate": "Comrade Surendra Sibag",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "All India Forward Bloc",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Sanjay Saoji Deshpande",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Republican Party of India",
+        "gender": "m",
+        "age": "58"
+    },
+    {
+        "candidate": "Sanju Maruti Pawar",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Maharashtra Vikas Aghadi",
+        "gender": "m",
+        "age": "44"
+    },
+    {
+        "candidate": "Prem Ramapati Gupta",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Bansode Dilip",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Mohammed Ahmed Shaikh",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Vidya Naik",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "f",
+        "age": "52"
+    },
+    {
+        "candidate": "Shahaji  Nanai Thorat",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Dr. Sushma Maurya",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "f",
+        "age": "45"
+    },
+    {
+        "candidate": "Sanjay Patil",
+        "state": "MH",
+        "constituency": "Mumbai North East",
+        "party": "Independent",
+        "gender": "m",
+        "age": "43"
+    },
+    {
         "candidate": "Amol Gajanan Kirtikar",
         "state": "MH",
         "constituency": "Mumbai North West",
@@ -25654,6 +25886,94 @@
         "party": "Independent",
         "gender": "m",
         "age": "32"
+    },
+    {
+        "candidate": "Ananda Sukalal Koli",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "56"
+    },
+    {
+        "candidate": "Adv Gowaal Kagada Padavi",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Indian National Congress",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Dr Heena Vijaykumar Gavit",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Bharatiya Janata Party",
+        "gender": "f",
+        "age": "35"
+    },
+    {
+        "candidate": "Nirmala Vasave",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "f",
+        "age": "38"
+    },
+    {
+        "candidate": "Ravindra Ranjit Valvi",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Bharat Adivasi Party",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Hemant Mansaram Koli",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Gitanjali Shashikant Koli",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Independent",
+        "gender": "f",
+        "age": "46"
+    },
+    {
+        "candidate": "Jalamsing Sutum Pawar",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Deepakkumar Madhukar Shirsath",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Rohidas Gemaji Valvi",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "58"
+    },
+    {
+        "candidate": "Sushilkumar Jahangir Pawara",
+        "state": "MH",
+        "constituency": "Nandurbar",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
     },
     {
         "candidate": "Arun Madhukar Kale",
@@ -27376,6 +27696,166 @@
         "age": "49"
     },
     {
+        "candidate": "Chandrahar Subhash Patil",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Tipusulatan Sikandar Patavegar",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "34"
+    },
+    {
+        "candidate": "Sanjay (Kaka) Patil",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "59"
+    },
+    {
+        "candidate": "Anand Shankar Nalage",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Baliraja Party",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Pandurang Raosaheb Bhosale",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Mahesh Yashwant Kharade",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Swabhimani Paksha",
+        "gender": "m",
+        "age": "48"
+    },
+    {
+        "candidate": "Satish Lalita Krishna Kadam",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Hindustan Janta Party",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Ajit Dhanaji Khandare",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Allauddin Hayatchand Kazi",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "58"
+    },
+    {
+        "candidate": "Dr Akash Vhatkar",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Jalindar Machindra Thomake",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "47"
+    },
+    {
+        "candidate": "Touhid Ilahi Momin",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Dattatray Pandit Patil",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Prakash Shivajirao Shendge",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Bandagar Nanaso Balaso",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "51"
+    },
+    {
+        "candidate": "Ravindra Chandar Solankar",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "47"
+    },
+    {
+        "candidate": "Vishal (Dada) Prakashbapu Patil",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Shashikant Gautam Deshmukh",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "30"
+    },
+    {
+        "candidate": "Suwarnatai Sudhakar Gayakwad",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "f",
+        "age": "48"
+    },
+    {
+        "candidate": "Sangram Rajaram More",
+        "state": "MH",
+        "constituency": "Sangli",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
         "candidate": "Anand Ramesh Thorwade",
         "state": "MH",
         "constituency": "Satara",
@@ -27662,6 +28142,262 @@
         "party": "Independent",
         "gender": "m",
         "age": "36"
+    },
+    {
+        "candidate": "Adhalrao Shivaji Dattatrey",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Nationalist Congress Party",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Dr. Amol Ramsing Kolhe",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Nationalist Congress Party \u2013 Sharadchandra Pawar",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Rahul Raghunath Owhal",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Dr. Anwar Shaikh",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "60"
+    },
+    {
+        "candidate": "Aslam Isak Bagwan",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Lok Sena Party",
+        "gender": "m",
+        "age": "56"
+    },
+    {
+        "candidate": "Kamble Trimbak Narayan",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Baliraja Party",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Tukaram Namdeo Daphal",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Sainik Samaj Party",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Narayan Prabhakar Ankushe",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bharatheeya Jawan Kisan Party",
+        "gender": "m",
+        "age": "45"
+    },
+    {
+        "candidate": "Adv. Dr. Laxman Rambhau Damse",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bharat Adivasi Party",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Sanjay Laxman Padwal",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bhartiya Navjawan Sena (Paksha)",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Swapnil Dhanaji Londhe",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bhim Sena",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Haridas Chandar Bhise",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Bharatiya Lokvikas Party",
+        "gender": "m",
+        "age": "41"
+    },
+    {
+        "candidate": "Amar Machindra Borhade",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Amol Vilas Pachundkar",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Umesh Mahadev Mhetre",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Gaikwad Niloba Changadeo",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "61"
+    },
+    {
+        "candidate": "Goraksh Kasabe",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "30"
+    },
+    {
+        "candidate": "Chandgude Vinod Vasant",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "38"
+    },
+    {
+        "candidate": "Chaaya Sanjay Jagdale-Solanke",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "f",
+        "age": "34"
+    },
+    {
+        "candidate": "Dada Alias Vikas Suresh Kasbe",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "30"
+    },
+    {
+        "candidate": "Pandurang Bhagwan Waghole",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Prakash Sukhadeo Jamdhade",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Bhor Vikas Rohidas",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Manohar Mahadu Wadekar",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Ravindra Motiram Sirsam",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Rahul Arjun Hore",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Wakhare Pradip Pandurang",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "62"
+    },
+    {
+        "candidate": "Salim Baba Sayyad",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "43"
+    },
+    {
+        "candidate": "Subash Kashinath Sarode",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
+    },
+    {
+        "candidate": "Suraj Chandrakant Gaikwad",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Sushil Dnyandev Kanse",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Adv.Swapnil Bhausaheb Shelar",
+        "state": "MH",
+        "constituency": "Shirur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "26"
     },
     {
         "candidate": "Praniti Sushilkumar Shinde",
@@ -28022,6 +28758,198 @@
         "party": "Independent",
         "gender": "m",
         "age": "42"
+    },
+    {
+        "candidate": "Amar Sharadrao Kale",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Nationalist Congress Party \u2013 Sharadchandra Pawar",
+        "gender": "m",
+        "age": "50"
+    },
+    {
+        "candidate": "Dr. Mohan Ramraoji  Raikwar",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "49"
+    },
+    {
+        "candidate": "Ramdas Chandrabhan Tadas",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "71"
+    },
+    {
+        "candidate": "Akshay Mehare Bhartiya",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Akhil Bhartiya Parivar Party",
+        "gender": "m",
+        "age": "29"
+    },
+    {
+        "candidate": "Ashish Lekhiram Izankar",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Vidarbha Rajya Aghadi",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Umesh Somaji Waware",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Maharashtra Vikas Aghadi",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Krushna Annaji Kalode",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Hindrashtra Sangh",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Krushna Subhashrao Fulkari",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Lok Swarajya Party",
+        "gender": "m",
+        "age": "27"
+    },
+    {
+        "candidate": "Dixita Anand",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Desh Janhit Party",
+        "gender": "f",
+        "age": "38"
+    },
+    {
+        "candidate": "Maroti Gulabrao Uike",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Gondvana Gantantra Party",
+        "gender": "m",
+        "age": "55"
+    },
+    {
+        "candidate": "Dr. Moreshwar Ramji Nagrale",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Republican Party of India",
+        "gender": "m",
+        "age": "70"
+    },
+    {
+        "candidate": "Prof. Rajendra Gulabrao  Salunkhe",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Vanchit Bahujan  Aaghadi",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Ramrao Bajirao Ghodaskar",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "All India Forward Bloc",
+        "gender": "m",
+        "age": "74"
+    },
+    {
+        "candidate": "Anil K. Ghushe",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Arvind Shamrao Lillore",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "45"
+    },
+    {
+        "candidate": "Asif",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Kishor Baba Pavar",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "68"
+    },
+    {
+        "candidate": "Jagadish Uddvrao  Wankhade",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Pooja Pankaj Tadas",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "f",
+        "age": "32"
+    },
+    {
+        "candidate": "Adv. Bhaskar Marotrao  Neware",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "47"
+    },
+    {
+        "candidate": "Ramesh Sinha",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "71"
+    },
+    {
+        "candidate": "Rahul T. Bhoyar",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Vijay Dnyaneshwarrao  Shrirao",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "49"
+    },
+    {
+        "candidate": "Suhas V. Thakare",
+        "state": "MH",
+        "constituency": "Wardha",
+        "party": "Independent",
+        "gender": "m",
+        "age": "44"
     },
     {
         "candidate": "Rajshritai Hemant Patil (Mahalle)",
@@ -45888,9 +46816,73 @@
         "age": "38"
     },
     {
+        "candidate": "Azad Kirti Jha",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "All India Trinamool Congress",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Dilip Ghosh",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "59"
+    },
+    {
+        "candidate": "Prabhu Nath Sah",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "64"
+    },
+    {
+        "candidate": "Sukriti Ghosal",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Communist Party of India  (Marxist)",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Tasbirul Islam",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "67"
+    },
+    {
+        "candidate": "Mir Sakimuddin",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "The National Road Map Party of India",
+        "gender": "m",
+        "age": "27"
+    },
+    {
+        "candidate": "Reena Leong",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Independent",
+        "gender": "f",
+        "age": "51"
+    },
+    {
+        "candidate": "Luxmi Narayan Kora",
+        "state": "WB",
+        "constituency": "Bardhaman-Durgapur",
+        "party": "Independent",
+        "gender": "m",
+        "age": "67"
+    },
+    {
         "candidate": "Arjun Singh",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Bharatiya Janata Party",
         "gender": "m",
         "age": "62"
@@ -45898,7 +46890,7 @@
     {
         "candidate": "Chapala Ray (Majumder)",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Bahujan Samaj Party",
         "gender": "f",
         "age": "70"
@@ -45906,7 +46898,7 @@
     {
         "candidate": "Debdut Ghosh",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Communist Party of India  (Marxist)",
         "gender": "m",
         "age": "52"
@@ -45914,7 +46906,7 @@
     {
         "candidate": "Partha Bhowmick",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "All India Trinamool Congress",
         "gender": "m",
         "age": "60"
@@ -45922,7 +46914,7 @@
     {
         "candidate": "Anjan Goswami",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Bharatiya Nyay-Adhikar Raksha Party",
         "gender": "m",
         "age": "61"
@@ -45930,7 +46922,7 @@
     {
         "candidate": "Debasish Banerjee",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Socialist Unity Centre Of India (COMMUNIST)",
         "gender": "m",
         "age": "61"
@@ -45938,7 +46930,7 @@
     {
         "candidate": "Md Jamir Hossain",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "All India Secular Front",
         "gender": "m",
         "age": "32"
@@ -45946,7 +46938,7 @@
     {
         "candidate": "Amit Kumar Choubey",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "36"
@@ -45954,7 +46946,7 @@
     {
         "candidate": "Uday Veer Choudhury",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "46"
@@ -45962,7 +46954,7 @@
     {
         "candidate": "Kundan Singh",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "40"
@@ -45970,7 +46962,7 @@
     {
         "candidate": "Dharmendra Singh",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "48"
@@ -45978,7 +46970,7 @@
     {
         "candidate": "Rohit Kumar Pathak",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "30"
@@ -45986,7 +46978,7 @@
     {
         "candidate": "Sharmistha Das",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "f",
         "age": "40"
@@ -45994,7 +46986,7 @@
     {
         "candidate": "Sanjay Singh",
         "state": "WB",
-        "constituency": "Barrackpore",
+        "constituency": "Barrackpur",
         "party": "Independent",
         "gender": "m",
         "age": "52"
@@ -46214,70 +47206,6 @@
         "party": "Independent",
         "gender": "m",
         "age": "70"
-    },
-    {
-        "candidate": "Azad Kirti Jha",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "All India Trinamool Congress",
-        "gender": "m",
-        "age": "65"
-    },
-    {
-        "candidate": "Dilip Ghosh",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Bharatiya Janata Party",
-        "gender": "m",
-        "age": "59"
-    },
-    {
-        "candidate": "Prabhu Nath Sah",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Bahujan Samaj Party",
-        "gender": "m",
-        "age": "64"
-    },
-    {
-        "candidate": "Sukriti Ghosal",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Communist Party of India  (Marxist)",
-        "gender": "m",
-        "age": "63"
-    },
-    {
-        "candidate": "Tasbirul Islam",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Socialist Unity Centre Of India (COMMUNIST)",
-        "gender": "m",
-        "age": "67"
-    },
-    {
-        "candidate": "Mir Sakimuddin",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "The National Road Map Party of India",
-        "gender": "m",
-        "age": "27"
-    },
-    {
-        "candidate": "Reena Leong",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Independent",
-        "gender": "f",
-        "age": "51"
-    },
-    {
-        "candidate": "Luxmi Narayan Kora",
-        "state": "WB",
-        "constituency": "Bardhaman-Durgapur",
-        "party": "Independent",
-        "gender": "m",
-        "age": "67"
     },
     {
         "candidate": "Jagadish Chandra Barma Basunia",
@@ -51190,6 +52118,222 @@
         "party": "Independent",
         "gender": "m",
         "age": "53"
+    },
+    {
+        "candidate": "Manoj Kumar",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Bahujan Samaj Party",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Yashaswini Sahay",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Indian National Congress",
+        "gender": "f",
+        "age": "27"
+    },
+    {
+        "candidate": "Sanjay Seth",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Bharatiya Janata Party",
+        "gender": "m",
+        "age": "65"
+    },
+    {
+        "candidate": "Dhananjay Bhagat \u201cGandhi\u201c",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Mera Adhikaar Rashtriya Dal",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Dharmendra Tiwary",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Bhartiya Jantantra Morcha",
+        "gender": "m",
+        "age": "63"
+    },
+    {
+        "candidate": "Nipu Singh",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Rashtriya Jansangharsh Swaraj Party",
+        "gender": "m",
+        "age": "36"
+    },
+    {
+        "candidate": "Pankaj Kumar Ravi",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Peoples Party of India (Democratic)",
+        "gender": "m",
+        "age": "37"
+    },
+    {
+        "candidate": "Praween Kachhap",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Sampoorna Bharat Kranti Party",
+        "gender": "m",
+        "age": "45"
+    },
+    {
+        "candidate": "Binod Oraon",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Bahujan Mukti Party",
+        "gender": "m",
+        "age": "32"
+    },
+    {
+        "candidate": "Birendra Nath Manjhi",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Abua Jharkhand Party",
+        "gender": "m",
+        "age": "62"
+    },
+    {
+        "candidate": "Mintu Paswan",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Socialist Unity Centre Of India (COMMUNIST)",
+        "gender": "m",
+        "age": "39"
+    },
+    {
+        "candidate": "Ranjana Giri",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Republican Party of India (A)",
+        "gender": "f",
+        "age": "35"
+    },
+    {
+        "candidate": "Ramhari Gope",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Ambedkarite Party of India",
+        "gender": "m",
+        "age": "31"
+    },
+    {
+        "candidate": "Shyam  Bihari Prajapati",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Bhagidari Party(P)",
+        "gender": "m",
+        "age": "54"
+    },
+    {
+        "candidate": "Sarweshwari Sahu",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Ekam Sanatan Bharat Dal",
+        "gender": "f",
+        "age": "43"
+    },
+    {
+        "candidate": "Soma Singh",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Jai Maha Bharath Party",
+        "gender": "m",
+        "age": "49"
+    },
+    {
+        "candidate": "Harinath Sahu",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Lokhit Adhikar Party",
+        "gender": "m",
+        "age": "47"
+    },
+    {
+        "candidate": "Hemnti Devi",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Samata Party",
+        "gender": "f",
+        "age": "38"
+    },
+    {
+        "candidate": "Anjani Pandey",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "66"
+    },
+    {
+        "candidate": "Arshad Ayub",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "53"
+    },
+    {
+        "candidate": "Ainul Ansari",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "35"
+    },
+    {
+        "candidate": "Kameshwar Prasad Saw",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "73"
+    },
+    {
+        "candidate": "Koleshwar Mahto",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "69"
+    },
+    {
+        "candidate": "Devendra Nath Mahto",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "33"
+    },
+    {
+        "candidate": "Prabeen Chandra Mahato",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "40"
+    },
+    {
+        "candidate": "Manoranjan Bhattacharya",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "42"
+    },
+    {
+        "candidate": "Santosh Kumar Jaiswal",
+        "state": "JH",
+        "constituency": "Ranchi",
+        "party": "Independent",
+        "gender": "m",
+        "age": "52"
     },
     {
         "candidate": "Geeta Kora",
