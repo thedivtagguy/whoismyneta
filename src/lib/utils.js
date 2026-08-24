@@ -3,6 +3,7 @@ import data from '../lib/data/data.json';
 import { feature } from 'topojson-client';
 import country from '../lib/data/india_ls_seats_545.json';
 import { goto } from '$app/navigation';
+import { base } from '$app/paths';
 import { geoContains, range } from 'd3';
 import { partyColors } from './colors';
 
@@ -56,7 +57,7 @@ export function setConstituency(constituency = '') {
 		selectedConstituency.set(constituencyData);
 	}
 
-	goto(`/?constituency=${slugify(constituency)}`, { noScroll: true });
+	goto(`${base}/?constituency=${slugify(constituency)}`, { noScroll: true });
 }
 
 export function setCandidate(candidate = '') {
@@ -68,7 +69,7 @@ export function setCandidate(candidate = '') {
 		selectedCandidate.set(candidateData);
 	}
 
-	goto(`/?candidate=${slugify(candidate)}`);
+	goto(`${base}/?candidate=${slugify(candidate)}`);
 }
 
 export function formatRupee(value, integer = false) {

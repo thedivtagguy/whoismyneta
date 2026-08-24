@@ -4,6 +4,7 @@
 	import { selectedConstituency } from '$lib/store';
 	import { mdiFilterRemove } from '@mdi/js';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	export let options = {};
 	let selectedStr = '';
 	let variant = 'fill-surface';
@@ -21,7 +22,7 @@
 		<Button
 			on:click={() => {
 				$selectedConstituency = {};
-				goto('/', { noScroll: true });
+				goto(`${base}/`, { noScroll: true });
 			}}
 			classes={{
 				root: 'text-xs whitespace-nowrap h-8 w-fit max-w-[125px] '

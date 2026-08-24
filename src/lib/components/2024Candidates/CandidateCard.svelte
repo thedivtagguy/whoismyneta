@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { partyColors } from '$lib/colors';
+	import { base } from '$app/paths';
 	import { Icon, dirtyStore } from 'svelte-ux';
 	import { formatTextForHighlight, getPartyColor } from '$lib/utils';
 	import { mdiAccountGroup, mdiAccount } from '@mdi/js';
@@ -36,7 +37,7 @@
 >
 	{#if partyColor.abbreviation && partyColor.abbreviation !== 'IND'}
 		<img
-			src="/symbols/{partyColor.abbreviation}.webp"
+			src="{base}/symbols/{partyColor.abbreviation}.webp"
 			alt="Party Logo"
 			class="object-fill rounded-full group-hover:border-[1px] border-neutral/50 size-16"
 		/>

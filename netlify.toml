@@ -1,5 +1,27 @@
+# Generic per-story Netlify config — nothing here is story-specific.
+# The story's public URL (diagramchasing.fun/2024/who-is-my-neta) is a 200-rewrite
+# proxy configured in the studio site repo's _redirects, not here.
 
+[build]
+  command = "pnpm build"
+  publish = "build"
 
-[[edge_functions]]
-function = "get-location"
-path = "/user-loc"
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "font/woff2"
+
+# Vite content-hashes everything under _app/immutable
+[[headers]]
+  for = "/_app/immutable/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
